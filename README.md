@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://tobebetterjavaer.com">
-    <img src="https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/clipboard_20220525_090350.png" width="360px" alt="Java程序员的自我修养">
+  <a href="https://github.com/JavaNPE/JavaProgrammerSelfCultivation">
+    <img src="http://cdn.tobebetterjavaer.com/tobebetterjavaer/images/logo-01.png" width="260px" alt="Java程序员的自我修养">
   </a>
 </p>
 
