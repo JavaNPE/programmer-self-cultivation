@@ -14,7 +14,7 @@ Notion这款笔记软件这两年可谓是非常的火爆，凭借着其独特�
 
 当然你也可以先在浏览器中安装一个油猴Tamper monkey插件然后在油猴里面直接搜索notion汉化选择相应的汉化脚本点击安装即可。
 
-方式二：Windows客户端汉化
+### 方式二：Windows客户端汉化
 
 1. **鼠标右键属性查看Notion 的安装目录：`C:\\Users\\用户名（以实际为准）\\AppData\\Local\\Programs\\Notion\\`**
 2. **打开`C:\\Users\\用户名（以实际为准）\\AppData\\Local\\Programs\\Notion\\resources\\app\\renderer`文件夹**
