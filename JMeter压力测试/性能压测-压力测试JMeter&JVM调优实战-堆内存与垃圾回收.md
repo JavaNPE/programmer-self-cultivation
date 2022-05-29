@@ -1,6 +1,6 @@
-# 性能压测-压力测试|JMeter在windows下地址占用bug解决|JVM调优-堆内存与垃圾回收
+# 15_性能压测- 压力测试|JMeter在windows下地址占用bug解决|JVM调优实战-堆内存与垃圾回收-优化Nginx动静分离
 
-# 性能压测- 压力测试基本介绍
+# P141、性能压测- 压力测试基本介绍
 
 ## 一、性能监控
 
@@ -158,9 +158,11 @@ JVM调优更多的是为了调整堆区，元数据区：直接操作物理内�
 
 垃圾回收
 
+Java8内存模型，元空间：直接操作物理内存
+
 ![Java8内存模型，元空间：直接操作物理内存](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
 
-Java8内存模型，元空间：直接操作物理内存
+
 
 **从Java8开始，HotSpot 已经完全将永久代(Permanent Generation)移除，取而代之的是一个新的区域一元空间(MetaSpace)** 
 
@@ -184,14 +186,14 @@ Win+R调出cmd窗口，输入命令：jconsole，选择本地连接。
 
 Win+R调出cmd窗口，输入命令：jvisualvm
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2013.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
 
 > 1、jvisualvm能干什么
 > 
 
 监控内存泄露，跟踪垃圾回收，执行时内存、cpu分析，线程分析...
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2014.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
 
 **运行**：正在运行的
 
@@ -217,7 +219,7 @@ Win+R调出cmd窗口，输入命令：jvisualvm
 
 ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2018.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
 
 ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
 
@@ -307,7 +309,7 @@ gulimall-gateway服务：application.yml
     - RewritePath=/api/(?<segment>/?.*),/$\{segment}
 ```
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2031.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2031.png)
 
 ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2032.png)
 
@@ -317,9 +319,9 @@ gulimall-gateway服务：application.yml
 
 [gulimall.com/hello](http://gulimall.com/hello)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2034.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2034.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2035.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2035.png)
 
 ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2036.png)
 
@@ -347,35 +349,35 @@ gulimall-gateway服务：application.yml
 
 [](http://localhost:10000/)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2037.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2037.png)
 
 JMeterHTTP请求内容：
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2038.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2038.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2039.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2039.png)
 
 ## 7、三级分类数据获取
 
 [localhost:10000/index/catalog.json](http://localhost:10000/index/catalog.json)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2040.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2040.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2041.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2041.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2042.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2042.png)
 
 ## 8、首页全量数据获取
 
 HTTP请求基本设置：
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2043.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2043.png)
 
 高级设置：
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2044.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2044.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2045.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2045.png)
 
 # P147、性能压测-优化简单优化吞吐量测试
 
@@ -385,29 +387,27 @@ jvm调优，调的是稳定，并不能带给你性能的大幅提升。服务�
 
 # P148、性能压测-优化- nginx动静分离
 
-[Java项目《谷粒商城》Java架构师 | 微服务 | 大型电商项目_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1np4y1C7Yf?p=148&spm_id_from=pageDriver)
-
 1、以后将所有项目的静态资源都应该放在nginx里面。
 
 2、规则: 指定/static/**所有请求都由nginx直接返回。
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2046.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2046.png)
 
 前后端分离之后，前端资源都不会到后台了，后台只处理前端发送的业务请求。
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2047.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2047.png)
 
 将原来在IDEA中的静态资源放在nginx中刚才新创建的static文件夹中，实现动静分离。
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2048.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2048.png)
 
 idea中的index.html中的url地址之前需要添加`/static/`
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2049.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2049.png)
 
 修改nginx配置信息
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2050.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2050.png)
 
 ```yaml
 server {
@@ -1077,41 +1077,41 @@ server {
 
 如果出现以下这种情况，务必检查Windows防火墙是否关闭：
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2051.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2051.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2052.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2052.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2053.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2053.png)
 
 1、idea中设置：-Xmx100m
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2054.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2054.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2055.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2055.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2056.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2056.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2057.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2057.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2058.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2058.png)
 
 2、我们调节idea中的 `-Xmx1024m -Xms1024m -Xmn512m`
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2059.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2059.png)
 
 ## 模拟服务崩溃场景：
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2060.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2060.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2061.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2061.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2062.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2062.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2063.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2063.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2064.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2064.png)
 
-![Untitled](15_%E6%80%A7%E8%83%BD%E5%8E%8B%E6%B5%8B-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%20JMeter%E5%9C%A8windows%E4%B8%8B%E5%9C%B0%E5%9D%80%E5%8D%A0%E7%94%A8bug%E8%A7%A3%E5%86%B3%20JVM%E8%B0%83%E4%BC%98-%E5%A0%86%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%202459c0ebbe12409ba8b1139e0d0b1f27/Untitled%2065.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2065.png)
 
 # P150、性能压测优化优化三级分类数据获取
 
