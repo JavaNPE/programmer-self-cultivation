@@ -2907,7 +2907,7 @@ match返回account_number=20的数据。
 
 查询结果：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2033.png)
+![ES6](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2033.png)
 
 1. 字符串，全文检索
 
@@ -3167,7 +3167,7 @@ GET bank/_search
 
 文本字段的匹配，使用keyword，匹配的条件就是要显示字段的全部值，要进行精确匹配的。`match_phrase`是做短语匹配，只要文本中包含匹配条件，就能匹配到。
 
-## **（5）query/multi_math【多字段匹配】**
+### **（5）query/multi_math【多字段匹配】**
 
 **state或者address中包含mill**，并且在查询过程中，会对于查询条件进行分词。
 
@@ -3286,7 +3286,7 @@ GET bank/_search
 }
 ```
 
-## **（6）query/bool/must复合查询**
+### **（6）query/bool/must复合查询**
 
 复合语句可以合并，任何其他查询语句，包括符合语句。这也就意味着，复合语句之间可以互相嵌套，可以表达非常复杂的逻辑。
 
@@ -3579,7 +3579,7 @@ GET bank/_search
     ```
     
 
-## （7）query/filter【结果过滤】
+### （7）query/filter【结果过滤】
 
 - must 贡献得分
 - should 贡献得分
@@ -3694,7 +3694,7 @@ GET bank/_search
 }
 ```
 
-## **（8）query/term**
+### **（8）query/term**
 
 和match一样。匹配某个属性的值。
 
@@ -3771,7 +3771,7 @@ GET bank/_search
 
 也就是说，**全文检索字段用match，其他非text字段(数字等)匹配用term**。
 
-## **（9）aggs/agg1（聚合）**
+### **（9）aggs/agg1（聚合）**
 
 前面介绍了存储、检索，但还没介绍分析。
 
