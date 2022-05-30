@@ -18,7 +18,6 @@ SpringlCloud配置复杂，难以上手，部分配置差别难以区分和合�
 > 阿里使用过的组件经历了考验，性能强悍，设计合理，现在开源出来大家用
 成套的产品搭配完善的可视化界面给开发运维带来极大的便利
 搭建简单，学习曲线低。
-> 
 
 ## 结合SpringCloud Alibaba我们最终的技术搭配方案：
 
@@ -460,9 +459,6 @@ spring.cloud.nacos.config.group=DEFAULT_GROUP
     spring.cloud.nacos.config.extension-configs[2].data-id=other.yml
     spring.cloud.nacos.config.extension-configs[2].group=dev
     spring.cloud.nacos.config.extension-configs[2].refresh=true
-    ————————————————
-    版权声明：本文为CSDN博主「hancoder」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-    原文链接：https://blog.csdn.net/hancoder/article/details/106922139
     ```
     
 - 启动：GulimallCouponApplication :7000/微服务：idea控制台输出内容
