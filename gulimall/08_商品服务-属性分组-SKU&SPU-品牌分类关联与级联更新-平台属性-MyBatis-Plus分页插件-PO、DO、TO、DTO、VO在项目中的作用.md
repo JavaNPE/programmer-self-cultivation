@@ -1,6 +1,6 @@
 # 08_商品服务-属性分组-SKU&SPU-品牌分类关联与级联更新-平台属性-MyBatis-Plus分页插件-PO、DO、TO、DTO、VO介绍
 
-# 70、商品服务-概念-SPU&SKU&规格参数&销售属性  | pms_attr属性表 | pms_attr_group属性分组表 | pms_attr_attrgroup_relation属性表和属性分组的关联表
+# 70、商品服务-SPU和SKU概念-表结构梳理
 
 对应的数据库表：
 
