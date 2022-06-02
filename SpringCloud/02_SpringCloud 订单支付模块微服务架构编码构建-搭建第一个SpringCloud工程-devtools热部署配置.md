@@ -2,7 +2,7 @@
 
 # 模块一：工程框架图
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147562.png)
 
 # 一、微服务cloud整体聚合父工程Project
 
@@ -10,37 +10,37 @@
 
 ### 1.1 New Project
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%201.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%201.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147564.png)
 
 ### 1.2 聚合总工程名字
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%202.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%202.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147565.png)
 
 ### 1.3 Maven选版本
 
 选择我们安装的Maven 
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%203.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%203.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147566.png)
 
 ### 1.4 工程名字
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%204.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%204.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147567.png)
 
 ### 1.5 字符编码
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%205.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%205.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147568.png)
 
 ### 1.6 注解生效激活
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%206.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%206.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147569.png)
 
 ### 1.7 java编译版本选择
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%207.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%207.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147570.png)
 
-![问答地址：[https://ask.csdn.net/questions/7461709](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png) ](02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%208.png)
+![img](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022153576.png)
 
-问答地址：[https://ask.csdn.net/questions/7461709](https://ask.csdn.net/questions/7461709) 
+
 
 ### 1.8 File Type过滤
 
@@ -48,35 +48,19 @@
 *.hprof;*.idea;*.pyc;*.pyo;*.rbc;*.yarb;*iml;*~;.DS_Store;.git;.hg;.svn;CVS;__pycache__;_svn;vssver.scc;vssver2.scc;
 ```
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%209.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%209.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147572.png)
 
 ## 2、父工程pom
 
 [Cloud2021父工程pom](https://www.notion.so/Cloud2021-pom-fff21461ab5b42fdb740ef5490984bd0)
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2010.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2010.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147573.png)
 
 ## 补充：Maven中的dependencyManagement和Idependencies的区别？
 
-**dependencyManagement**
-
-Maven使用dependencyManagement元素来提供了-种管理依赖版本号的方式。
-
-**通常会在一个组织或者项目的最顶层的父POM中看到dependencyManagement元素。**
-
-使用pom.xml中的dependencyManagement元素能让所有在子项目中引用一个依赖而不用显式的列出版本号。
-
-Maven会沿着父子层次向上走,直到找到一个拥有dependencyManagement元素的项目,然后它就会使用这个dependencyManagement元素中指定的版本号。
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2011.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147574.png)
 
 
-
-这样做的好处就是:如果有多个子项目都引用同-样依赖,则可以避免在每个使用的子项目里都声明一个版本号,这样当想升级或切换到另一个版本时,只需要在顶层父容器里更新,而不需要一个一 个子项目的修改;另外如果某个子项目需要另外的一个版本，只需要声明version就可。
-
-* dependencyManagement里只是声明依赖，并不实现引入,因此子项目需要显示的声明需要用的依赖。
-* 如果不在子项目中声明依赖，是不会从父项目中继承下来的;只有在子项目中写了该依赖项,并且没有指定具体版本，才会从父项目中继承该项，并耳versjon和scope都读取自父pom;
-* 如果子项目中指定了版本号，那么会使用子项目中指定的jar版本。
-
-[2020年解决：IDEA中已配置阿里镜像，但maven无法下载jar包的问题_傲娇的何先生的博客-CSDN博客](https://blog.csdn.net/HeyWeCome/article/details/104543411)
 
 # 二、Rest微服务工程构建步骤
 
@@ -112,11 +96,11 @@ mybatis:
 
 ### 1.4 主启动
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2012.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2012.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147575.png)
 
 ### 1.5 业务类-建表SQL、entities、dao、service、controller
 
-![本地Win10环境安装的MySQL版本为：Server version: 5.5.28 MySQL Community Server (GPL)  故须升级MySQL版本为：5.7及以上](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+![本地Win10环境安装的MySQL版本为：Server version: 5.5.28 MySQL Community Server (GPL)  故须升级MySQL版本为：5.7及以上](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147576.png)
 
 本地Win10环境安装的MySQL版本为：Server version: 5.5.28 MySQL Community Server (GPL)  故须升级MySQL版本为：5.7及以上
 
@@ -174,17 +158,17 @@ mybatis:
 
 ### 3.Enabling automatic build
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2014.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2014.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147577.png)
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2015.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2015.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147578.png)
 
 ### 4.Update the value of
 
 快捷键：ctrl + alt +shift +/
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2016.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2016.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147579.png)
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2017.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2017.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147580.png)
 
 ### 5.重启IDEA
 
@@ -192,15 +176,15 @@ mybatis:
 
 ### 整体的业务调用关系：
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2018.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2018.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147581.png)
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2019.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2019.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147582.png)
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2020.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2020.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2020.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147583.png)
 
 代码在Idea工程文件的位置：
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2021.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2021.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2021.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147584.png)
 
 ```java
 @RestController
@@ -234,9 +218,9 @@ public class OrderController {
 
 举例：
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2022.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2022.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2022.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147585.png)
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2023.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2023.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2023.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147586.png)
 
 url：REST请求地址，[http://localhost:8001](http://localhost:8001/)/payment/create
 
@@ -244,10 +228,10 @@ request：请求参数，
 
 ResponseType： HTTP响应转换被转换的对象模型，CommonResult.class  （用来存放公共响应头信息的 报错错误信息，浏览器错误码等公共信息）
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2024.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2024.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2024.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147587.png)
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2025.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2025.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2025.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147588.png)
 
 # 此阶段的工程架构图：
 
-![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2026.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2026.png)
+![02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA%E2%80%94%E2%80%94%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B%205cb47b59862244efb921bec4c66f8f06/Untitled%2026.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022147589.png)
