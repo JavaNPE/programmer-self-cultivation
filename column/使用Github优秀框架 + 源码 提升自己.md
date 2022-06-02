@@ -1,4 +1,4 @@
-# 新手必看Github使用教程
+# 使用Github优秀框架 + 源码 提升自己
 
 Created: September 10, 2021 11:57 AM
 
@@ -25,11 +25,11 @@ Created: September 10, 2021 11:57 AM
 
 参考案例：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://cdn.jsdelivr.net/gh/hediancha/blog-image-bed/Untitled.png)
 
 组合搜索使用：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![Untitled](https://cdn.jsdelivr.net/gh/hediancha/blog-image-bed/Untitled%201.png)
 
 ## **stars或fork数量关键字查找**
 
@@ -42,9 +42,9 @@ Created: September 10, 2021 11:57 AM
 - 组合使用
     - 查找star大于1000，fork数在500到1000：`springboot stars:>1000 forks:500..1000`
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+    ![Untitled](https://cdn.jsdelivr.net/gh/hediancha/blog-image-bed/Untitled%202.png)
     
-    ![Untitled](13_Github%20832c9ced8770452ea072f094ad4d166d/Untitled%203.png)
+    ![Untitled](https://cdn.jsdelivr.net/gh/hediancha/blog-image-bed/Untitled%203.png)
     
 
 ## **awesome加强搜索**
@@ -52,7 +52,7 @@ Created: September 10, 2021 11:57 AM
 - 公式：`awesome 关键字`：awesome系列，一般用来收集学习、工具、书籍类相关的项目
 - 搜索优秀的redis相关的项目，包括框架，教程等 awesome redis
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](https://cdn.jsdelivr.net/gh/hediancha/blog-image-bed/Untitled%204.png)
 
 ## **高亮显示某行代码**
 
@@ -61,16 +61,16 @@ Created: September 10, 2021 11:57 AM
 - 多行：地址后面紧跟 #Lx - #Ln
     - `https://github.com/moxi624/mogu_blog_v2/blob/master/mogu_admin/pom.xml#L13-L30`
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+    ![Untitled](https://cdn.jsdelivr.net/gh/hediancha/blog-image-bed/Untitled%205.png)
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+    ![Untitled](https://cdn.jsdelivr.net/gh/hediancha/blog-image-bed/Untitled%206.png)
     
 
 ## **项目内搜索**
 
 - 使用英文字母 `t` ,开启项目内搜索
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![Untitled](https://cdn.jsdelivr.net/gh/hediancha/blog-image-bed/Untitled%207.png)
 
 ## **搜索某个地区内的大佬**
 
