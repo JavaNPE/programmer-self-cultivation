@@ -1,14 +1,14 @@
-# 03_单机Eureka构建步骤-eureka服务注册与发现
+# 03_单机Eureka构建-eureka服务注册与发现
 
 # 一、IDEA生成eurekaServer端服务注册中心类似物业公司
 
 ## 工程架构图：
 
-![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022157682.png)
 
  
 
-![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%201.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%201.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022157684.png)
 
 ## 1、建Module——cloud-eureka-server7001
 
@@ -113,7 +113,7 @@ public class EurekaMain7001 {
 
 [](http://localhost:7001/)
 
-![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%202.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%202.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022157685.png)
 
 # 二、支付微服务8001入驻进eurekaServer
 
@@ -145,7 +145,7 @@ eureka:
 
 图例：
 
-![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%203.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%203.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022157686.png)
 
 ## [3、主启动中PaymentMain8001添加@EnableEurekaClient注解](https://www.notion.so/01_Eureka-c1b35e2878a841aa8241ca6639510d2e)
 
@@ -165,7 +165,7 @@ public class PaymentMain8001 {
 
 ### 4.2在启动EurekaClient:8001
 
-![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%204.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%204.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022157687.png)
 
 测试地址：
 
@@ -173,15 +173,15 @@ public class PaymentMain8001 {
 
 结果页：
 
-![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%205.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%205.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022157688.png)
 
 ### 微服务注册名配置说明
 
-![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%206.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%206.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022157689.png)
 
 ### Eureka的自我保护机制：
 
-![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%207.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%207.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022157690.png)
 
 # 二、订单微服务80入驻进eurekaServer
 
@@ -239,10 +239,10 @@ eureka服务器
 
 测试地址：[http://localhost:7001/](http://localhost:7001/)
 
-![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%208.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%208.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022157691.png)
 
 此时我们随机测试80消费者：
 
 [http://localhost/consumer/payment/get/7](http://localhost/consumer/payment/get/7)
 
-![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%209.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA%E6%AD%A5%E9%AA%A4%EF%BC%88eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0%EF%BC%89%2001c4d2b62758438d89bdb44d2f075a02/Untitled%209.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206022157692.png)
