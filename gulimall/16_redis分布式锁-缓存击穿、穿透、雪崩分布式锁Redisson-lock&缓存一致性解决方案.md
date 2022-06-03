@@ -1,7 +1,5 @@
 # 16_redis分布式锁-缓存击穿、穿透、雪崩|分布式锁Redisson-lock&缓存一致性解决方案
 
-
-
 # P151、 缓存缓存使用-本地缓存与分布式缓存
 
 ## 1、缓存的使用
@@ -17,7 +15,7 @@
 
 举例：电商类应用，商品分类，商品列表等适合缓存并加一个失效时间(根据数据更新频率来定)，后台如果发布一个商品，买家需要5分钟才能看到新的商品一般还是可以接受的。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906578.png)
 
 伪代码：
 
@@ -36,11 +34,11 @@ if(data == null){
 
 ### 本地缓存
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906580.png)
 
 ### 分布式缓存-本地模式在分布式下的问题
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906581.png)
 
 ### 分布式缓存
 
@@ -48,7 +46,7 @@ if(data == null){
 
 缓存中间件：redis，zSet可以用跳表来实现，面试常问哦
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906582.png)
 
 # P152、 缓存使用-整合redis测试案例
 
@@ -61,7 +59,7 @@ if(data == null){
 
 虚拟机中安装redis，由于我们之前已经通过docker安装过了redis。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906584.png)
 
 那么还需要我们将redis整合到我们的项目上。在gulimall-product服务中的pom文件中引入redis的pom依赖。
 
@@ -107,9 +105,9 @@ public void stringRedisTemplate() {
 }
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906585.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906586.png)
 
 # P153、缓存-Redis缓存使用-改造三级分类业务
 
@@ -187,17 +185,15 @@ public Map<String, List<Catelog2Vo>> getCatalogJsonFromDb() {
 
 # P154、Redis缓存使用-压力测试出的内存泄露及解决
 
-
-
 我们测试上一节课使用redis作为缓存优化后的代码重启服务在进行压力测试，
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906587.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906588.png)
 
 浏览器显示服务崩了，RedisException: io.netty.util.internal.OutOfDirectMemoryError:堆外内存溢出
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906589.png)
 
 ### 上线或进行压力测试的时候会产生堆外内存溢出：OutOfDirectMemoryError
 
@@ -255,7 +251,7 @@ null结果缓存，并加入短暂过期时间
 
 ## 【面试】防止缓存穿透方式一：设置让其缓存空值
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906590.png)
 
 ---
 
@@ -272,9 +268,9 @@ null结果缓存，并加入短暂过期时间
 > 缓存雪崩解决办法之——加随机时间又容易引发的其他问题有：
 > 
 
-![缓存雪崩解决办法之——加随机时间又容易引发的其他问题有.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%E4%B9%8B%E5%8A%A0%E9%9A%8F%E6%9C%BA%E6%97%B6%E9%97%B4%E5%8F%88%E5%AE%B9%E6%98%93%E5%BC%95%E5%8F%91%E7%9A%84%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98%E6%9C%89.png)
+![缓存雪崩解决办法之——加随机时间又容易引发的其他问题有.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906591.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2011.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906592.png)
 
 ---
 
@@ -294,7 +290,7 @@ null结果缓存，并加入短暂过期时间
 > 缓存击穿：大量并发进来同时查询一个正好过期的数据。解决方案：加锁。
 > 
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906593.png)
 
 ## 总结-解决方案：
 
@@ -316,7 +312,7 @@ null结果缓存，并加入短暂过期时间
 
 本地锁：synchronized，JUC(Lock)都称之为本地锁，只锁当前的进程；但是如果在分布式情况下，想要锁住所有，必须使用分布式锁。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906594.png)
 
 - CategoryServiceImpl
   
@@ -434,13 +430,13 @@ null结果缓存，并加入短暂过期时间
 
 浏览器访问地址：h[ttp://localhost:10000/index/catalog.json](http://localhost:10000/index/catalog.json)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906595.png)
 
 进行压力测试
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906596.png)
 
-![查询了两遍数据库](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![查询了两遍数据库](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906597.png)
 
 查询了两遍数据库
 
@@ -450,17 +446,17 @@ null结果缓存，并加入短暂过期时间
 
 查缓存-》确认缓存没有-》查询数据库-》结果放入缓存
 
-![黑色块为锁：这样的逻辑容易查询2遍数据库](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![黑色块为锁：这样的逻辑容易查询2遍数据库](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906598.png)
 
 黑色块为锁：这样的逻辑容易查询2遍数据库
 
 将结果放入缓存中是需要时间的，在这个时间间隔中，有可能下一个请求进来的时候上一个请求还没有将结果放入缓存中，结果又查了一次数据库。。。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906599.png)
 
 刚同步块出来，放redis还是需要时间的；另外一个或多个拿到锁的在这段时间内在缓存拿不到数据，又会查数据库，是先释放锁，再缓存，还没来及缓存完，其他的又访问数据库。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906600.png)
 
 修改之后的代码逻辑：查完数据库之后就将查询出来的数据放缓存种（保证在同一把本地锁的情况下，确保原子性操作）
 
@@ -567,63 +563,61 @@ null结果缓存，并加入短暂过期时间
 
 记得清空redis中的缓存数据，然后使用JMeter对接口进行压测，同上：
 
-![image-20220529125327476](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125327476.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906601.png)
 
 压测结果：控制台只打印了一次**“查询了数据库...” 表名在锁的时序性问题上做了逻辑修改之后，保证了查询数据库操作的原子性。**
 
-![image-20220529125340774](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125340774.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906602.png)
 
 # P157、Redis缓存-缓存使用-本地锁在分布式下的问题
 
 上一节内容，我们使用本地锁解决缓存穿透的问题，使用synchronized (this)锁的当前服务，单机版我们进行压力测试发现，控制台只打印了一次**“查询了数据库...” 表名在锁的时序性问题上做了逻辑修改之后，保证了查询数据库操作的原子性。**那么在分布式的情况下，使用本地锁会出现哪些问题？
 
-![image-20220529125359544](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125359544.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906603.png)
 
 ## IDEA模拟启动多个商品（同类）服务-集群部署
 
 首先在idea中模拟部署很多商品服务，需要进行简单设置：`--server.port=10001`
 
-![image-20220529125454882](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125454882.png)
+![1](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906604.png)
 
+1
 
+![2](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906605.png)
 
-![image-20220529125511241](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125511241.png)
+2
 
+![3](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906606.png)
 
+3
 
-![image-20220529125520618](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125520618.png)
+![4](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906607.png)
 
+4
 
-
-![image-20220529125532969](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125532969.png)
-
-
-
-![image-20220529125548525](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125548525.png)
+![启动以上集群服务](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906608.png)
 
 启动以上集群服务
 
 JMeter设置：
 
-![image-20220529125605333](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125605333.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906609.png)
 
+![7](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906610.png)
 
-
-![image-20220529125622220](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125622220.png)
-
-
+7
 
 压测之前先清空redis中的缓存数据：
 
-![image-20220529125642278](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125642278.png)
+![8](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906611.png)
 
-
+8
 
 4个gulimall-product商品服务各查询了一次数据库，说明使用本地锁：synchronized(this)只能锁住它自己那个this服务，不能锁住其他服务。
 
-![image-20220529125701052](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125701052.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906612.png)
 
-![image-20220529125709161](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125709161.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906613.png)
 
 引入：**本地锁synchronized (this)只能锁住它自己的那个服务**，那么如果我们想**锁住所有的东西**，让所有的gulimall-product商品服务只查询一次数据库，然后将查询出来的数据放入到缓存中，我们可以使用**分布式锁来实现**。
 
@@ -637,7 +631,7 @@ JMeter设置：
 
 ## 分布式锁演进-基本原理
 
-![image-20220529125732199](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125732199.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906614.png)
 
 我们可以同时去一个地方“占坑”，如果占到，就执行逻辑。否则就必须等待，直到释放锁。“占坑”可
 
@@ -652,27 +646,27 @@ JMeter设置：
 - `NX` – 只有键key不存在的时候才会设置key的值
 - `XX` – 只有键key存在的时候才会设置key的值
 
-![image-20220529125750162](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125750162.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906615.png)
 
 ## XShell骚操作：
 
-![image-20220529125802753](C:\Users\lenovo\AppData\Roaming\Typora\typora-user-images\image-20220529125802753.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906617.png)
 
 在撰写栏中输入：`docker exec -it redis redis-cli` ，然后选择发送全部会话（A）
 
-![image-20220529125823327](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125823327.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906618.png)
 
-![image-20220529125836086](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125836086.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906619.png)
 
 `set lock hahah NX`   解释：`NX` – 只有键key不存在的时候才会设置key的值
 
-![image-20220529125850497](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125850497.png)
+![`NX` – 只有键key不存在的时候才会设置key的值](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906620.png)
 
 `NX` – 只有键key不存在的时候才会设置key的值
 
 结果：
 
-![image-20220529125903317](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125903317.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906621.png)
 
 ## 分布式锁演进-阶段一
 
@@ -684,18 +678,18 @@ JMeter设置：
 
 设置锁的自动过期，即使没有删除，会自动删除。
 
-![image-20220529125922186](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529125922186.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906622.png)
 
-`redisTemplate.opsForValue().setIfAbsent("lock", "111");`  表示只有key不存在的时候才会设置key的值。
+**`redisTemplate**.opsForValue().setIfAbsent(**"lock"**, **"111"**);`   表示只有key不存在的时候才会设置key的值。
 
 其中`setIfAbsent` 对应的就是redis中的*`SETNX` 命令。*
 
-![image-20220529130004615](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130004615.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906623.png)
 
 > 思考：如果在**占用redis锁**和**设置过期时间**中间突然断电，依旧会出现死锁的问题（一辈子的死锁）。
 > 
 
-![image-20220529130015650](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130015650.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906624.png)
 
 代码：
 
@@ -732,9 +726,9 @@ public Map<String, List<Catelog2Vo>> getCatalogJsonFromDbWithRedisLock() {
 
 ### 解决方案
 
-设置过期时间和占位必须是原子的。redis支持使用`setnx ex`命令
+设置过期时间和占位必须是原子的。redis支持使用setnx ex命令
 
-![image-20220529130030626](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130030626.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906625.png)
 
 ```java
 docker exec -it redis redis-cli
@@ -742,7 +736,7 @@ set lock 1111 EX 300 NX
 ttl lock
 ```
 
-![image-20220529130054731](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130054731.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906626.png)
 
 ## 分布式锁演进-阶段三
 
@@ -756,24 +750,24 @@ ttl lock
 
 占锁的时候，值指定为uuid，每个人匹配是自己的锁才删除。
 
-![image-20220529130112009](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130112009.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906627.png)
 
 ```java
 // 1、占分布式锁，去redis中占坑
-// Boolean lock = redisTemplate.opsForValue().setIfAbsent("lock", "111");
-// 确保设置过期时间,必须和加锁（占锁）是同步的原子的
-Boolean lock = redisTemplate.opsForValue().setIfAbsent("lock", "111", 300, TimeUnit.SECONDS);
-if (lock) {
-    // 加锁成功......执行业务
-    // 2、设置过期时间,必须和加锁（占锁）是同步的原子的
-    // redisTemplate.expire("lock", 30, TimeUnit.SECONDS);
-    Map<String, List<Catelog2Vo>> dataFromDb = getDataFromDb();
-    redisTemplate.delete("lock");    // 记得删除锁
-    return dataFromDb;
-} else {
-    // 加锁失败（没有获取到锁）......休眠100毫秒然后进行重试。synchronized ()
-    return getCatalogJsonFromDbWithRedisLock();    // 自旋的方式重试获取锁
-}
+//		Boolean lock = redisTemplate.opsForValue().setIfAbsent("lock", "111");
+		// 确保设置过期时间,必须和加锁（占锁）是同步的原子的
+		Boolean lock = redisTemplate.opsForValue().setIfAbsent("lock", "111", 300, TimeUnit.SECONDS);
+		if (lock) {
+			// 加锁成功......执行业务
+			// 2、设置过期时间,必须和加锁（占锁）是同步的原子的
+			// redisTemplate.expire("lock", 30, TimeUnit.SECONDS);
+			Map<String, List<Catelog2Vo>> dataFromDb = getDataFromDb();
+			redisTemplate.delete("lock");    // 记得删除锁
+			return dataFromDb;
+		} else {
+			// 加锁失败（没有获取到锁）......休眠100毫秒然后进行重试。synchronized ()
+			return getCatalogJsonFromDbWithRedisLock();    // 自旋的方式重试获取锁
+		}
 ```
 
 ## 分布式锁演进-阶段四：
@@ -786,7 +780,7 @@ if (lock) {
 
 删除锁必须保证原子性。使用redis+Lua脚本完成。
 
-![image-20220529130146509](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130146509.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906628.png)
 
 ```java
 public Map<String, List<Catelog2Vo>> getCatalogJsonFromDbWithRedisLock() {
@@ -875,29 +869,29 @@ public Map<String, List<Catelog2Vo>> getCatalogJsonFromDbWithRedisLock() {
 
 **保证加锁【占位+过期时间】和删除锁【判断+删除】的原子性**。更难的事情，锁的自动续期
 
-![image-20220529130205615](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130205615.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906629.png)
 
 ## JMeter测试：
 
-![image-20220529130219601](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130219601.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906630.png)
 
-![image-20220529130230551](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130230551.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906631.png)
 
 redis中删除缓存
 
-![image-20220529130325559](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130325559.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906632.png)
 
 启动以下服务：
 
-![image-20220529130343225](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130343225.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906633.png)
 
 **然后开始压力测试：记得关闭本地防火墙**
 
 只有这一个服务查询了数据库。。。其他服务成功被锁。避免高并发下大量访问数据库，造成压力。
 
-![image-20220529130359380](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130359380.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906634.png)
 
-![image-20220529130418235](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130418235.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906635.png)
 
 - 抽取出来的方法代码：getDataFromDb
   
@@ -987,7 +981,7 @@ redis中删除缓存
 
 [Distributed locks with Redis - Redis](https://redis.io/topics/distlock)
 
-![image-20220529130507809](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130507809.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906636.png)
 
 ## Redisson中文文档地址
 
@@ -1005,9 +999,9 @@ redis中删除缓存
 
 [14. 第三方框架整合 · redisson/redisson Wiki](https://github.com/redisson/redisson/wiki/14.-%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88)
 
-![image-20220529130525765](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130525765.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906637.png)
 
-![image-20220529130534737](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130534737.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906638.png)
 
 ## 整合redisson作为分布式锁等功能框架步骤
 
@@ -1105,7 +1099,7 @@ public void redisson() {
 
 单元测试Redisson结果：
 
-![image-20220529130554683](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130554683.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906639.png)
 
 # P160、 缓存分布式锁- Redisson-lock锁测试
 
@@ -1157,9 +1151,9 @@ public String hello() {
 
 浏览器中打开2个窗口，快速依次访问以下链接：[http://localhost:10000/hello](http://localhost:10000/hello)
 
-![image-20220529130612991](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130612991.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906640.png)
 
-![image-20220529130622373](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130622373.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906641.png)
 
 分别启动`GulimallProductApplication [devtools]：10000`和`GulimallProductApplication - 10001 [devtools] :10001/`服务，在浏览器中分别依次快速访问[http://localhost:10000/hello](http://localhost:10000/hello)和 [http://localhost:10001/hello](http://localhost:10001/hello) 地址，然后强制`GulimallProductApplication [devtools]：10000`服务宕机，看`GulimallProductApplication - 10001 [devtools] :10001`
 
@@ -1167,19 +1161,17 @@ public String hello() {
 
 如果负责储存这个分布式锁的Redisson节点宕机以后，而且这个锁正好处于锁住的状态时，这个锁会出现锁死的状态。为了避免这种情况的发生，**Redisson内部提供了一个监控锁的看门狗，它的作用是在Redisson实例被关闭前，不断的延长锁的有效期。**默认情况下，看门狗的检查锁的超时时间是30秒钟，也可以通过修改[Config.lockWatchdogTimeout](https://github.com/redisson/redisson/wiki/2.-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95#lockwatchdogtimeout%E7%9B%91%E6%8E%A7%E9%94%81%E7%9A%84%E7%9C%8B%E9%97%A8%E7%8B%97%E8%B6%85%E6%97%B6%E5%8D%95%E4%BD%8D%E6%AF%AB%E7%A7%92)来另行指定。
 
-![image-20220529130648631](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130648631.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906642.png)
 
-![image-20220529130659446](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130659446.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906643.png)
+
+![为了避免死锁，**Redisson内部提供了一个监控锁的看门狗，它的作用是在Redisson实例被关闭前，不断的延长锁的有效期。**](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906644.png)
 
 为了避免死锁，**Redisson内部提供了一个监控锁的看门狗，它的作用是在Redisson实例被关闭前，不断的延长锁的有效期。**
 
-![image-20220529130711490](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130711490.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906645.png)
 
-
-
-![image-20220529130744246](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130744246.png)
-
-![image-20220529130754896](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130754896.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906646.png)
 
 # P161、 缓存分布式锁- Redisson-lock看门狗原理-redisson如何解决死锁
 
@@ -1319,15 +1311,15 @@ public String readValue() {
 
 启动这俩服务：
 
-![image-20220529130840636](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130840636.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906647.png)
 
 在Redis中手动添加key：writeValue   value：11111
 
-![image-20220529130851294](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130851294.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906648.png)
 
 浏览器输入：[http://localhost:10000/read](http://localhost:10000/read)测试读锁
 
-![image-20220529130906199](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130906199.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906649.png)
 
 读写锁：保证一定能读到最新数据,修改期间，写锁是一个排他锁(互斥锁)。读锁是一个共享锁；
 
@@ -1335,7 +1327,7 @@ public String readValue() {
 
 [localhost:10000/write](http://localhost:10000/write) 
 
-![image-20220529130951135](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529130951135.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906650.png)
 
 # P163、 缓存-分布式锁- Redisson-读写锁补充
 
@@ -1428,21 +1420,19 @@ public String readValue() {
 
 读读可以，读写互斥，写写互斥，先读后写，会导致数据不一致。
 
+![先读后写](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906651.png)
+
 先读后写
 
-![image-20220529131012591](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131012591.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906652.png)
 
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906653.png)
 
-
-![image-20220529131028696](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131028696.png)
-
-![image-20220529131047512](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131047512.png)
-
-![image-20220529131100002](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131100002.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906654.png)
 
 并发操作：*`读 ——> 读： 相当于无锁，并发读，只会在redis中记录好，所有当前的读锁。他们都会同时加锁成功`*
 
-![image-20220529131112855](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131112855.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906655.png)
 
 # P165、 缓存分布式锁Redisson-信号量测试【与P64顺序反了】
 
@@ -1513,15 +1503,15 @@ semaphore.releaseAsync();
 
 设置初始值：value=3
 
-![image-20220529131142697](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131142697.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906656.png)
 
 执行停车操作：[http://localhost:10000/park](http://localhost:10000/park) 执行三次停车操作，value变为0，此时在执行停车操作就会转圈圈一直等待。
 
-![image-20220529131155076](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131155076.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906657.png)
 
 指导执行[http://localhost:10000/go](http://localhost:10000/go)车开走的方法，value值会自增1，释放车位
 
-![image-20220529131211877](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131211877.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906658.png)
 
 # P164、缓存分布式锁- Redisson-闭锁测试（JUC）
 
@@ -1573,19 +1563,19 @@ latch.countDown();
 
 设置key=door，value=5（表示五个班级）
 
-![image-20220529131236733](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131236733.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906659.png)
 
 [localhost:10000/gogogo/1](http://localhost:10000/gogogo/1)
 
-![image-20220529131248557](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131248557.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906660.png)
 
 [localhost:10000/gogogo/2](http://localhost:10000/gogogo/2)
 
-![image-20220529131331851](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131331851.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906661.png)
 
 [localhost:10000/lockDoor](http://localhost:10000/lockDoor)
 
-![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131259931.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906662.png)
 
 # P166、缓存分布式锁-缓存一致性解决
 
@@ -1595,7 +1585,7 @@ redis中的底层的所有锁都保证了原子性，底层方法都是lua脚本
 
 写完数据库紧接着写缓存。
 
-![image-20220529131344965](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131344965.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906663.png)
 
 由于卡顿等原因，导致写缓存2在最前，写缓存1在后面就出现了不一致；
 
@@ -1605,7 +1595,7 @@ redis中的底层的所有锁都保证了原子性，底层方法都是lua脚本
 
 写完数据库就删缓存。
 
-![image-20220529131356830](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131356830.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906664.png)
 
 ### 我们系统的一致性解决方案：
 
@@ -1636,7 +1626,7 @@ redis中的底层的所有锁都保证了原子性，底层方法都是lua脚本
 
 canal：可以理解成MySQL的一个从库，MySQL更新了，canal就会跟着更新呢
 
-![image-20220529131414291](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131414291.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906665.png)
 
 # P167、分布式缓存-SpringCache简介
 
@@ -1652,9 +1642,9 @@ Cache接口的实现包括RedisCache、EhCacheCache、ConcurrentMapCache等
 
 2、从缓存中读取之前缓存存储的数据
 
-![image-20220529131426673](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131426673.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906666.png)
 
-![image-20220529131436361](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131436361.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906667.png)
 
 ## Spring官网关于Cache相关链接
 
@@ -1779,7 +1769,7 @@ public List<CategoryEntity> getLevel1Categorys() {
 
 将数据库中的数据放入缓存，在第二次查询的时候，发现缓存中有数据，就不会执行查询数据库的方法体。
 
-![image-20220529131459363](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131459363.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906668.png)
 
 # P169、 缓存SpringCache- @Cacheable细节设置
 
@@ -1980,9 +1970,7 @@ CacheAutoConfiguration -> RedisCacheConfiguration 自动配置了RedisCacheManag
 
 TTL使用了我们自定义的配置，value值也为json格式的了
 
-![image-20220529131536285](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131536285.png)
-
-### 【面试】防止缓存穿透方式一：设置让其缓存空值
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906669.png)
 
 针对spring-cache以下注解可以解决缓存穿透问题：
 
@@ -2004,7 +1992,7 @@ spring.cache.redis.cache-null-values=true
 
 清空缓存再次gulimamll-product重启服务，浏览器访问[http://localhost:10000/](http://localhost:10000/)  查看缓存
 
-![image-20220529131701763](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529131701763.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906671.png)
 
 # 171、 缓存- SpringCache- @CacheEvict 缓存失效模式
 
