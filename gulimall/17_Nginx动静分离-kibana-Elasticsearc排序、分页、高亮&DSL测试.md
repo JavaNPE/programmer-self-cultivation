@@ -2,63 +2,63 @@
 
 # P173、商城业务-检索服务-搭建页面环境
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016457.png)
 
 因为nginx中我们配置了static文件，又搜索服务为
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016459.png)
 
 统一替换：
 
 替换超链接：`href=”  —> href="/static/search/`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016460.png)
 
 替换图片：`src=”` —> `src="/static/search/`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016461.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016462.png)
 
 将静态资源文件放置在`/mydata/nginx/html/static/search` 服务器目录中
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016463.png)
 
 ## Nginx动静分离（Search服务）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016464.png)
 
 修改配置文件
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016465.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016466.png)
 
 wq 退出并保存
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016467.png)
 
 然后重启docker、nginx
 
 `[root@10 conf.d]# docker restart nginx`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016468.png)
 
 ## 修改系统host文件：
 
 新增：`192.168.56.10 [search.gulimall.com](http://search.gulimall.com/)` 配置
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2011.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016469.png)
 
 ## Nginx转发效果：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016470.png)
 
 ## 测试：
 
 我们访问：[http://search.gulimall.com/](http://search.gulimall.com/) 地址 会自动跳转到 检索服务页面，而不是在首页
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016471.png)
 
 修改完配置之后重启nginx  `[root@10 conf.d]# docker restart nginx`
 
@@ -66,11 +66,11 @@ wq 退出并保存
 
 server_name 中可以使用 空格配置多个地址服务。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016472.png)
 
 我们访问：[http://search.gulimall.com/](http://search.gulimall.com/) 地址 会自动跳转到 检索服务页面，而不是在首页。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016473.png)
 
 ### 本期代码：
 
@@ -95,7 +95,7 @@ server_name 中可以使用 空格配置多个地址服务。
 - gulimall-search 中 src\main\resources\templates    index.html
   
     ```html
-    省略
+    
     ```
     
 - gulimall-search pom.xml
@@ -134,7 +134,7 @@ spring.thymeleaf.cache=false
 </div>
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016474.png)
 
 **gulimall.conf**
 
@@ -199,23 +199,23 @@ http://search.gmall.com/list.html?catalog3Id=250
 var cata3link = $("<a href=\"http://search.gulimall.com/list.html?catalog3Id="+ctg3.id+"\" style=\"color: #999;\">" + ctg3.name + "</a>");
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016475.png)
 
 别忘了nginx中也需要改
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016476.png)
 
 将index.html 改成list.html之后，浏览器访问[http://search.gulimall.com/](http://search.gulimall.com/) 显示
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016477.png)
 
 尝试添加 在/mydata/nginx/conf/conf.d/gulimall.conf配置文件中添加 [search.gulimall.com](http://search.gulimall.com) 然后重启
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2020.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016478.png)
 
 发现还是不行，然后保留index.thml的形式，不在改名list.html。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2021.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016479.png)
 
 - 修改：gulimall-product-index.html
   
@@ -254,11 +254,11 @@ var cata3link = $("<a href=\"http://search.gulimall.com/list.html?catalog3Id="+c
 
 # P175、商城业务-检索服务-检索查询参数模型分析抽取
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2022.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016480.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2023.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016481.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2024.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016482.png)
 
 ## 代码：
 
@@ -515,7 +515,7 @@ gulimall-search服务
 GET product/_search
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2025.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016483.png)
 
 按条件搜索华为相关：
 
@@ -536,7 +536,7 @@ GET product/_search
 }
 ```
 
-![image-20220529123840376](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529123840376.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031016484.png)
 
 # P179、商城业务-检索服务-SearchRequest构建-检索
 
