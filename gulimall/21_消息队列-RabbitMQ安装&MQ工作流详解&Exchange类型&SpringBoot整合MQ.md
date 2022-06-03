@@ -408,3 +408,106 @@ RabbitMq管理台查看我们刚刚创建好的交换机hello-java-exchange，�
 如图，通过管理台查看绑定关系。
 
 ![image-20220603121936831](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031219987.png)
+
+# P257、消息队列- RabbitTemplate的使用
+
+因为我们之前已经引入了spring- boot-starter-amqp的pox依赖（俗称场景启动器）SpringBoot自动配置RabbitAutoConfiguration就会自动生效，给容器中自动配置了RabbitTemplate、AmqpAdmin、CachingConnectionFactory、 RabbitMessagingTemplatej等，我们通过@Autowired可以直接使用RabbitTemplate来进行发送消息。
+
+```java
+    @Autowired
+    RabbitTemplate rabbitTemplate;
+
+    @Test
+    public void sendMessageTemplate() {
+        // 1、发送消息
+        String msg = "Hello World!";
+        rabbitTemplate.convertAndSend("hello-java-exchange", "hello.java", msg);
+        log.info("发送的消息内容为：【{}】", msg);
+    }
+```
+
+通过MQ的后台我们可以看到，点击hello-java-queue找到GetMessage(s)
+
+![image-20220603152352058](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031523235.png)
+
+通过MQ发送对象，进行传输我们来看序列化之前和转成JSON之后对象的传输之间的变化。
+
+```java
+
+    @Autowired
+    RabbitTemplate rabbitTemplate;
+
+    @Test
+    public void sendMessageTemplate() {
+        // 发送消息，如果发送的消息是个对象，我们会使用序列化机制，将对象写出去。对象必须实现Serializable
+        OrderReturnReasonEntity reasonEntity = new OrderReturnReasonEntity();
+        reasonEntity.setId(1L);
+        reasonEntity.setCreateTime(new Date());
+        reasonEntity.setName("赫点茶");
+        String jsonString = JSONObject.toJSONString(reasonEntity);
+        // 1、发送消息
+        String msg = "Hello World!";
+        rabbitTemplate.convertAndSend("hello-java-exchange", "hello.java", jsonString);
+        log.info("发送的消息内容为：【{}】", jsonString);
+    }
+```
+
+![image-20220603155143031](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031551154.png)
+
+如果不使用阿里巴巴出品的fastjson工具将实体对象转成JSON，我们还可以使用RabbitMQ中SpringBoot给我们提供的自动配置组件来进行对象的转换，写一个config类，添加一个配置类，如下
+
+```java
+package com.atguigu.gulimall.order.config;
+
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
+import org.springframework.amqp.support.converter.MessageConverter;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * @Author Dali
+ * @Date 2022/6/3 15:40
+ * @Version 1.0
+ * @Description: RabbitMQ消息格式转换组件
+ */
+@Configuration
+public class MyRabbitConfig {
+
+    /**
+     * RabbitMQ消息格式转换组件
+     *
+     * @return
+     */
+    @Bean
+    public MessageConverter messageConverter() {
+        return new Jackson2JsonMessageConverter();
+    }
+}
+
+```
+
+然后我们将代码写成这样
+
+```java
+    @Autowired
+    RabbitTemplate rabbitTemplate;
+
+    @Test
+    public void sendMessageTemplate() {
+        // 发送消息，如果发送的消息是个对象，我们会使用序列化机制，将对象写出去。对象必须实现Serializable
+        OrderReturnReasonEntity reasonEntity = new OrderReturnReasonEntity();
+        reasonEntity.setId(1L);
+        reasonEntity.setCreateTime(new Date());
+        reasonEntity.setName("绿妹");
+        //String jsonString = JSONObject.toJSONString(reasonEntity);
+        // 1、发送消息
+        String msg = "Hello World!";
+        rabbitTemplate.convertAndSend("hello-java-exchange", "hello.java", reasonEntity);
+        log.info("发送的消息内容为：【{}】", reasonEntity);
+    }
+
+```
+
+![mq](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031558849.png)
+
+项目中数据的传输一般还是比较推荐JSON的形式，阿里巴巴出品的fastjson目前个人所处项目中用到的还是比较多的，组件配置的方式相对来说有其的优越性，那么你会怎么选？
