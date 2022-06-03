@@ -6,9 +6,7 @@
 
 ## 二、压力测试
 
-压力测试考察当前软硬件环境下系统所能承受的最大负荷并帮助找出系统瓶颈所在。压测都
-
-是为了系统在线上的处理能力和稳定性维持在-一个标准范围内，做到心中有数。
+压力测试考察当前软硬件环境下系统所能承受的最大负荷并帮助找出系统瓶颈所在。压测都是为了系统在线上的处理能力和稳定性维持在-一个标准范围内，做到心中有数。
 
 使用压力测试，我们有希望找到很多种用其他测试方法更难发现的错误。**有两种错误类型是:内存泄漏，并发与同步**。
 
@@ -60,15 +58,15 @@
 
 1、添加线程组
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859403.png)
 
 2、添加HTTP请求
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859406.png)
 
 3、添加查看结果树、汇总报告
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859408.png)
 
 到90%以上，则可以说明服务器有问题，压力机没有问题。
 
@@ -100,17 +98,17 @@ Windows提供给TCP/IP 链接的端口为1024-5000， 并且要四分钟来循�
 
 [错误 WSAENOBUFS (10055) - Windows Client](https://docs.microsoft.com/zh-CN/troubleshoot/windows-client/networking/connect-tcp-greater-than-5000-error-wsaenobufs-10055)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859409.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859410.png)
 
 **TCPTimedWaitDelay: 30**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859411.png)
 
 最终结果：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859412.png)
 
 # P144、性能压测-性能监控-JVM调优-堆内存与垃圾回收
 
@@ -120,7 +118,7 @@ Windows提供给TCP/IP 链接的端口为1024-5000， 并且要四分钟来循�
 
 优化更多的是在**堆**这一块
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859413.png)
 
 - 程序计数 器Program Counter Register：
     - 记录的是正在执行的虛拟机字节码指令的地址，
@@ -138,7 +136,7 @@ Windows提供给TCP/IP 链接的端口为1024-5000， 并且要四分钟来循�
 
 jvm内存模型图：
 
-![JVM调优更多的是为了调整堆区，元数据区：直接操作物理内存](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![JVM调优更多的是为了调整堆区，元数据区：直接操作物理内存](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859414.png)
 
 JVM调优更多的是为了调整堆区，元数据区：直接操作物理内存
 
@@ -158,17 +156,15 @@ JVM调优更多的是为了调整堆区，元数据区：直接操作物理内�
 
 垃圾回收
 
+![Java8内存模型，元空间：直接操作物理内存](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859415.png)
+
 Java8内存模型，元空间：直接操作物理内存
-
-![Java8内存模型，元空间：直接操作物理内存](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
-
-
 
 **从Java8开始，HotSpot 已经完全将永久代(Permanent Generation)移除，取而代之的是一个新的区域一元空间(MetaSpace)** 
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859416.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2011.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859417.png)
 
 # P145、性能压测-性能监控-jvisualvm使用
 
@@ -180,20 +176,20 @@ Jdk的两个小工具jconsole、jvisualvm (升级版的jconsole)； 通过命令
 
 Win+R调出cmd窗口，输入命令：jconsole，选择本地连接。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859418.png)
 
 ### jvisualvm使用案例
 
 Win+R调出cmd窗口，输入命令：jvisualvm
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859419.png)
 
 > 1、jvisualvm能干什么
 > 
 
 监控内存泄露，跟踪垃圾回收，执行时内存、cpu分析，线程分析...
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859420.png)
 
 **运行**：正在运行的
 
@@ -210,30 +206,30 @@ Win+R调出cmd窗口，输入命令：jvisualvm
 1. cmd启动jvisualvm
 2. 工具→ 插件
    
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859421.png)
     
 
 如果提示无法连接Java VisualVM 插件中心..............
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859422.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859423.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859424.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859425.png)
 
 更新插件中心的URL地址
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2020.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859426.png)
 
 安装Visual GC插件，安装完成之后重启jvisualvm
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2021.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859427.png)
 
 监视+Visual GC
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2022.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859428.png)
 
 # P146、性能压测-优化-中间件(nginx和geateway)对性能的影响
 
@@ -243,25 +239,25 @@ Win+R调出cmd窗口，输入命令：jvisualvm
 
 ## 1、压测Nginx
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2023.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859429.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2024.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859430.png)
 
 ## 监控docker容器CPU使用率命令：`docker stats`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2025.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859431.png)
 
 nginx比较消耗CPU资源
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2026.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859432.png)
 
 ## 2、压测网关gateway
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2027.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859433.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2028.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859434.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2029.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859435.png)
 
 ## 3、压测简单服务
 
@@ -291,7 +287,7 @@ public class IndexController {
 }
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2030.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859436.png)
 
 ## 4 gateway+简单服务：通过网关访问简单服务/hello，并对其进行压力测试
 
@@ -309,21 +305,21 @@ gulimall-gateway服务：application.yml
     - RewritePath=/api/(?<segment>/?.*),/$\{segment}
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2031.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859437.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2032.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859438.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2033.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859439.png)
 
 ## 5、压测全链路：nginx+gateway+product商品微服务
 
 [gulimall.com/hello](http://gulimall.com/hello)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2034.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859440.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2035.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859441.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2036.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859442.png)
 
 | 压测内容 | 压测线程数 | 吞吐量/s | 90%响应时间 | 99%响应时间 |
 | --- | --- | --- | --- | --- |
@@ -349,35 +345,35 @@ gulimall-gateway服务：application.yml
 
 [](http://localhost:10000/)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2037.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859443.png)
 
 JMeterHTTP请求内容：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2038.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859444.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2039.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859445.png)
 
 ## 7、三级分类数据获取
 
 [localhost:10000/index/catalog.json](http://localhost:10000/index/catalog.json)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2040.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859446.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2041.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859447.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2042.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859448.png)
 
 ## 8、首页全量数据获取
 
 HTTP请求基本设置：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2043.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859449.png)
 
 高级设置：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2044.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859450.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2045.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859451.png)
 
 # P147、性能压测-优化简单优化吞吐量测试
 
@@ -387,27 +383,29 @@ jvm调优，调的是稳定，并不能带给你性能的大幅提升。服务�
 
 # P148、性能压测-优化- nginx动静分离
 
+
+
 1、以后将所有项目的静态资源都应该放在nginx里面。
 
 2、规则: 指定/static/**所有请求都由nginx直接返回。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2046.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859452.png)
 
 前后端分离之后，前端资源都不会到后台了，后台只处理前端发送的业务请求。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2047.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859453.png)
 
 将原来在IDEA中的静态资源放在nginx中刚才新创建的static文件夹中，实现动静分离。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2048.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859454.png)
 
 idea中的index.html中的url地址之前需要添加`/static/`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2049.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859455.png)
 
 修改nginx配置信息
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2050.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859456.png)
 
 ```yaml
 server {
@@ -1077,41 +1075,41 @@ server {
 
 如果出现以下这种情况，务必检查Windows防火墙是否关闭：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2051.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859457.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2052.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859458.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2053.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859459.png)
 
 1、idea中设置：-Xmx100m
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2054.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859460.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2055.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859461.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2056.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859462.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2057.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859463.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2058.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859464.png)
 
 2、我们调节idea中的 `-Xmx1024m -Xms1024m -Xmn512m`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2059.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859465.png)
 
 ## 模拟服务崩溃场景：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2060.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859466.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2061.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859467.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2062.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859468.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2063.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859469.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2064.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859470.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2065.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030859471.png)
 
 # P150、性能压测优化优化三级分类数据获取
 
