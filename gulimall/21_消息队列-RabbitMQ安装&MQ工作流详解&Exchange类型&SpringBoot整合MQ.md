@@ -313,3 +313,98 @@ spring.rabbitmq.port=5672
 spring.rabbitmq.virtual-host=/
 ```
 
+# P256、消息队列-AmqpAdmin使用-使用Java代码创建交换机-队列以及他们之间的绑定关系
+
+前面我们整合了RabbitMq，接下来我们就来测试它的第一个属性，AmqpAdmin的使用，它是一个管理组件，它可以帮我们来创建队列，绑定关系等等，包括消费者队列，所以我们后台管理这一块儿能做到更改功能。
+
+接下来拿到这个先来测试，第一个创建一个交换机。假设我们现在创建一个交换机，这个交换机的名字我们叫hello-java-exchange。我们使用这个代码创建，我们叫这是我们这个交换机的名字呢，想要创建这个款，我们就把这个AmqpAdmin肯定拿过来。
+
+![image-20220603114113158](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031141224.png)
+
+看看有哪些方法，首先呢，那么可以来声明一个绑定关系，声明一个交换机，声明一个队列，所以我们将来就是用declareExchange这个方法来声明一个交换机。
+
+
+
+![image-20220603114323467](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031143649.png)
+
+创建hello-java-exchange交换机
+
+```java
+package com.atguigu.gulimall.order;
+
+import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+@Slf4j
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public class GulimallOrderApplicationTests {
+
+    @Autowired
+    AmqpAdmin amqpAdmin;
+    /**
+     * 1、测试RabbitMQ之如何通过代码的方式创建Exchange[hello.java.exchange]、Queue、Bingding绑定关系
+     *      方式一：使用RabbitAutoConfiguration自动配置中的AmqpAdmin进行创建
+     * 2、测试如何收发消息
+     */
+    // public DirectExchange(String name, boolean durable, boolean autoDelete, Map<String, Object> arguments)
+    @Test
+    public void createExchange() {
+        // 传个名字就可以了 后面那2个值都是默认设置了的
+        DirectExchange directExchange = new DirectExchange("hello-java-exchange", true, false);
+        amqpAdmin.declareExchange(directExchange);
+        log.info("Exchange[{}]创建成功", "hello-java-exchange");
+    }
+
+}
+
+```
+
+RabbitMq管理台查看我们刚刚创建好的交换机hello-java-exchange，连接失败的一定要看看5672端口有没有映射成功，使用云服务器的去安全组放开端口访问权限，空指针测试类加:@RunWith(SpringRunner.class)。
+
+![image-20220603115731483](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031157640.png)
+
+创建hello-java-queue队列
+
+```java
+    @Test
+    public void createQueue() {
+        // public Queue(String name, boolean durable, boolean exclusive, boolean autoDelete, Map<String, Object> arguments)
+        // 选择import org.springframework.amqp.core.Queue;
+        Queue queue = new Queue("hello-java-queue", true, false, false);
+        amqpAdmin.declareQueue(queue);
+        log.info("Queue队列[{}]创建成功", "hello-java-queue");
+    }
+```
+
+[RabbitMQ Management](http://192.168.56.10:15672/#/queues) 管理台查看刚才创建的hello-java-queue队列
+
+![image-20220603120645590](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031206753.png)
+
+创建交换机hello-java-exchange与队列hello-java-queue之间的绑定关系
+
+```java
+    /**
+     * 创建交换机hello-java-exchange与队列hello-java-queue之间的绑定关系
+     */
+    @Test
+    public void createBinding() {
+        // import org.springframework.amqp.core.Binding;
+        // public Binding(String destination【目的地】,
+        // DestinationType destinationType【目的地类型】,
+        // String exchange【交换机】,
+        // String routingKey【路由键】,
+        // Map<String, Object> arguments【自定义参数】)
+        //将exchange指定的交换机和destination目的地进行绑定，使用routingKey作为指定的路由键
+        Binding binding = new Binding("hello-java-queue", Binding.DestinationType.QUEUE, "hello-java-exchange",
+                "hello.java", null);
+        amqpAdmin.declareBinding(binding);
+        log.info("Binding绑定关系[{}]创建成功", "hello-java-binding");
+
+    }
+```
+
+如图，通过管理台查看绑定关系。
+
+![image-20220603121936831](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031219987.png)
