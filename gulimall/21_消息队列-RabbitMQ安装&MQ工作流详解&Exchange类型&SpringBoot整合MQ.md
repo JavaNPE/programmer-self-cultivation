@@ -269,3 +269,47 @@ toptic这种类型的交换机，主题订阅式，指定具体的路由键Routi
 按照规则绑定关系如下图：
 
 ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033023.png)
+
+
+
+# P255、消息队列-SpringBoot整合RabbitMQ
+> 整合步骤
+
+1. 引入spring- boot-starter-amqp的pox依赖（俗称场景启动器）
+2. application.yml配置
+3. 测试RabbitMQ
+   1. AmqpAdmin：管理组件
+   2. RabbitTemplate：消息发送处理组件
+
+```java
+使用 RabbitMQ步骤
+1、引入spring- boot-starter-amqp的pox依赖（俗称场景启动器）RabbitAutoConfiguration就会自动生效
+2、给容器中自动配置了
+     RabbitTemplate、AmqpAdmin、CachingConnectionFactory、 RabbitMessagingTemplatej
+     所有的属性都是spring. rabbitmq
+         @ConfigurationProperties(prefix = "spring. rabbi tmq")
+         public class RabbitProperties
+3、给配置文件中配置spring.rabbitmq 信息
+4、@EnableRabbit: @EnabLeXxxxx开启功能
+```
+
+
+
+引入spring- boot-starter-amqp的pox依赖（俗称场景启动器）
+
+```java
+        <!--RabbitMQ-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+```
+
+在gulimall-order中的application.properties中配置rabbitmq的相关属性
+
+```json
+spring.rabbitmq.host=192.168.56.10
+spring.rabbitmq.port=5672
+spring.rabbitmq.virtual-host=/
+```
+
