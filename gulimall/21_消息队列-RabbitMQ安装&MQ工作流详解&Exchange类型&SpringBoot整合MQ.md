@@ -4,15 +4,15 @@
 
 ## 1、解耦：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033980.png)
 
 ## 2、异步
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033982.png)
 
 ## 3、削峰（流量控制）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033983.png)
 
 # P249、商城业务消息队列-RabbitMQ简介
 
@@ -44,23 +44,23 @@
 > JMS和AMQP的区别：
 > 
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033984.png)
 
 # P250、消息队列-RabbitMQ 工作流程
 
 ## RabbitMQ相关概念：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033985.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033986.png)
 
 ## RabbitMQ 工作流程：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033987.png)
 
 # P251、RabbitMQ安装-Docker安装RabbitMQ
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033988.png)
 
 ## Docker安装RabbitMQ命令：
 
@@ -68,11 +68,11 @@
 docker run -d --name rabbitmq -p 5671:5671 -p 5672:5672 -p 4369:4369 -p 25672:25672 -p 15671:15671 -p 15672:15672 rabbitmq:management
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033989.png)
 
 显示以下信息表示安装成功
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033990.png)
 
 ### Docker安装RabbitMQ各端口说明
 
@@ -96,16 +96,16 @@ https://www.rabbitmq.com/networking.html
 [root@10 ~]# docker update rabbitmq --restart=always
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033991.png)
 
 > 登录RabbitMQ
 > 
 
 浏览器访问：192.168.56.10:15672
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2011.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033992.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033993.png)
 
 # P252、商城业务消息队列-Exchange类型
 
@@ -117,13 +117,13 @@ AMQP中消息的路由过程和Java开发者熟悉的JMS存在一些差别，AMQ
 
 生产者把消息发布到Exchange上，消息最终到达队列并被消费者接收，而Binding决定交换器的消息应该发送到那个队列。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033994.png)
 
 Producer消息的生产者生成一个消息Message，消息先发给我们的消息代理Broker，由代理先将消息发给指定的交换机Exchange，该交换机下面可能会绑定Bindings非常多的队列Queues，即Bindings：Queues = m：n，同样的一个队列Queues也可以被多个多个交换机来绑定，有着复杂的绑定绑定关系，把交换机理解成男人中的一个海王也不足为过 🙃
 
 ## Exchange类型
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033995.png)
 
 Exchange分发消息时根据类型的不同分发策略有区别，目前共四种类型：
 
@@ -132,26 +132,26 @@ Exchange分发消息时根据类型的不同分发策略有区别，目前共四
 3. topic：• 美 /ˈtɑːpɪk/ 主题
 4. ~~headers：• 英 /ˈhedəz/ 头信息~~ （PS：几乎用不到）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033996.png)
 
 direct、fanout, topic、 headers 。headers 匹配AMQP消息的header而不是路由键，headers 交换器和direct 交换器完全一致，这二者都是JMS中所说的点对点通讯， 但headers 性能比较底下，目前几乎用不到了，fanout, topic属于发布订阅式的，所以直接着另外三种类型：
 
 > 类型一：direct Exchange直接交换机
 > 
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033997.png)
 
 > 类型二：Fanout Exchange
 > 
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033998.png)
 
 假设Fanout 类型的交换机绑定了多个Queues队列，是用来实现发布订阅式的广播类型，不关心路由键是什么，无条件将消息Message发送给所有绑定好的队列Queues。
 
 > 类型三：Topic Exchange  主题发布订阅模式（根据主题部分广播）
 > 
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033999.png)
 
 关心路由键是什么，根据匹配的路由键将消息Message发送给所有绑定好的队列Queues。
 
@@ -161,23 +161,23 @@ direct、fanout, topic、 headers 。headers 匹配AMQP消息的header而不是�
 
 页面：Exchange→Add a new exchange
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033000.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2020.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033001.png)
 
 创建的my.exchange.direct交换机必须和队列Queues绑定才能工作，消息要发给交换机Exchange，那么我们就需要先创建一个队列
 
 ### 如何创建一个队列Queues
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2021.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033002.png)
 
 ### 将创建好的交换机和队列进行绑定
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2022.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033003.png)
 
 # P253、商城业务-消息队列- Direct- Exchange
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2023.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033004.png)
 
 > 第一步：先创建四个队列Queues
 > 
@@ -188,11 +188,11 @@ direct、fanout, topic、 headers 。headers 匹配AMQP消息的header而不是�
 
 其他同理，依次创建，相应的队列。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2024.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033005.png)
 
 创建好的队列
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2025.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033006.png)
 
 > 第二部：创建交换机Exchange
 > 
@@ -202,41 +202,41 @@ direct、fanout, topic、 headers 。headers 匹配AMQP消息的header而不是�
 
 创建exchange.direct类型的交换机
 
-![exchange.direct](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2026.png)
+![exchange.direct](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033007.png)
 
 exchange.direct
 
 将exchange.direct交换机绑定对应的Queues队列
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2027.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033008.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2028.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033009.png)
 
 依次绑定好之后，我们测试通过Exchange往指定的队列发消息，
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2029.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033010.png)
 
 点击进入到队列Queues选项
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2030.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033011.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2031.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033012.png)
 
 创建exchange.fanout类型的交换机
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2032.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033013.png)
 
 添加好交换机之后，我们需要绑定队列，因为是fanout类型的交换机，无论路由键是什么，都会把消息派发出去，本例Routing Key与队列名保持一致。（fanout就没必要指定路由键了把）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2033.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033014.png)
 
 测试fanout类型的交换机发送Queues消息
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2034.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033015.png)
 
 切换到Queues队列，查看接收到的消息请求，如下发现每个队列都接收到了消息，也就是说fanout类型的Exchange发消息的时候，无论路由键Routing Key用哪一个，写或不写，所有的队列都会收到消息。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2035.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033016.png)
 
 # P254、商城业务消息队列-Topic- Exchange
 
@@ -244,11 +244,11 @@ exchange.direct
 
 创建exchange.topic类型的交换机。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2036.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033017.png)
 
 toptic这种类型的交换机，主题订阅式，指定具体的路由键Routing Key
 
-![绑定路由规则：Toptic](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2037.png)
+![绑定路由规则：Toptic](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033018.png)
 
 绑定路由规则：Toptic
 
@@ -258,14 +258,14 @@ toptic这种类型的交换机，主题订阅式，指定具体的路由键Routi
 
 *：代表前面必须有一个单词或字符
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2038.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033019.png)
 
 点击创建的exchange.toptic进行队列绑定，路由键Routing Key：**`atguigu.#`**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2039.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033021.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2040.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033022.png)
 
 按照规则绑定关系如下图：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2041.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031033023.png)
