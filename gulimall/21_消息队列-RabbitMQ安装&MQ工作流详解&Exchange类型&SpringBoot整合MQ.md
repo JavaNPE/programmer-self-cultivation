@@ -287,10 +287,15 @@ toptic这种类型的交换机，主题订阅式，指定具体的路由键Routi
 2、给容器中自动配置了
      RabbitTemplate、AmqpAdmin、CachingConnectionFactory、 RabbitMessagingTemplatej
      所有的属性都是spring. rabbitmq
-         @ConfigurationProperties(prefix = "spring. rabbi tmq")
+         @ConfigurationProperties(prefix = "spring. rabbi tmq")	
          public class RabbitProperties
 3、给配置文件中配置spring.rabbitmq 信息
 4、@EnableRabbit: @EnabLeXxxxx开启功能
+5、监听消息:使用@RabbitListener;必须有@EnableRabbit注解
+    @RabbitListener:类+方法上
+	@RabbitHandler:标在方法上
+
+
 ```
 
 
@@ -511,3 +516,275 @@ public class MyRabbitConfig {
 ![mq](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031558849.png)
 
 项目中数据的传输一般还是比较推荐JSON的形式，阿里巴巴出品的fastjson目前个人所处项目中用到的还是比较多的，组件配置的方式相对来说有其的优越性，那么你会怎么选？
+
+
+
+# P258、商城业务消息队列-RabbitListener&RabbitHandler接收消息
+
+```
+监听消息:使用@RabbitListener;必须有@EnableRabbit
+ @RabbitListener:类+方法上(监听哪些队列)
+ @RabbitHandler:标在方法上（重载区分不同的消息）
+```
+
+接下来我们来测试一下接收消息，首先我们要接收来自于这个队列里面的消息，那么就需要来监听这个队列里面的内容，想要监听队列这件事情呢，Spring也会做的非常简单，Spring为我们抽取了一个注解，叫RabbitListener来看一下，这个注解呢，翻译过来它就叫rabbit的监听器，它的作用就是来监听我们指定的队列，只要这个里边有内容，我们就可以收到内容。
+
+
+
+先使用上面的测试类中的代码发送消息
+
+
+
+![image-20220603164710092](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031647290.png)
+
+
+
+使用@RabbitListener(queues = {"hello-java-queue"})注解监听队列中的消息如下图所示
+
+![image-20220603165123181](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206031651348.png)
+
+# P259、商城业务消息队列可靠投递发送端确认
+
+## RabbitMQ消息确认机制-可靠抵达
+
+* 保证消息不丢失，可靠抵达，可以使用事务消息，性能下降250倍，为此引入确认机制。
+* **publisher confirmCallback**确认模式。
+* **publisher returnCallback**未投递到queue退回模式。
+* **consumer ack**机制。
+
+![image-20220603205753923](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206032057970.png)
+
+### 1、可靠抵达-ConfirmCallback：确认回调
+
+可靠抵达是在生成者publisher发送至代理对象Broker过程中
+
+* `spring.rabbitmq.publisher-confirms=true`
+  * 在创建connectionFactory的时候设置PublisherConfirms(true)选项，开启confirmcallback。
+  * CorrelationData:用来表示当前消息唯一性。
+  * 消息只要被broker接收到就会执行confirmCallback,如果是cluster模式，需要所有broker接收到才会调用confirmCalback。
+  * 被broker接收到只能表示message已经到达服务器，并不能保证消息一定会被投递到目标queue里。所以需要用到接下来的returnCallback。
+
+首先在gulimall-order中的application.properties配置文件中配置
+
+```yaml
+spring.rabbitmq.host=192.168.56.10
+spring.rabbitmq.port=5672
+spring.rabbitmq.virtual-host=/
+
+# 开启发送端确认（以下是新加的）
+spring.rabbitmq.publisher-confirms=true
+```
+
+代码1：
+
+```java
+package com.atguigu.gulimall.order.config;
+
+import org.springframework.amqp.rabbit.connection.CorrelationData;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
+import org.springframework.amqp.support.converter.MessageConverter;
+
+import javax.annotation.PostConstruct;
+
+/**
+ * @Author Dali
+ * @Date 2022/6/3 15:40
+ * @Version 1.0
+ * @Description: RabbitMQ消息格式转换组件
+ */
+@Configuration
+public class MyRabbitConfig {
+
+    @Autowired
+    RabbitTemplate rabbitTemplate;
+
+    /**
+     * RabbitMQ消息格式转换组件
+     *
+     * @return
+     */
+    @Bean
+    public MessageConverter messageConverter() {
+        return new Jackson2JsonMessageConverter();
+    }
+
+    /**
+     * 定制RabbitTemplate
+     * 步骤一： 开启发送端确认 spring.rabbitmq.publisher-confirms=true
+     * 步骤二： 设置确认回调
+     */
+    @PostConstruct // MyRabbitConfig对象创建完成之后，才执行这个方法
+    public void initRabbitTemplate() {
+        rabbitTemplate.setConfirmCallback(new RabbitTemplate.ConfirmCallback() {
+            /**
+             *
+             * @param correlationData 当前消息的唯一关联数据（这个消息的唯一id）
+             * @param ack 消息是否成功收到
+             * @param cause 失败的原因
+             */
+            @Override
+            public void confirm(CorrelationData correlationData, boolean ack, String cause) {
+                System.out.println("confirm...correlationData[" + correlationData + "]==>ack[" + ack + "]==>cause[" + cause + "]");
+            }
+        });
+    }
+}
+
+```
+
+代码2：
+
+```java
+package com.atguigu.gulimall.order.controller;
+
+import com.atguigu.gulimall.order.entity.OrderEntity;
+// 省略
+
+import java.util.Date;
+import java.util.UUID;
+
+/**
+ * @Author Dali
+ * @Date 2022/6/4 6:23
+ * @Version 1.0
+ * @Description
+ */
+@RestController
+public class RabbitController {
+    @Autowired
+    RabbitTemplate rabbitTemplate;
+
+    @GetMapping("/sendMq")
+    public String sendMq(@RequestParam(value = "num", defaultValue = "10") Integer num) {
+        for (int i = 0; i < num; i++) {
+            if (i % 2 == 0) {
+                OrderReturnReasonEntity reasonEntity = new OrderReturnReasonEntity();
+                reasonEntity.setId(1L);
+                reasonEntity.setCreateTime(new Date());
+                reasonEntity.setName("赫点茶--" + i);
+                rabbitTemplate.convertAndSend("hello-java-exchange", "hello.java", reasonEntity);
+            } else {
+                OrderEntity orderEntity = new OrderEntity();
+                orderEntity.setOrderSn(UUID.randomUUID().toString());
+                rabbitTemplate.convertAndSend("hello-java-exchange", "hello.java", orderEntity);
+            }
+        }
+        return "ok";
+    }
+}
+
+```
+
+启动gulimall-order服务，浏览器访问：[localhost:9010/sendMq](http://localhost:9010/sendMq)，回车，页面返回一个ok，然后去idea的管理台查看日志，发现ack为true，说明 ，可靠抵达-ConfirmCallback：确认回调了。只要消息抵达Broker代理服务器那么ack返回的就是true，跟是否接收到消息无必然关联。
+
+![image-20220603205753923](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206040638915.png)
+
+![image-20220604063501614](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206040635816.png)
+
+### 2、可靠抵达-ReturnCallback
+
+同样是参考下图，可靠抵达ReturnCallback是在e->q阶段，也就是Exchange交换机将消息发送给队列Queue的过程中。
+
+![image-20220603205753923](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206040652184.png)
+
+同样我们使用可靠抵达-ReturnCallback的话，首先需要在gulimall-order中的application.properties配置文件中开启以下这两个配置
+
+```yaml
+# 开启发送端消息抵达队列的确认
+spring.rabbitmq.publisher-returns=true
+# 只要抵达队列，以异步的方式发送优先回调我们这个returnConfirm
+spring.rabbitmq.template.mandatory=true
+```
+
+**ConfirmCallback**模式只能保证消息到达broker也就是从publish到broker这个过程中，不能保证消息准确投递到目标队列queue里，在有些业务场景下，我们需要保证消息一定要投递到目标队列queue里，比时就需要用到return退回模式。
+
+这样如果未能投递到目标queue里将调用returnCallback，可以记录下详细的投递数据，定期的巡检或者自动纠错都需要这些数据。
+
+
+
+```java
+        // 设置消息抵达队列的确认回调
+        rabbitTemplate.setReturnCallback(new RabbitTemplate.ReturnCallback() {
+            /**
+             *  只要消息没有投递给指定的队列，就触发这个失败回调
+             *
+             * @param message   消息投递失败的详细信息
+             * @param replyCode 回复的状态码
+             * @param replyText 回复的文本内容
+             * @param exchange  当时这个消息发给哪个交换机
+             * @param routingKey    当时这个消息用的哪个路由键
+             */
+            @Override
+            public void returnedMessage(Message message, int replyCode, String replyText, String exchange,
+                                        String routingKey) {
+                System.out.println("Fail Message[" + message + "]==>replyCode[" + replyCode + "]==>replyText[" + replyText +
+                        "]==>exchange[" + exchange + "]==>routingKey[" + routingKey + "]");
+            }
+        });
+```
+
+只要消息没有投递给指定的队列，就触发这个失败回调，那么我们只需要将路由键routingKey写错，就可以故意模拟这种投递失败的场景案例了，比如：将sendMq()方法中的路由键故意写成未配置的”hello.22.java“。重启服务，然后浏览器访问[localhost:9010/sendMq](http://localhost:9010/sendMq)，查看idea的控制台
+
+```java
+rabbitTemplate.convertAndSend("hello-java-exchange", "hello222.java", orderEntity);
+```
+
+![image-20220604072116010](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206040721115.png)
+
+idea控制台输出打印如下内容
+
+```json
+2022-06-04 07:23:38.310  INFO 27472 --- [nio-9010-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-04 07:23:38.318  INFO 27472 --- [nio-9010-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+confirm...correlationData[null]==>ack[true]==>cause[null]
+Fail Message[(Body:'{"id":null,"memberId":null,"orderSn":"ea5b63a3-7867-4da7-ad41-707c7bde27b5","couponId":null,"createTime":null,"memberUsername":null,"totalAmount":null,"payAmount":null,"freightAmount":null,"promotionAmount":null,"integrationAmount":null,"couponAmount":null,"discountAmount":null,"payType":null,"sourceType":null,"status":null,"deliveryCompany":null,"deliverySn":null,"autoConfirmDay":null,"integration":null,"growth":null,"billType":null,"billHeader":null,"billContent":null,"billReceiverPhone":null,"billReceiverEmail":null,"receiverName":null,"receiverPhone":null,"receiverPostCode":null,"receiverProvince":null,"receiverCity":null,"receiverRegion":null,"receiverDetailAddress":null,"note":null,"confirmStatus":null,"deleteStatus":null,"useIntegration":null,"paymentTime":null,"deliveryTime":null,"receiveTime":null,"commentTime":null,"modifyTime":null}' MessageProperties [headers={__TypeId__=com.atguigu.gulimall.order.entity.OrderEntity}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, deliveryTag=0])]==>replyCode[312]==>replyText[NO_ROUTE]==>exchange[hello-java-exchange]==>routingKey[hello222.java]
+confirm...correlationData[null]==>ack[true]==>cause[null]
+Fail Message[(Body:'{"id":null,"memberId":null,"orderSn":"8c2a3b06-ff6f-4253-a74d-0c51b0b50591","couponId":null,"createTime":null,"memberUsername":null,"totalAmount":null,"payAmount":null,"freightAmount":null,"promotionAmount":null,"integrationAmount":null,"couponAmount":null,"discountAmount":null,"payType":null,"sourceType":null,"status":null,"deliveryCompany":null,"deliverySn":null,"autoConfirmDay":null,"integration":null,"growth":null,"billType":null,"billHeader":null,"billContent":null,"billReceiverPhone":null,"billReceiverEmail":null,"receiverName":null,"receiverPhone":null,"receiverPostCode":null,"receiverProvince":null,"receiverCity":null,"receiverRegion":null,"receiverDetailAddress":null,"note":null,"confirmStatus":null,"deleteStatus":null,"useIntegration":null,"paymentTime":null,"deliveryTime":null,"receiveTime":null,"commentTime":null,"modifyTime":null}' MessageProperties [headers={__TypeId__=com.atguigu.gulimall.order.entity.OrderEntity}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, deliveryTag=0])]==>replyCode[312]==>replyText[NO_ROUTE]==>exchange[hello-java-exchange]==>routingKey[hello222.java]
+confirm...correlationData[null]==>ack[true]==>cause[null]
+confirm...correlationData[null]==>ack[true]==>cause[null]
+Fail Message[(Body:'{"id":null,"memberId":null,"orderSn":"08c93790-8691-48c1-adf9-2654a3bdee3b","couponId":null,"createTime":null,"memberUsername":null,"totalAmount":null,"payAmount":null,"freightAmount":null,"promotionAmount":null,"integrationAmount":null,"couponAmount":null,"discountAmount":null,"payType":null,"sourceType":null,"status":null,"deliveryCompany":null,"deliverySn":null,"autoConfirmDay":null,"integration":null,"growth":null,"billType":null,"billHeader":null,"billContent":null,"billReceiverPhone":null,"billReceiverEmail":null,"receiverName":null,"receiverPhone":null,"receiverPostCode":null,"receiverProvince":null,"receiverCity":null,"receiverRegion":null,"receiverDetailAddress":null,"note":null,"confirmStatus":null,"deleteStatus":null,"useIntegration":null,"paymentTime":null,"deliveryTime":null,"receiveTime":null,"commentTime":null,"modifyTime":null}' MessageProperties [headers={__TypeId__=com.atguigu.gulimall.order.entity.OrderEntity}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, deliveryTag=0])]==>replyCode[312]==>replyText[NO_ROUTE]==>exchange[hello-java-exchange]==>routingKey[hello222.java]
+confirm...correlationData[null]==>ack[true]==>cause[null]
+confirm...correlationData[null]==>ack[true]==>cause[null]
+Fail Message[(Body:'{"id":null,"memberId":null,"orderSn":"48f5c9b7-7957-43e6-b42c-1b1cf43b3c0b","couponId":null,"createTime":null,"memberUsername":null,"totalAmount":null,"payAmount":null,"freightAmount":null,"promotionAmount":null,"integrationAmount":null,"couponAmount":null,"discountAmount":null,"payType":null,"sourceType":null,"status":null,"deliveryCompany":null,"deliverySn":null,"autoConfirmDay":null,"integration":null,"growth":null,"billType":null,"billHeader":null,"billContent":null,"billReceiverPhone":null,"billReceiverEmail":null,"receiverName":null,"receiverPhone":null,"receiverPostCode":null,"receiverProvince":null,"receiverCity":null,"receiverRegion":null,"receiverDetailAddress":null,"note":null,"confirmStatus":null,"deleteStatus":null,"useIntegration":null,"paymentTime":null,"deliveryTime":null,"receiveTime":null,"commentTime":null,"modifyTime":null}' MessageProperties [headers={__TypeId__=com.atguigu.gulimall.order.entity.OrderEntity}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, deliveryTag=0])]==>replyCode[312]==>replyText[NO_ROUTE]==>exchange[hello-java-exchange]==>routingKey[hello222.java]
+confirm...correlationData[null]==>ack[true]==>cause[null]
+confirm...correlationData[null]==>ack[true]==>cause[null]
+Fail Message[(Body:'{"id":null,"memberId":null,"orderSn":"33f2baeb-7f6e-4a48-84e4-60eb25539859","couponId":null,"createTime":null,"memberUsername":null,"totalAmount":null,"payAmount":null,"freightAmount":null,"promotionAmount":null,"integrationAmount":null,"couponAmount":null,"discountAmount":null,"payType":null,"sourceType":null,"status":null,"deliveryCompany":null,"deliverySn":null,"autoConfirmDay":null,"integration":null,"growth":null,"billType":null,"billHeader":null,"billContent":null,"billReceiverPhone":null,"billReceiverEmail":null,"receiverName":null,"receiverPhone":null,"receiverPostCode":null,"receiverProvince":null,"receiverCity":null,"receiverRegion":null,"receiverDetailAddress":null,"note":null,"confirmStatus":null,"deleteStatus":null,"useIntegration":null,"paymentTime":null,"deliveryTime":null,"receiveTime":null,"commentTime":null,"modifyTime":null}' MessageProperties [headers={__TypeId__=com.atguigu.gulimall.order.entity.OrderEntity}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, deliveryTag=0])]==>replyCode[312]==>replyText[NO_ROUTE]==>exchange[hello-java-exchange]==>routingKey[hello222.java]
+confirm...correlationData[null]==>ack[true]==>cause[null]
+confirm...correlationData[null]==>ack[true]==>cause[null]
+2022-06-04 07:23:38.413  INFO 27472 --- [ntContainer#0-1] c.a.g.o.s.impl.OrderItemServiceImpl      : 接收到了消息...内容为：{}(Body:'{"id":1,"name":"赫点茶--0","sort":null,"status":null,"createTime":1654298618338}' MessageProperties [headers={spring_listener_return_correlation=c2bcd4e7-0a02-4e4f-b39e-39d0645a4d4e, __TypeId__=com.atguigu.gulimall.order.entity.OrderReturnReasonEntity}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=hello-java-exchange, receivedRoutingKey=hello.java, deliveryTag=1, consumerTag=amq.ctag-4keUvD75d0jiQJ_r7kVqTQ, consumerQueue=hello-java-queue])==>类型：class org.springframework.amqp.core.Message
+2022-06-04 07:23:38.414  INFO 27472 --- [ntContainer#0-1] c.a.g.o.s.impl.OrderItemServiceImpl      : 接收到了消息...内容为：{}(Body:'{"id":1,"name":"赫点茶--2","sort":null,"status":null,"createTime":1654298618387}' MessageProperties [headers={spring_listener_return_correlation=c2bcd4e7-0a02-4e4f-b39e-39d0645a4d4e, __TypeId__=com.atguigu.gulimall.order.entity.OrderReturnReasonEntity}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=hello-java-exchange, receivedRoutingKey=hello.java, deliveryTag=2, consumerTag=amq.ctag-4keUvD75d0jiQJ_r7kVqTQ, consumerQueue=hello-java-queue])==>类型：class org.springframework.amqp.core.Message
+2022-06-04 07:23:38.414  INFO 27472 --- [ntContainer#0-1] c.a.g.o.s.impl.OrderItemServiceImpl      : 接收到了消息...内容为：{}(Body:'{"id":1,"name":"赫点茶--4","sort":null,"status":null,"createTime":1654298618389}' MessageProperties [headers={spring_listener_return_correlation=c2bcd4e7-0a02-4e4f-b39e-39d0645a4d4e, __TypeId__=com.atguigu.gulimall.order.entity.OrderReturnReasonEntity}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=hello-java-exchange, receivedRoutingKey=hello.java, deliveryTag=3, consumerTag=amq.ctag-4keUvD75d0jiQJ_r7kVqTQ, consumerQueue=hello-java-queue])==>类型：class org.springframework.amqp.core.Message
+2022-06-04 07:23:38.414  INFO 27472 --- [ntContainer#0-1] c.a.g.o.s.impl.OrderItemServiceImpl      : 接收到了消息...内容为：{}(Body:'{"id":1,"name":"赫点茶--8","sort":null,"status":null,"createTime":1654298618392}' MessageProperties [headers={spring_listener_return_correlation=c2bcd4e7-0a02-4e4f-b39e-39d0645a4d4e, __TypeId__=com.atguigu.gulimall.order.entity.OrderReturnReasonEntity}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=hello-java-exchange, receivedRoutingKey=hello.java, deliveryTag=4, consumerTag=amq.ctag-4keUvD75d0jiQJ_r7kVqTQ, consumerQueue=hello-java-queue])==>类型：class org.springframework.amqp.core.Message
+2022-06-04 07:23:38.415  INFO 27472 --- [ntContainer#0-1] c.a.g.o.s.impl.OrderItemServiceImpl      : 接收到了消息...内容为：{}(Body:'{"id":1,"name":"赫点茶--6","sort":null,"status":null,"createTime":1654298618390}' MessageProperties [headers={spring_listener_return_correlation=c2bcd4e7-0a02-4e4f-b39e-39d0645a4d4e, __TypeId__=com.atguigu.gulimall.order.entity.OrderReturnReasonEntity}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=hello-java-exchange, receivedRoutingKey=hello.java, deliveryTag=5, consumerTag=amq.ctag-4keUvD75d0jiQJ_r7kVqTQ, consumerQueue=hello-java-queue])==>类型：class org.springframework.amqp.core.Message
+
+```
+
+# P260、消息队列-可靠投递消费端确认
+
+## 可靠抵达Ack消息确认机制
+
+同样是参考下图，这部分主要发生在q->c阶段，也就是队列Queue发送消息到consume这个过程中的消息确认机制。
+
+![image-20220603205753923](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206051027258.png)
+
+消费者获取到消息，成功处理，可以回复Ack给Broker
+
+- basic.ack用于肯定确认;  broker将移除此消息
+- basic.nack用于否定确认; 可以指定broker是否丢弃此消息，可以批量
+- basic.reject用于否定确认; 同上，但不能批量
+
+默认，消息被消费者收到，就会从broker的queue中移除，queue无消费者，消息依然会被存储，直到消费者消费。
+
+消费者（C）收到消息，默认会自动ack，但是如果无法确定此消息是否被处理完成，或者成功处理，我们可以开启手动ack模式：
+
+- 消息处理成功，ack()，接受下一个消息， 此消息broker就会移除。
+- 消息处理失败，nack()/reject（)，重新发送给其他人进行处理，或者容错处理后ack
+- 消息一直没有调用ack/nack方法，broker认为此消息正在被处理，不会投递给别人，此时客户端断开，消息不会被broker移除， 会投递给别人
+
+```yaml
+# 手动ack消息
+spring.rabbitmq.listener.simple.acknowledge-mode=manual
+```
+
+总结：结合发送端的消息确认机制和消费端的消息确认机制（即P259和P260），就能最终保证我们的消息一定发出去，也一定会被别人接收到，即使没有接收到，还可以进行重写发送，保证消息的不丢失。
