@@ -18,23 +18,23 @@ SpringlCloud配置复杂，难以上手，部分配置差别难以区分和合�
 > 阿里使用过的组件经历了考验，性能强悍，设计合理，现在开源出来大家用
 成套的产品搭配完善的可视化界面给开发运维带来极大的便利
 搭建简单，学习曲线低。
+> 
 
 ## 结合SpringCloud Alibaba我们最终的技术搭配方案：
 
 > **SpringCloud Alibaba- Nacos:注册中心(服务发现/注册)
 SpringCloud Alibaba . Nacos:配置中心(动态配置管理)**
 
-SpringCloud- Ribbon: 负载均衡
-SpringCloud- Feign: 声明式HTTP客户端(调用远程服务)
-**SpringCloud Alibaba - Sentinel: 服务容错(限流、降级、熔断)**
+SpringCloud- Ribbon:负载均衡
+SpringCloud- Feign:声明式HTTP客户端(调用远程服务)
+**SpringCloud Alibaba - Sentinel:服务容错(限流、降级、熔断)**
 
-SpringCloud - Gateway:  API 网关(webflux 编程模式)
-SpringCloud- Sleuth: 调用链监控
-**SpringCloud Alibaba- Seata: 原Fescar,即分布式事务解决方案**
+SpringCloud - Gateway: API 网关(webflux 编程模式)
+SpringCloud- Sleuth:调用链监控
+**SpringCloud Alibaba- Seata:原Fescar,即分布式事务解决方案**
+> 
 
-
-
-## 项目统一Springcloud和Springboot版本
+## 尚硅谷：谷粒商城项目统一Springcloud和Springboot版本
 
 ### Springcloud版本：`Greenwich.SR3`
 
@@ -48,9 +48,13 @@ SpringCloud- Sleuth: 调用链监控
 
 spring cloud与springboot的版本选择
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122518.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+
+
+微服务-注册中心、配置中心、网关
+
+![image-20220606212314616](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062123719.png)
 
 在gulimall-commonModule中的pom.xml中加入依赖：
 
@@ -132,7 +136,7 @@ Nacos注册中心文档
   
     
 
-![`http://127.0.0.1:8848/nacos/` ](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![`http://127.0.0.1:8848/nacos/` ](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122521.png)
 
 `http://127.0.0.1:8848/nacos/` 
 
@@ -141,6 +145,7 @@ Nacos注册中心文档
 > 注意：每一个应用都应该有名字，这样才能注册上去。修改application.properties/yml文件
 `spring.application.name=serviceprovider
 server.port 8000`
+> 
 
 然后依次给member、配置上面的yaml，改下name就行。再给每个项目配置类上加上注解@EnableDiscoveryClient
 
@@ -260,11 +265,11 @@ SpringCloudFeigd在NetflixFeign的基础，上扩展了对SpringMVC注解的支�
     
 - 6、重新启动服务：GulimallCouponApplication :7000和GulimallMemberApplication :8000服务
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122522.png)
     
 - 7、浏览器访问：[http://localhost:8000/member/member/coupons](http://localhost:8000/member/member/coupons)
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122523.png)
     
 
 ## Feign的使用步骤：
@@ -289,8 +294,6 @@ SpringCloudFeigd在NetflixFeign的基础，上扩展了对SpringMVC注解的支�
 > 
 
 # 23、分布式组件-SpringCloud Alibaba-Nacos配置中心-简单示例
-
-
 
 ## Nacos Config Example：Nacos作为配置中心案例
 
@@ -361,17 +364,17 @@ nacos官方文档
     coupon.user.age=23
     ```
     
-    ![方式二：nacos配置中心：配置列表中添加以下配置信息【优先使用】](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+    ![方式二：nacos配置中心：配置列表中添加以下配置信息【优先使用】](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122524.png)
     
     方式二：nacos配置中心：配置列表中添加以下配置信息【优先使用】
     
 - 5、启动GulimallCouponApplication :7000/服务
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122525.png)
     
 - 6、浏览器中访问：[http://localhost:7000/coupon/coupon/test](http://localhost:7000/coupon/coupon/test)
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122526.png)
     
 
 # 24、分布式组件SpringCloud Alibaba Nacos配置中心命名空间与配置分组
@@ -401,7 +404,7 @@ spring.cloud.nacos.config.server-addr=127.0.0.1:8848
 spring.cloud.nacos.config.namespace=06e5773d-6438-471e-9f70-31fd20ed98dc**
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122527.png)
 
 ### 2.2 配置集：一组相关或不相关配置项的集合。
 
@@ -417,8 +420,6 @@ spring.cloud.nacos.config.group=DEFAULT_GROUP
 ### 谷粒商城项目最终方案：每个微服务创建自己的命名空间，然后使用配置分组区分环境（dev/test/prod）
 
 # 25、分布式组件-SpringCloud Alibaba-Nacos配置中心-加载多配置集
-
-
 
 我们要把原来application.yml里的内容都分文件抽离出去。我们在nacos里创建好后，在coupons里指定要导入的配置即可。
 
@@ -459,6 +460,7 @@ spring.cloud.nacos.config.group=DEFAULT_GROUP
     spring.cloud.nacos.config.extension-configs[2].data-id=other.yml
     spring.cloud.nacos.config.extension-configs[2].group=dev
     spring.cloud.nacos.config.extension-configs[2].refresh=true
+    
     ```
     
 - 启动：GulimallCouponApplication :7000/微服务：idea控制台输出内容
@@ -474,30 +476,24 @@ spring.cloud.nacos.config.group=DEFAULT_GROUP
     
 - nacos配置列表中我们进行以下配置
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122528.png)
     
 - 浏览器访问：[http://localhost:7000/coupon/coupon/list](http://localhost:7000/coupon/coupon/list)
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122529.png)
     
 
 # 26、分布式组件-SpringCloud-Gateway网关核心概念&原理
 
-## 微服务-注册中心-配置中心-网关
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122530.png)
 
-![image-20220530152903147](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530152903147.png)
+![没有使用网关](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122531.png)
 
-## 没有使用网关API网关
+没有使用网关
 
-![image-20220530152951501](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530152951501.png)
+![使用api网关之后](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122532.png)
 
-
-
-## 使用使用api网关之后
-
-![使用api网关之后](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
-
-
+使用api网关之后
 
 ## gateway官网手册：
 
@@ -530,7 +526,7 @@ spring.cloud.nacos.config.group=DEFAULT_GROUP
 
 客户端发请求给服务端。中间有网关。先交给映射器，如果能处理就交给handler处理，然后交给一系列filer，然后给指定的服务，再返回回来给客户端。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122533.png)
 
 有很多断言。
 
@@ -565,9 +561,9 @@ spring:
 
 创建，使用initilizer，Group：com.atguigu.gulimall，Artifact： gulimall-gateway，package：com.atguigu.gulimall.gateway。 搜索gateway选中。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122534.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122535.png)
 
 gulimall-gateway模块中的pom.xml里加上common依赖， 修改springboot和springcloud的版本，
 
@@ -589,7 +585,7 @@ server.port=88
 
 在nacos新建gateway命名空间：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122536.png)
 
 `bootstrap.properties` 填写nacos配置中心地址
 
@@ -607,9 +603,9 @@ spring:
         name: gulimall-gateway
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122537.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062122538.png)
 
 - 在gulimall-gateway模块下新建application.yml文件：根据条件转发到uri等
   
