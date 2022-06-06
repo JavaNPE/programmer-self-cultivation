@@ -1,4 +1,4 @@
-# 12_商城业务-商品上架-sku在es中存储模型分析&构造基本数据 &远程查询库存&泛型结果封装（重要）&feign源码分析 &修改响应结果R
+# 12_商城业务-商品上架-sku在es中存储模型分析-构造基本数据-远程查询库存-泛型结果封装（重要）-feign源码分析 -修改响应结果R
 
 # P128、商城业务-商品上架-sku在es中存储模型分析
 
@@ -149,13 +149,11 @@ user.addr=["ccc","ddd"]
 
 数组的扁平化处理会使检索能检索到本身不存在的，为了解决这个问题，就采用了嵌入式属性，数组里是对象时用嵌入式属性（不是对象无需用嵌入式属性）
 
-nested阅读：[https://blog.csdn.net/weixin_40341116/article/details/80778599](https://blog.csdn.net/weixin_40341116/article/details/80778599)
-
-使用聚合：[https://blog.csdn.net/kabike/article/details/101460578](https://blog.csdn.net/kabike/article/details/101460578)
-
 ### Es-数组的扁平化处理
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![image-20220606222737559](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062227696.png)
+
+
 
 # P130、商城业务商品上架-构造基本数据
 
@@ -163,7 +161,7 @@ nested阅读：[https://blog.csdn.net/weixin_40341116/article/details/80778599](
 
 [20、商品上架](https://easydoc.net/doc/75716633/ZUqEdvA4/DhOtFr4A)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062224580.png)
 
 按skuId上架
 
@@ -386,8 +384,6 @@ POST /product/spuinfo/{spuId}/up
     
 
 # P131、 商城业务-商品上架-构造sku检索属性
-
-
 
 ## 代码
 
@@ -1047,7 +1043,7 @@ POST /product/spuinfo/{spuId}/up
 
 ## 统一配置：一次启动多个微服务
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062224581.png)
 
 修改gulimall-search微服务的application.properties端口号
 
@@ -1059,7 +1055,7 @@ server.port=12000
 
 ## 功能展示
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062224582.png)
 
 ## Feign的源码解析：
 
@@ -1110,7 +1106,7 @@ vo.setHasStock(count == null ? false : count > 0);
 
 功能图：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062224583.png)
 
 ## 本例代码：
 
@@ -1390,4 +1386,4 @@ GET product/_search
 
 [](http://192.168.56.10:9200/)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062224584.png)
