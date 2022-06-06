@@ -1,4 +1,4 @@
-# 14_商城业务-nginx 搭建域|反向代理配置 |负载均衡-gateway网关配置
+# 14_商城业务-nginx 搭建域-反向代理配置-负载均衡-gateway网关配置
 
 # P139、商城业务-nginx 搭建域名访问环境一(反向代理配置 )
 
@@ -6,11 +6,11 @@
 
 让nginx帮我们进行反向代理，所有来自原gulimall.com的请求， 都转到商品服务。**nginx是基于服务端的负载均衡，gateway是基于客户端的负载均衡。**
 
-![image-20220529150432517](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529150432517.png)
+![image-20220606223535453](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062235578.png)
 
 # nginx正向代理和反向代理
 
-![image-20220529150448896](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529150448896.png)
+![image-20220606223551080](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062235209.png)
 
 
 
@@ -51,7 +51,9 @@ Windows中hosts文件地址C:\Windows\System32\drivers\etc
 
 ## Nginx配置文件
 
-![image-20220529150613539](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529150613539.png)
+![image-20220606223614738](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062236904.png)
+
+
 
 ![image-20220529150623372](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529150623372.png)
 
@@ -247,8 +249,11 @@ server {
 
 ### 域名映射效果
 
-![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/20220529151212.png)
+![image-20220606223641165](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062236231.png)
+
+
 
 ### 汇总：nginx+windows搭建域名访问环境
 
-![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/20220529151321.png)
+![image-20220606223718952](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062237102.png)
+
