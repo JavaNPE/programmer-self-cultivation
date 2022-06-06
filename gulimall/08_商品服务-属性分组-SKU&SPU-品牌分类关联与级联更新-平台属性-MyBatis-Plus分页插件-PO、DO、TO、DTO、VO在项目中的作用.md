@@ -18,9 +18,9 @@
 
 是商品信息聚合的最小单位，是一组可复用、易检索的标准化信息的集合，该集合描述了一个产品的特性。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148824.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148825.png)
 
 ## SKU: Stock Keeping Unit (库存量单位)
 
@@ -38,31 +38,35 @@
 
 ## [属性分组-规格参数-销售属性-3三级分类]关联关系
 
-![image-20220530095610060](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530095610060.png)
+![image-20220606215020426](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062150572.png)
+
+
 
 ## SPU-SKU-属性表
 
-![image-20220530095625301](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530095625301.png)
+![image-20220606215056852](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062150025.png)
 
 
 
 ## 属性分组-效果
 
-![image-20220530095655800](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530095655800.png)
+![image-20220606215115298](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062151393.png)
+
+
 
 # 71、商品服务API属性分组前端组件抽取&父子组件交互
 
 后台：**商品系统/平台属性/属性分组，**现在想要实现点击菜单的左边，能够实现在右边展示数据。。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148829.png)
 
 将谷粒商城雷神提供的那个SQL文件，打开，复制内容：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148830.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148831.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148832.png)
 
 ## 谷粒商城在线接口文档地址：（好宝贝）
 
@@ -74,13 +78,13 @@
 
 所以应该有`product/attrgroup.vue`。我们之前写过`product/cateory.vue`，现在我们要抽象到`common/cateory.vue`（也就是左侧的tree单独成一个vue组件）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148833.png)
 
 ## 参考ElementUI：Layout 布局组件：分栏间隔
 
 [Element - The world's most popular Vue UI framework](https://element.eleme.cn/#/zh-CN/component/layout)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148834.png)
 
 ### 1）左侧内容：
 
@@ -679,7 +683,7 @@ nodeclick(data, node, component) {
     ```
     
 
-![本节课的：目录结构](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2011.png)
+![本节课的：目录结构](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148835.png)
 
 本节课的：目录结构
 
@@ -689,7 +693,7 @@ nodeclick(data, node, component) {
 
 [03、获取分类属性分组](https://easydoc.net/s/78237135/ZUqEdvA4/OXTgKobR)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148836.png)
 
 ## 03、获取分类属性分组
 
@@ -868,7 +872,7 @@ public class AttrGroupServiceImpl extends ServiceImpl<AttrGroupDao, AttrGroupEnt
 
 因为分类可以对应多个属性分组，所以我们新增的属性分组时要指定分类
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148837.png)
 
 下拉菜单应该是手机一级分类的，这个功能是级联选择器
 
@@ -915,7 +919,7 @@ data() {
 .......................................
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148838.png)
 
 ## @JsonInclude注解去空字段
 
@@ -939,9 +943,9 @@ data() {
 
 接下来要解决的问题是，修改了该vue后，新增是可以用，修改回显就有问题了，应该回显3级
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148839.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148840.png)
 
 - 前端这节课修改的代码：`attrgroup-add-or-update.vue`
   
@@ -1186,11 +1190,11 @@ data() {
 
 上节课我们完成了新增操作，目前修改操作回显信息是不完整的
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148841.png)
 
 ## 这节课要实现的效果
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148842.png)
 
 `attrgroup.vue` ：这里不做修改
 
@@ -1253,7 +1257,7 @@ init(id) {
 
 将`attrgroup-add-or-update.vue`文件下的`catelogIds`全部替换成`catelogPath`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148843.png)
 
 在 `AttrGroupEntity` 实体类中添加catelogPath字段
 
@@ -1326,7 +1330,7 @@ private CategoryService categoryService;
     }
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2020.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148844.png)
 
 优化：会话关闭时清空内容，防止下次开启还遗留数据
 
@@ -1334,7 +1338,7 @@ private CategoryService categoryService;
 
 我们点击新增的时候{所属分类}还停留在上一次的状态，我们需要对其进行优化
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2021.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148845.png)
 
 使用ElementUI中的Dialog对话框组件
 
@@ -1342,7 +1346,7 @@ private CategoryService categoryService;
 
 closed：Dialog 关闭动画结束时的回调；
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2022.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148846.png)
 
 在 `attrgroup-add-or-update.vue` 下添加
 
@@ -1363,11 +1367,11 @@ methods: {
     },**
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2023.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148847.png)
 
 # 75、商品服务-API-品牌管理-品牌分类关联与级联更新
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2024.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148849.png)
 
 ## MyBatis-Plus分页插件
 
@@ -1417,7 +1421,7 @@ public class MybatisConfig {
 
 分页显示效果正常
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2025.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148850.png)
 
  
 
@@ -1468,19 +1472,19 @@ public class BrandServiceImpl extends ServiceImpl<BrandDao, BrandEntity> impleme
 }
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2026.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148851.png)
 
 ## 显示关联分类功能
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2027.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148852.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2028.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148853.png)
 
 接口文档：15、获取品牌关联的分类
 
 [15、获取品牌关联的分类](https://easydoc.net/s/78237135/ZUqEdvA4/SxysgcEF)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2029.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148854.png)
 
 ### GET请求的几种不同的写法：`@RequestMapping(value ="/catelog/list", method = RequestMethod.GET)`等于`@GetMapping("/catelog/list")`
 
@@ -1491,11 +1495,11 @@ public class BrandServiceImpl extends ServiceImpl<BrandDao, BrandEntity> impleme
 @GetMapping("/catelog/list")
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2030.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148855.png)
 
 我们想要的效果：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2031.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148856.png)
 
 BrandController：新增**updateDetail方法**
 
@@ -1647,15 +1651,15 @@ public R update(@Validated(UpdateGroup.class) @RequestBody BrandEntity brand) {
 
 ### 修改分类维护使其在品牌管理中的关联分类里面正常读取数据
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2032.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148857.png)
 
 我们需要实现的效果：先修改分类维护中的**手机111**将其改成**手机333**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2033.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148858.png)
 
 在品牌管理中**关联分类**里面的**分类名**要同步读取到正常修改之后的数据。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2034.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148859.png)
 
 - CategoryController
   
@@ -1876,11 +1880,11 @@ UPDATE `pms_category_brand_relation` SET catelog_name = #{name} WHERE catelog_id
 
 使用了错误的写法容易出现下面的错误：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2035.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148860.png)
 
 这节课完结撒花：最终实现下面的效果：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2036.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148861.png)
 
 # 76、商品服务-API-平台属性规格参数新增与VO
 
@@ -1933,7 +1937,7 @@ PO就是对应数据库中某个表中的一条记录，多个记录可以用PO�
 
 Vo里面对应的都是接口文档里面的响应数据字段，比如 ：14、获取分类关联的品牌：[https://easydoc.net/s/78237135/ZUqEdvA4/HgVjlzWV](https://easydoc.net/s/78237135/ZUqEdvA4/HgVjlzWV)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2037.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148862.png)
 
 ### [6.BO](http://6.bo/)(business object)业务对象
 
@@ -1949,7 +1953,7 @@ Vo里面对应的都是接口文档里面的响应数据字段，比如 ：14、
 
 是一个sun的一个标准j2ee 设计模式，这个模式中有个接口就是DAO，它负持久层的操作。为业务层提供接口。此对象用于访问数据库。通常和PO结合使用，DAO中包含了各种数据库的操作方法。通过它的方法,结合PO对数据库进行相关的操作。夹在业务逻辑与数据库资源中间。配合Vo,提供数据库的CRUD操作。
 
-![参考：[《Java_开发手册》嵩山版.pdf (amazonaws.com)](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2038.png) 3. 【参考】分层领域模型规约章节](08_%E5%95%86%E5%93%81%E6%9C%8D%E5%8A%A1-%E5%B1%9E%E6%80%A7%E5%88%86%E7%BB%84&%E5%85%B3%E8%81%94&%E7%A7%BB%E9%99%A4%20%E5%93%81%E7%89%8C%E7%AE%A1%E7%90%86-%E5%93%81%E7%89%8C%E5%88%86%E7%B1%BB%E5%85%B3%E8%81%94%E4%B8%8E%E7%BA%A7%E8%81%94%E6%9B%B4%E6%96%B0%20%E5%B9%B3%E5%8F%B0%E5%B1%9E%E6%80%A7-%E8%A7%84%E6%A0%BC%E4%BF%AE%E6%94%B9%208037f8da968b4ccca88fe7b1c1e72b6b/Untitled%2038.png)
+![参考：[《Java_开发手册》嵩山版.pdf (amazonaws.com)](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148863.png) 3. 【参考】分层领域模型规约章节](08_%E5%95%86%E5%93%81%E6%9C%8D%E5%8A%A1-%E5%B1%9E%E6%80%A7%E5%88%86%E7%BB%84&%E5%85%B3%E8%81%94&%E7%A7%BB%E9%99%A4%20%E5%93%81%E7%89%8C%E7%AE%A1%E7%90%86-%E5%93%81%E7%89%8C%E5%88%86%E7%B1%BB%E5%85%B3%E8%81%94%E4%B8%8E%E7%BA%A7%E8%81%94%E6%9B%B4%E6%96%B0%20%E5%B9%B3%E5%8F%B0%E5%B1%9E%E6%80%A7-%E8%A7%84%E6%A0%BC%E4%BF%AE%E6%94%B9%208037f8da968b4ccca88fe7b1c1e72b6b/Untitled%2038.png)
 
 参考：[《Java_开发手册》嵩山版.pdf (amazonaws.com)](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b89734cb-4eb6-46cf-b08c-9c32beaa78d0/%E3%80%8AJava_%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C%E3%80%8B%E5%B5%A9%E5%B1%B1%E7%89%88.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211215%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211215T011341Z&X-Amz-Expires=86400&X-Amz-Signature=7fd189bc9176f94f7c107bb0c5f58d926411e7f94e1609989887484c224bb27a&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22%25E3%2580%258AJava%2520%25E5%25BC%2580%25E5%258F%2591%25E6%2589%258B%25E5%2586%258C%25E3%2580%258B%25E5%25B5%25A9%25E5%25B1%25B1%25E7%2589%2588.pdf%22&x-id=GetObject) 3. 【参考】分层领域模型规约章节
 
@@ -2161,13 +2165,13 @@ Vo里面对应的都是接口文档里面的响应数据字段，比如 ：14、
     ```
     
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2039.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148864.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2040.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148865.png)
 
 # P77商品服务-API-平台属性规格参数列表
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2041.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148866.png)
 
 ## 谷粒商城接口文档地址：
 
@@ -2244,15 +2248,15 @@ public PageUtils queryBaseAttrPage(Map<String, Object> params, long catelogId) {
 
 ### 后端启动以下服务：（nacos）虚拟机：VirtualBox（docker自启动）前端【npm run dev】
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2042.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148867.png)
 
 ### 人人快速开发平台测试地址：[http://localhost:8001/#/product-baseattr](http://localhost:8001/#/product-baseattr)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2043.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148868.png)
 
 # P78-商品服务-API-平台属性-规格修改
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2044.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148869.png)
 
 **07、查询属性详情**（接口文档）：[https://easydoc.net/s/78237135/ZUqEdvA4/7C3tMIuF](https://easydoc.net/s/78237135/ZUqEdvA4/7C3tMIuF)
 
@@ -2347,9 +2351,7 @@ public void updateAttr(AttrVo attr) {
 
 # P79、商品服务-API-平台属性销售属性维护
 
-
-
-![页面展示：](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2045.png)
+![页面展示：](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148870.png)
 
 页面展示：
 
@@ -2521,13 +2523,13 @@ PageUtils queryBaseAttrPage(Map<String, Object> params, long catelogId, String t
 
 数据库表：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2046.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148871.png)
 
 由于表：pms_attr中的attr_type字段是可选的（为了后期方便维护：比如增加一个2-[]）我们需要新建一个枚举类：
 
 **ProductConstant：枚举类湘湖风情苑**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2047.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148872.png)
 
 ```java
 package com.atguigu.common.constant;
@@ -2563,25 +2565,23 @@ public class ProductConstant {
 
 然后测试新增与修改等功能
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2048.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148873.png)
 
 # P80、商品服务API-平台属性查询分组关联属性&删除关联
-
-
 
 ## 1、平台属性查询分组关联属性：
 
 页面原型：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2049.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148874.png)
 
 **参考接口文档：**
 
 10、获取属性分组的关联的所有属性：[https://easydoc.net/s/78237135/ZUqEdvA4/LnjzZHPj](https://easydoc.net/s/78237135/ZUqEdvA4/LnjzZHPj)
 
-![10、获取属性分组的关联的所有属性](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2050.png)
+![10、获取属性分组的关联的所有属性](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148875.png)
 
-
+10、获取属性分组的关联的所有属性
 
 AttrGroupController：
 
@@ -2634,7 +2634,7 @@ public List<AttrEntity> getRelationAttr(Long attrgroupId) {
 
 打开人人前台页面：[http://localhost:8001/#/product-attrgroup](http://localhost:8001/#/product-attrgroup) 发现所有的属性都已经被查到，并显示在前端页面。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2051.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148876.png)
 
 ## 2、删除关联：删除属性与分组的关联关系
 
@@ -2642,7 +2642,7 @@ public List<AttrEntity> getRelationAttr(Long attrgroupId) {
 
 12、删除属性与分组的关联关系：[https://easydoc.net/s/78237135/ZUqEdvA4/OXTgKobR](https://easydoc.net/s/78237135/ZUqEdvA4/OXTgKobR)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2052.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148877.png)
 
 **AttrGroupController**：@PostMapping从前端携带JSON数据，必须加@RequestBody接收
 
@@ -2699,7 +2699,7 @@ void deleteBatchRelation(@Param("entities") List<AttrAttrgroupRelationEntity> en
 
 使用MybatisX插件自动生成：**AttrAttrgroupRelationDao.xml中**的**statement**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2053.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148878.png)
 
 **AttrAttrgroupRelationDao.xml：动态SQL**
 
@@ -2720,20 +2720,18 @@ Idea控制台输出打印：
 
 测试关联属性之移除功能操作。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2054.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148879.png)
 
 对应的`pms_attr_attrgroup_relation`数据库表：数据的变化
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2055.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148880.png)
 
 # P81、商品服务-API-平台属性-查询分组未关联的属性
-
-
 
 > 页面原型：
 > 
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2056.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148881.png)
 
 > 难点：
 > 
@@ -2742,7 +2740,7 @@ Idea控制台输出打印：
 
 1. 当前分组能关联的，肯定是本分类下的（比如手机分类）而且是本分类下没有被其他分组关联的属性，所以这一步会发送一个请求（F12）看一下控制台
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2057.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148882.png)
 
 1. 按照接口文档【13、获取属性分组没有关联的其他属性：[https://easydoc.net/s/78237135/ZUqEdvA4/d3EezLdO](https://easydoc.net/s/78237135/ZUqEdvA4/d3EezLdO)】
 
@@ -2752,13 +2750,13 @@ Idea控制台输出打印：
 List<AttrGroupEntity> group = attrGroupDao.selectList(new QueryWrapper<AttrGroupEntity>().eq("catelog_id", catelogId).ne("attr_group_id",attrgroupId));
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2058.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148883.png)
 
 由于一个三级分类（对应多个商品）下的所有关联的基本属性,而这些基本属性都被分成组别，此时要找到当前分类还能关联的基本属性， 必须找到其他分组中还没关联的基本属性.
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2059.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148884.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2060.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148885.png)
 
 - AttrGroupController：
   
@@ -2838,15 +2836,13 @@ List<AttrGroupEntity> group = attrGroupDao.selectList(new QueryWrapper<AttrGroup
 
 测试：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2061.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148886.png)
 
 # P82、商品服务API-平台属性新增分组与属性关联
 
-
-
 编写添加分组与属性的关联关系功能：当我们点击关联的时候，先查出当前分组关联的所有属性，如果我们想关联新的属性，我们点击新建关联。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2062.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062148887.png)
 
 **11、添加属性与分组关联关系接口文档地址：**[https://easydoc.net/s/78237135/ZUqEdvA4/VhgnaedC](https://easydoc.net/s/78237135/ZUqEdvA4/VhgnaedC)
 
