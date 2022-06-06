@@ -11,6 +11,7 @@
 市面上有5种常见的电商模式：B2B、B2C、C2B、C2C、 O2O；
 
 > 1、B2B模式
+> 
 
 B2B (Business to Business)，是指商家 与商家建立的商业关系。如: 阿里巴巴。
 
@@ -46,13 +47,13 @@ C2C (Customer to Consumer)，客户之间自己把东西放上网去卖，如:�
 
 ### 2.1项目微服务架构图
 
-![01_%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B&%E5%88%86%E5%B8%83%E5%BC%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%20465fbe08b2964f0f9a2c20e74f725d1f/Untitled.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062057178.png)
 
-![01_%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B&%E5%88%86%E5%B8%83%E5%BC%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%20465fbe08b2964f0f9a2c20e74f725d1f/Untitled%201.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062059373.png)
 
 ### 2.2微服务划分图
 
-![01_%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B&%E5%88%86%E5%B8%83%E5%BC%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%20465fbe08b2964f0f9a2c20e74f725d1f/Untitled%202.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062059374.png)
 
 ## 3、项目技术&特色
 
@@ -85,7 +86,7 @@ C2C (Customer to Consumer)，客户之间自己把东西放上网去卖，如:�
 
 **简而言之:拒绝大型单体应用，基于业务边界进行服务微化拆分，各个服务独立部署运行。**
 
-![链路追踪：参考zipkin](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![链路追踪：参考zipkin](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062059376.png)
 
 链路追踪：参考zipkin
 
@@ -126,11 +127,11 @@ C2C (Customer to Consumer)，客户之间自己把东西放上网去卖，如:�
 
 **SpringCloud中使用HTTP+JSON的方式完成远程调用。**
 
-![01_%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B&%E5%88%86%E5%B8%83%E5%BC%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%20465fbe08b2964f0f9a2c20e74f725d1f/Untitled%204.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062059377.png)
 
 ## 4、负载均衡
 
-![01_%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B&%E5%88%86%E5%B8%83%E5%BC%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%20465fbe08b2964f0f9a2c20e74f725d1f/Untitled%205.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062059378.png)
 
 分布式系统中，A服务需要调用B服务，B服务在多台机器中都存在，A调用任意一个服务器均可完成功能。
 
@@ -147,15 +148,15 @@ C2C (Customer to Consumer)，客户之间自己把东西放上网去卖，如:�
 
 A服务调用B服务, A服务并不知道B服务当前在哪几台服务器有，哪些正常的，哪些服务已经下线。解决这个问题可以引入注册中心;
 
-![01_%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B&%E5%88%86%E5%B8%83%E5%BC%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%20465fbe08b2964f0f9a2c20e74f725d1f/Untitled%206.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062059379.png)
 
-![01_%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B&%E5%88%86%E5%B8%83%E5%BC%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%20465fbe08b2964f0f9a2c20e74f725d1f/Untitled%207.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062059380.png)
 
 如果某些服务下线,我们其他人可以实时的感知到其他服务的状态，从而避免调用不可用的服务。
 
 ## 6、配置中心
 
-![01_%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B&%E5%88%86%E5%B8%83%E5%BC%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%20465fbe08b2964f0f9a2c20e74f725d1f/Untitled%208.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062059381.png)
 
 每一个服务最终都有大量的配置,并且每个服务都可能部署在多台机器上。我们经常需要变更配置，我们可以让每个服务在配置中心获取自己的配置。
 
@@ -165,7 +166,7 @@ A服务调用B服务, A服务并不知道B服务当前在哪几台服务器有�
 
 在微服务架构中，微服务之间通过网络进行通信，存在相互依赖，当其中一个服务不可用时，有可能会造成雪崩效应。要防止这样的情况，必须要有容错机制来保护服务。
 
-![01_%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B&%E5%88%86%E5%B8%83%E5%BC%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%20465fbe08b2964f0f9a2c20e74f725d1f/Untitled%209.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062059382.png)
 
 ### 7.1 服务熔断
 
@@ -181,4 +182,4 @@ a.在运维期间，当系统处于高峰期，系统资源紧张，我们可以
 
 在微服务架构中，API Gateway作为整体架构的**重要组件**，它抽象了微服务中都需要的公共功能，同时提供了客户端负载均衡，服务自动熔断，灰度发布，统一认证，限流流控，日志统计等丰富的功能，帮助我们解诀很多API管理难题。
 
-![01_%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B&%E5%88%86%E5%B8%83%E5%BC%8F%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%20465fbe08b2964f0f9a2c20e74f725d1f/Untitled%2010.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062059383.png)
