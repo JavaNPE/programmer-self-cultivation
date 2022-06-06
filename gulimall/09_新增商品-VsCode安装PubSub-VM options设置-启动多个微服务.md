@@ -4,11 +4,11 @@
 
 # P83、商品服务-API-新增商品-调试会员等级相关接口（需要处理前端-安装PubSub：解决PubSub is not defined"）
 
-`npm install --save pubsub-js` 安装PubSub
+npm install --save pubsub-js 安装PubSub
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158666.png)
 
-![PubSub is not defined"](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![PubSub is not defined"](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158667.png)
 
 PubSub is not defined"
 
@@ -26,15 +26,15 @@ PubSub is not defined"
 
 然后 npm run dev启动前端页面
 
-![1、安装PubSub：`npm install --save pubsub-js` ](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![1、安装PubSub：`npm install --save pubsub-js` ](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158668.png)
 
 1、安装PubSub：`npm install --save pubsub-js` 
 
-![2、src下的**main.js**中引用：](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![2、src下的**main.js**中引用：](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158669.png)
 
 2、src下的**main.js**中引用：
 
-![同样会一上来就报错：因为有些接口还没写（网关gateway没有配置路由，或者没有启动member服务）](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![同样会一上来就报错：因为有些接口还没写（网关gateway没有配置路由，或者没有启动member服务）](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158670.png)
 
 同样会一上来就报错：因为有些接口还没写（网关gateway没有配置路由，或者没有启动member服务）
 
@@ -62,13 +62,13 @@ Request URL: http://localhost:88/api/member/memberlevel/list?t=1633512192391&pag
 
 Caused by: com.alibaba.nacos.api.exception.NacosException: endpoint is blank（暂时没管它）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158671.png)
 
 ## 问题：会员等级-显示空页面，需要添加.vue文件
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158672.png)
 
-![重启前端服务：npm run dev](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![重启前端服务：npm run dev](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158673.png)
 
 重启前端服务：npm run dev
 
@@ -76,7 +76,7 @@ Caused by: com.alibaba.nacos.api.exception.NacosException: endpoint is blank（�
 
 原型页面：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158674.png)
 
 ## 商品系统-接口文档：14、获取分类关联的品牌
 
@@ -189,11 +189,9 @@ List<BrandEntity> getBrandsByCatId(Long catId);
 
 测试：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158675.png)
 
 # P85、商品服务-API-新增商品-获取分类下所有分组以及属性
-
-
 
 ## 对应的接口文档地址：17、获取分类下所有分组&关联属性
 
@@ -201,11 +199,9 @@ List<BrandEntity> getBrandsByCatId(Long catId);
 
 ## 勘误：P77和P85（无法获取值类型）左右开始数据库里少了value_type字段，把数据库字段添上，再去mapper.xml和对应Entity与Vo中添加即可
 
-
-
 P77（无法获取值类型）左右开始数据库里少了value_type字段，把数据库字段添上，再去mapper.xml和对应Entity与Vo中添加即可
 
-**电风扇吹啊吹到85报错才注意到，我补充详细一点吧；在数据库的 pms_attr 表加上value_type字段，类型为tinyint就行；在代码中，AttyEntity.java、AttrVo.java中各添加：private Integer valueType，在AttrDao.xml中添加：《result property=valueType column=value_type/》  （把尖括号换成英文的）；**
+到85报错才注意到，我补充详细一点吧；在数据库的 pms_attr 表加上value_type字段，类型为tinyint就行；在代码中，AttyEntity.java、AttrVo.java中各添加：private Integer valueType，在AttrDao.xml中添加：《result property=valueType column=value_type/》  （把尖括号换成英文的）；**
 
 ## 勘误P85【发布商品-》规格参数（不显示内容）】——解决办法
 
@@ -213,13 +209,11 @@ P77（无法获取值类型）左右开始数据库里少了value_type字段，�
 
 如果P85【规格参数】里面不显示，F12查看控制台看看attrs是否存在null的情况，如果存在attrs为null的情况，一般就不会显示， 此时需要，前段页面（product→spuadd.vue文件）在第679行或者是680行将代码修改为 `(item.attrs || [] ).forEach(attr => {`进行非空判断。（如果attrs==null查看gulimail_pms数据库找出对应的数据先将其在数据库这条null空数据删除也可以正常显示【权宜之计】）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158676.png)
 
 显示不出来在680行加上判断 (item.attrs || [] ).forEach(attr => {
 
-显示不出来在680行加上判断 (item.attrs || [] ).forEach(attr => {
-
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2011.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158677.png)
 
 # P86、商品服务API-新增商品-商品新增vo抽取
 
@@ -227,19 +221,19 @@ P77（无法获取值类型）左右开始数据库里少了value_type字段，�
 
 销售属性如果不显示或者显示不正确，一定是数据库数据有问题，往数据库插入数据的时候极力不推荐直接在数据库插入，应该在以前写好的模块里面插入，因为涉及到级联保存。这个页面显示的所有销售属性，都是在前面录入进去的
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158678.png)
 
 ## 将json转成JavaBean小工具（将json逆向生成JavaBean）
 
 [JSON转JAVA实体|在线JSON转JavaBean工具 - JSON.cn](https://www.json.cn/json/json2java.html)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158679.png)
 
 自动生成的JavaBean
 
 [bejson_gen_beans.zip](09_%E5%95%86%E5%93%81%E6%9C%8D%E5%8A%A1-API-%E6%96%B0%E5%A2%9E%E5%95%86%E5%93%81-%E8%B0%83%E8%AF%95%E4%BC%9A%E5%91%98%E7%AD%89%E7%BA%A7%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3%203cc748e5c18942288db5b652c78f95a3/bejson_gen_beans.zip)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158680.png)
 
 # P87、商品服务-API-新增商品-商品新增业务流程分析
 
@@ -427,13 +421,13 @@ P77（无法获取值类型）左右开始数据库里少了value_type字段，�
 
 ### gulimall_pms表介绍：（跨库）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158681.png)
 
 ### gulimall_sms表介绍：（跨库）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158682.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158683.png)
 
 由于前端发送的请求字段太多，一不小心点击一下刷新按钮，数据就会重新填写，很是浪费时间，所以这里使用postman很重要，直接复制要发送的请求，到postmansku
 
@@ -466,8 +460,6 @@ SpuInfoServiceImpl：
 ```
 
 # P88、商品服务-API-新增商品-保存SPU基本信息
-
-
 
 ```java
 		/**
@@ -626,11 +618,11 @@ SpuInfoServiceImpl
 
 # P90、商品服务-API-新增商品-调用远程 服务保存优惠等信息
 
-5、保存spu的积分信息：gulimall_sms ——》 sms_spu_bounds （跨库）
+*//5、保存spu的积分信息：gulimall_sms ——》 sms_spu_bounds （跨库）*
 
-5.4 保存sku的优惠，满减等信息：gulimall_sms数据库中的sms_sku_ladder\sms_sku_full_reduction
+*//5.4 保存sku的优惠，满减等信息：gulimall_sms数据库中的sms_sku_ladder\sms_sku_full_reduction\*
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158684.png)
 
 product商品服务调用coupon远程服务可以通过feign进行远程调取：
 
@@ -708,7 +700,7 @@ product商品服务调用coupon远程服务可以通过feign进行远程调取�
 
 我们在些这步代码逻辑的时候：***5、保存spu的积分信息：gulimall_sms ——》 sms_spu_bounds （跨库）***  要调用远程coupon服务，需要进行以下处理：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158685.png)
 
 1. 在GulimallProductApplication启动类中添加**@EnableFeignClients注解**
    
@@ -743,7 +735,7 @@ product商品服务调用coupon远程服务可以通过feign进行远程调取�
     }
     ```
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2020.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158686.png)
     
 3. 在gulimall-product中`SpuInfoServiceImpl` 实现类中注入`CouponFeignService` 服务，帮助我们调用远程的所有功能
    
@@ -756,17 +748,17 @@ product商品服务调用coupon远程服务可以通过feign进行远程调取�
         CouponFeignService couponFeignService;
     ```
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2021.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158687.png)
     
     ## 关于TO数据模型：
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2022.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158688.png)
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2023.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158689.png)
     
     创建各自对应的To：
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2024.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158690.png)
     
     MemberPrice：
     
@@ -1048,37 +1040,37 @@ product商品服务调用coupon远程服务可以通过feign进行远程调取�
 
 对每个服务的内存占用进行设置一下
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2025.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158692.png)
 
 创建Compound
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2026.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158693.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2027.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158694.png)
 
 ## 设置微服务占用最大内存
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2028.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158695.png)
 
 ### 在VM options中添加 `-Xmx100m` 限制占用内存大小
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2029.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158696.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2030.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158697.png)
 
 在Compound中改名字：gulimall
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2031.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158698.png)
 
 ### 一次重启/启动多个微服务
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2032.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158699.png)
 
 ### 执行debug
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2033.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158700.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2034.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158701.png)
 
 MySQL默认的隔离级别是：可重复读，也就是必须最起码读到已经提交了的数据，所以为了测试方便我们使用以下命令：
 
@@ -1094,31 +1086,31 @@ SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
 
 方式一：新建查询，运行选中语句
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2035.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158702.png)
 
 方式二：鼠标右键gulimall_pms数据库，选择【命令列界面】输入`SET SESSION TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;` 回车，提示成功之后。通过查询语句才可以查出新数据，
 
 navicat可以选择数据库右键运行命令行，执行这个语句
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2036.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158703.png)
 
 Navicat通过：`SELECT * FROM pms_spu_info` 才可以查出，我们刚才页面新增的数据
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2037.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158704.png)
 
 ### 插入图片描述信息的时候抛出的异常：**`catch** (InvocationTargetException ex)`
 
 控制台打印：Preparing: `INSERT INTO pms_spu_info_desc ( decript ) VALUES ( ? )` mybatis默认把**`spu_id`**字段当成了自增的。插入的时候只插入了`decript` 字段，并没有插入`spu_id` 字段，所以抛出异常。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2038.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158705.png)
 
 但是我们在设计表的时候，`spu_id`这个字段并不是自增的
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2039.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158706.png)
 
 放行debug之后，因为我们开启了事务`@Transactional` 抛出异常，所有的都结束了，其他东西肯定也都没提交，再次执行sql查询语句 ，发现我们页面录入的P50相关的数据就没有了了。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2040.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158707.png)
 
 既然`spu_id` 字段不是自增的我们就对其修改为：**@TableId(type = IdType.INPUT) 使其成为我们自己输入的**
 
@@ -1160,19 +1152,19 @@ public class SpuInfoDescEntity implements Serializable {
 
 修改完之后我们重启：GulimallProductApplication :10000/服务，重新debug，发现成功保存spu的描述图片信息。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2041.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158708.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2042.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158709.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2043.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158710.png)
 
 这里失败的话在商品配置文件设置超时时间 ribbon.ReadTimeout=5000 ribbon.ConnectTime=5000
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2044.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158711.png)
 
 修改：R中的getCode()方法，然后重启GulimallProductApplication :10000/服务
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2045.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158712.png)
 
 ```sql
 public Integer getCode() {
@@ -1180,21 +1172,21 @@ public Integer getCode() {
 }
 ```
 
-执行sql语句查询：`SELECT * FROM pms_sku_info`
+执行sql语句查询：SELECT * FROM pms_sku_info
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2046.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158713.png)
 
 5.2 保存sku的图片信息：pms_sku_images  ***`TODO 没有图片路径的，无需保存`***
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2047.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158714.png)
 
-5.3 保存sku的销售属性信息：pms_sku_sale_attr_value
+//5.3 保存sku的销售属性信息：pms_sku_sale_attr_value
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2048.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158715.png)
 
 debug完成之后：回到对应的数据库表中，就可以查看我们录入的信息了
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2049.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158716.png)
 
 初级开发工程师
 
@@ -1209,7 +1201,7 @@ private BigDecimal fullPrice;
 skuReductionTo.getFullPrice().compareTo(new BigDecimal(0)) == 1
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2050.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062158717.png)
 
 SpuInfoServiceImpl:
 
