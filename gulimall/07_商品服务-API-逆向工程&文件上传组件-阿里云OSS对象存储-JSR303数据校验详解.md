@@ -1,4 +1,4 @@
-# 07_商品服务-API-逆向工程&文件上传组件-阿里云OSS对象存储-JSR303数据校验详解
+# 07_商品服务-API-品牌管理使用逆向工程的前后端代码 | 文件上传|阿里云OSS对象存储|JSR303数据校验
 
 准备工作：
 
@@ -10,15 +10,15 @@
 
 新增菜单：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142124.png)
 
 将逆向生成的那两个文件通过复制粘贴到VSCode对应的目录层级下，
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142125.png)
 
 在VSCode**终端面板**键入`Ctrl+C` 快捷键，停止当前服务，然后使用命令：`npm run dev`重启动**renren-fast-vue服务**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142127.png)
 
 因为**新增**和**批量删除**功能需要权限才有，为了方便，我们先将权限问题暂时搁置一边（将权限关掉）调出**新增**和**批量删除**功能：`**index.js**` 位置 `src\utils\index.js` 先注释掉那一行代码。
 
@@ -33,7 +33,7 @@ export function isAuth (key) {
 }
 ```
 
-![调出新增和批量删除功能之后的效果](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![调出新增和批量删除功能之后的效果](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142128.png)
 
 调出新增和批量删除功能之后的效果
 
@@ -41,17 +41,17 @@ export function isAuth (key) {
 
 ## 关掉语法检查
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142129.png)
 
 `webpack.base.conf.js` 文件的地址`build\webpack.base.conf.js` ，重启项目（Ctrl+C断开连接），`npm run dev` 启动项目。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142130.png)
 
 ## 参考的组件：自定义列模板
 
 [Element - The world's most popular Vue UI framework](https://element.eleme.cn/#/zh-CN/component/table)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142131.png)
 
 ```bash
 <template slot-scope="scope">
@@ -64,7 +64,7 @@ export function isAuth (key) {
 
 [Element - The world's most popular Vue UI framework](https://element.eleme.cn/#/zh-CN/component/switch)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142132.png)
 
 ```bash
 <el-switch
@@ -78,7 +78,7 @@ export function isAuth (key) {
 
 [Element - The world's most popular Vue UI framework](https://element.eleme.cn/#/zh-CN/component/upload)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142133.png)
 
 ```bash
 <el-upload
@@ -98,7 +98,7 @@ export function isAuth (key) {
 
 Events：change switch 状态发生变化时的回调函数
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142134.png)
 
 `scope.row` 代表是当前行的数据.
 
@@ -522,7 +522,7 @@ Events：change switch 状态发生变化时的回调函数
 1. **自建服务器：FastDFS** 和 **vsftpd**；特点：搭建复杂，维护成本高，前期费用高。
 2. **云存储：[阿里云对象存储](https://www.aliyun.com/product/oss?spm=5176.19720258.J_8058803260.132.e9392c4aE8D7cU)** 和 **七牛云存储**； 特点：即开即用，无需维护，按量收费。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142135.png)
 
 [简介](https://help.aliyun.com/document_detail/31947.html?spm=5176.8465980.help.dexternal.375b1450mA8zKv)
 
@@ -532,7 +532,7 @@ Events：change switch 状态发生变化时的回调函数
 
 一般推荐一个项目创建1个**Bucket**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2011.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142136.png)
 
 ### 阿里云对象存储OSS官网：
 
@@ -542,23 +542,23 @@ Events：change switch 状态发生变化时的回调函数
 
 本教程大致设置内容：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142137.png)
 
 ### 上传文件
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142138.png)
 
 复制URL链接即可访问：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142139.png)
 
 ### 阿里云对象存储-普通上传方式 （不推荐）
 
-![image-20220530141231972](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530141231972.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142140.png)
 
 ### 阿里云对象存储-服务端签名后直传（推荐使用）
 
-![image-20220530141215629](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530141215629.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142141.png)
 
 ## 方式一：文件上传Java SDK方式（不推荐）
 
@@ -651,25 +651,23 @@ ossClient.shutdown();
 
 Endpoint（地域节点）：[`oss-cn-beijing.aliyuncs.com`](http://oss-cn-beijing.aliyuncs.com/)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142142.png)
 
 ### 阿里云**创建**并使用RAM用户
 
 阿里云账号AccessKey拥有所有API的访问权限，风险很高。**强烈建议**您**创建**并使用RAM用户进行API访问或日常运维，请登录RAM控制台创建RAM用户。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142143.png)
 
 ### 开始使用子用户AccessKey
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142144.png)
 
 ### 创建用户：开启Open API调用访问
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2020.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142145.png)
 
-创建用户完毕后，会得到一个“AccessKey ID”和“AccessKeySecret”，然后复制这两个值到代码的
-
-`“AccessKey ID”`和`“AccessKeySecret”`。
+创建用户完毕后，会得到一个“AccessKey ID”和“AccessKeySecret”，然后复制这两个值到代码的`“AccessKey ID”`和`“AccessKeySecret”`。
 
 另外还需要添加访问控制权限：
 
@@ -677,9 +675,9 @@ Endpoint（地域节点）：[`oss-cn-beijing.aliyuncs.com`](http://oss-cn-beiji
 
 千万复制哦 要不然出去就没了。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2021.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142146.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2022.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142147.png)
 
 下面代码的信息可以通过如下查找：
 
@@ -721,8 +719,8 @@ public class GulimallProductApplicationTests {
         String endpoint = "oss-cn-beijing.aliyuncs.com";
 
         // 阿里云账号AccessKey拥有所有API的访问权限，风险很高。强烈建议您创建并使用RAM用户进行API访问或日常运维，请登录RAM控制台创建RAM用户。
-        String accessKeyId = "LTAI5************VWfkH";
-        String accessKeySecret = "NYJes****************20vBe2z";
+        String accessKeyId = "LTAI5tQJe43xkmKionyVWfkH";
+        String accessKeySecret = "NYJesMLZJcVdFvhVx5bjEPw20vBe2z";
 
         // 创建OSSClient实例。
         OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
@@ -762,13 +760,13 @@ public class GulimallProductApplicationTests {
 }
 ```
 
-![image-20220530142128193](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530142128193.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142148.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2024.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142149.png)
 
 测试运行，将本地2.png文件上传到阿里云
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2025.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142150.png)
 
 ## 方式二：文件上传使用SpringCloud Alibaba来管理OSS （推荐）
 
@@ -776,7 +774,7 @@ public class GulimallProductApplicationTests {
 
 [aliyun-spring-boot/aliyun-spring-boot-samples/aliyun-oss-spring-boot-sample at master · alibaba/aliyun-spring-boot](https://github.com/alibaba/aliyun-spring-boot/tree/master/aliyun-spring-boot-samples/aliyun-oss-spring-boot-sample)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2026.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142151.png)
 
 1、在`gulimall-common` 项目中的`pom.xml` 添加以下内容：
 
@@ -793,7 +791,7 @@ public class GulimallProductApplicationTests {
 </dependency>
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2027.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142152.png)
 
 2、配置“AccessKey ID”和“AccessKeySecret”和endpoint
 
@@ -926,9 +924,9 @@ spring:
 
 # 63、商品服务-API-品牌管理- OSS获取服务端签名 | 新建gulimall-third-party微服务
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2028.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142153.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2029.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142154.png)
 
 添加依赖，将原来`gulimall-common`中的“`spring-cloud-starter-alicloud-oss`”依赖移动到`gulimall-third-party`该项目中pom文件
 
@@ -1013,24 +1011,24 @@ spring:
 
 1、在nacos创建命名空间“ `third-party`”
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2030.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142156.png)
 
 在配置列表中`third-party` 命名空间下新建如下配置
 
-![image-20220530142529438](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530142529438.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142157.png)
 
 ```yaml
 -------------------------------------oss.yml-注意缩进-----------------------------------
 spring:
   cloud:
     alicloud:
-      access-key: LTAI5tQJ******onyVWfkH
-      secret-key: NYJesMLZ*************w20vBe2z
+      access-key: LTAI5tQJe43xkmKionyVWfkH
+      secret-key: NYJesMLZJcVdFvhVx5bjEPw20vBe2z
       oss:
         endpoint: oss-cn-beijing.aliyuncs.com
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2032.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142158.png)
 
 在 `gulimall-third-party` 服务下新建`application.yml` 文件，配置nacos服务注册与发现,，将gulimall-third-party注册到nacos中
 
@@ -1097,8 +1095,8 @@ spring.cloud.nacos.config.ext-config[0].refresh=true
             String endpoint = "oss-cn-beijing.aliyuncs.com";
     
             // 阿里云账号AccessKey拥有所有API的访问权限，风险很高。强烈建议您创建并使用RAM用户进行API访问或日常运维，请登录RAM控制台创建RAM用户。
-            String accessKeyId = "LTAI5t******onyVWfkH";
-            String accessKeySecret = "NYJesMLZJcV**************w20vBe2z";
+            String accessKeyId = "LTAI5tQJe43xkmKionyVWfkH";
+            String accessKeySecret = "NYJesMLZJcVdFvhVx5bjEPw20vBe2z";
     
             // 创建OSSClient实例。
             OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);*/
@@ -1116,7 +1114,7 @@ spring.cloud.nacos.config.ext-config[0].refresh=true
     }
     ```
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2033.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142159.png)
     
 
 上面的逻辑中，我们的想法是先把字节流给服务器，服务器给阿里云，还是传到了服务器。我们需要一些前端代码完成这个功能，字节流就别来服务器了
@@ -1129,19 +1127,19 @@ spring.cloud.nacos.config.ext-config[0].refresh=true
 
 Web端上传数据至OSS
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2034.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142160.png)
 
 ### 服务端签名后直传——对象存储 OSS
 
 [服务端签名后直传](https://help.aliyun.com/document_detail/31926.html)
 
-![image-20220530142937590](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530142937590.png)
+阿里云对象存储-服务端签名后直传
 
-
+![image-20220606214407913](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062144069.png)
 
 流程介绍：流程如下图所示：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2036.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142162.png)
 
 ## 以Java语言为例，讲解在服务端通过Java代码完成签名，并且设置上传回调，然后通过表单直传数据到OSS。
 
@@ -1358,7 +1356,7 @@ Web端上传数据至OSS
     
 - 测试： [http://localhost:30000/oss/policy](http://localhost:30000/oss/policy) 返回签名
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2037.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142163.png)
     
 
 在该微服务中测试通过，但是我们不能对外暴露端口或者说为了统一管理，我们还是让用户请求网关然后转发过来，以后在上传文件时的访问路径为[http://localhost:88/api/thirdparty/oss/policy](http://localhost:88/api/thirdparty/oss/policy)
@@ -1378,7 +1376,7 @@ Web端上传数据至OSS
 
 测试是否能够正常跳转： [http://localhost:88/api/thirdparty/oss/policy](http://localhost:88/api/thirdparty/oss/policy)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2038.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142164.png)
 
 # 64、商品服务-API-品牌管理-OSS前后端联调测试**文件上传**
 
@@ -1387,8 +1385,7 @@ Web端上传数据至OSS
 `policy.js`封装一个`Promise`，发送`/thirdparty/oss/policy`请求。vue项目会自动加上api前缀
 `multiUpload.vue`多文件上传。要改，改方式如下
 `singleUpload.vue`单文件上传。要替换里面的action中的内容。action=“[http://gulimall-fermhan.oss-cn-qingdao.aliyuncs.com](http://gulimall-fermhan.oss-cn-qingdao.aliyuncs.com/)”
-
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2039.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142165.png)
 
 `multiUpload.vue`多文件上传和`singleUpload.vue`单文件上传中均更改：
 
@@ -1396,11 +1393,11 @@ Web端上传数据至OSS
 action="http://gulimall-dali.oss-cn-beijing.aliyuncs.com"
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2040.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142166.png)
 
 要修改vue项目中心品牌logo地址，要改成下面形式：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2041.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142167.png)
 
 brand-add-or-update.vue中，修改**el-form-item label="品牌logo地址"**内容。
 要使用文件上传组件，先导入`import SingleUpload from “@/components/upload/singleUpload”;`
@@ -1682,7 +1679,7 @@ brand-add-or-update.vue中，修改**el-form-item label="品牌logo地址"**内�
 `localhost:88/api/thirdparty/oss/policy?t=1613300654238`
 ————————————————
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2042.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142168.png)
 
 在vue中看是`response.data.policy`，在控制台看`response.policy`。所以去java里面改返回值为R。
 
@@ -1804,7 +1801,7 @@ brand-add-or-update.vue中，修改**el-form-item label="品牌logo地址"**内�
 
 开始执行上传，但是在上传过程中，出现了跨域请求问题：（从我们的服务去请求oss服务，我们前面说过了，跨域不是浏览器限制了你，而是新的服务器限制的问题，所以得去阿里云设置）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2043.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142169.png)
 
 再次执行文件上传。
 
@@ -1814,17 +1811,17 @@ brand-add-or-update.vue中，修改**el-form-item label="品牌logo地址"**内�
 
 显示图片：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2044.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142170.png)
 
 去阿里云查看，成功上传！！！
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2045.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142171.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2046.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142172.png)
 
 # 65、商品服务-API-品牌管理表单校验&自定义校验器 ——前端校验
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2047.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142173.png)
 
 ## 品牌Logo以图片的形式显示
 
@@ -1832,9 +1829,9 @@ brand-add-or-update.vue中，修改**el-form-item label="品牌logo地址"**内�
 
 [Element - The world's most popular Vue UI framework](https://element.eleme.cn/#/zh-CN/component/table)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2048.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142174.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2049.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142175.png)
 
 ```bash
 <template slot-scope="scope">
@@ -2051,7 +2048,7 @@ Image 图片组件
 
 ## 表单校验&自定义校验器 ——前端进行校验
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2050.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142176.png)
 
 **前端的校验是element-ui表单验证**https://element.eleme.cn/#/zh-CN/component/form
 
@@ -2301,7 +2298,7 @@ BrandEntity实体类中name字段添加**`@NotBlank`注解**
 
 使用PostMan测试：[http://localhost:88/api/product/brand/save](http://localhost:88/api/product/brand/save)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2051.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142177.png)
 
 - 双击Shift：查找 `validationmessages.properties` 定义了发生错误该怎么提示——英文版提示
   
@@ -2453,7 +2450,7 @@ privateStringname;
 
 使用postman测试：[http://localhost:88/api/product/brand/save](http://localhost:88/api/product/brand/save)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2052.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142178.png)
 
 - `BrandEntity`：gulimall-product 这节课结束时的代码
   
@@ -2537,11 +2534,12 @@ privateStringname;
     }
     ```
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2053.png)
-    
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142179.png)
     
 
 # 67、商品服务-API-品牌管理统一异常处理
+
+
 
 ## 统一异常处理`@ExceptionHandler`
 
@@ -2694,11 +2692,9 @@ public enum BizCodeEnume {
 
 测试：[http://localhost:88/api/product/brand/save](http://localhost:88/api/product/brand/save)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2054.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142180.png)
 
 # 68、商品服务-API-品牌管理-JSR303分组校验 | @Validated注解
-
-
 
 ## 为社么需要JSR303分组校验
 
@@ -2715,7 +2711,7 @@ controller的方法上或者方法参数上写要处理的分组的接口信息�
 
 1、创建空接口：AddGroup 和 UpdateGroup
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2055.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142181.png)
 
 2、给校验注解标注什么情况需要进行校验，比如新增时创建
 
@@ -2818,11 +2814,11 @@ public class BrandEntity implements Serializable {
 }
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2056.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142182.png)
 
 5、PostMan不填写brandId测试
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2057.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142183.png)
 
 修改：BrandEntity
 
@@ -2845,7 +2841,7 @@ public class BrandEntity implements Serializable {
 }
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2058.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142184.png)
 
 测试BrandController修改update()方法的情况：update(`@Validated(UpdateGroup.class`)
 
@@ -2874,9 +2870,9 @@ public R update(@Validated(UpdateGroup.class) @RequestBody BrandEntity brand) {
 
 postman测试：[http://localhost:88/api/product/brand/update](http://localhost:88/api/product/brand/update)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2059.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142185.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2060.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062142186.png)
 
 这节课总的代码
 
