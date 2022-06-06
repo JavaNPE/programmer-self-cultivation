@@ -6,31 +6,31 @@
 
 下载并安装VirtualBox虚拟机，要开启CPU虚拟化
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104241.png)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%201.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%201.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104242.png)
 
 ## 1.2 下载并安装VirtualBox
 
 虚拟机Oracle VM VirtualBox官网地址：[https://www.virtualbox.org/](https://www.virtualbox.org/)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%202.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%202.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104243.png)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%203.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%203.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104244.png)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%204.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%204.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104245.png)
 
 只改盘符，选择D盘，其他默认点击下一步即可
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%205.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%205.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104246.png)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%206.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%206.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104247.png)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%207.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%207.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104248.png)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%208.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%208.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104249.png)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%209.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%209.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104250.png)
 
 ## 1.3 下载并安装Vagrant
 
@@ -38,27 +38,27 @@ Vagrant官方镜像仓库：[https://app.vagrantup.com/boxes/search](https://app
 
 Vagrant下载：[https://www.vagrantup.com/downloads](https://www.vagrantup.com/downloads)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2010.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2010.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104251.png)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2011.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2011.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2011.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104252.png)
 
 然后点击Next安装稍等片刻即可。重启电脑
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2012.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2012.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104253.png)
 
 > 1、打开cmd窗口输入以下命令：`vagrant`查看我们是否安装成功Vagrant
 > 
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2013.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2013.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104254.png)
 
 > 2、打开window cmd窗口，运行`vagrant init centos/7` ，即可初始化一个centos7系统
 > 
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2014.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2014.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104255.png)
 
 [https://www.notion.so](https://www.notion.so)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2015.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2015.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104256.png)
 
 > 3、在cmd命令窗口运行`vagrant up` 即可启动虚拟机。系统root用户的密码是vagrant
 > 
@@ -67,49 +67,49 @@ Vagrant下载：[https://www.vagrantup.com/downloads](https://www.vagrantup.com/
 
 稍微有点慢，耐心等待，此时打开我们的虚拟机Oracle VM VirtualBox会发现多了一个虚拟机
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2016.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2016.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104257.png)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2017.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2017.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104258.png)
 
 > 4、 `vagrant ssh`：自动使用vagrant 用户连接虚拟机。
 > 
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2018.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2018.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104259.png)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2019.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2019.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104260.png)
 
 `[vagrant@localhost ~]$` 查看当前是哪个用户
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2020.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2020.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2020.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104261.png)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2021.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2021.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2021.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104262.png)
 
 退出连接：`[vagrant@localhost ~]$` `exit;`
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2022.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2022.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2022.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104263.png)
 
 > 4.1、vagrant upload source [destination] [name|id]：上传文件
 > 
 
 ### 虚拟网络设置
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2023.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2023.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2023.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104264.png)
 
 > 5、默认虚拟机的ip地址不是固定ip,开发不方便
 > 
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2024.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2024.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2024.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104265.png)
 
 > 5.1 修改Vagrantfile文件：文件地址：C:\Users\lenovo\Vagrantfile 【不同电脑位置略有不同，以自己电脑cmd窗口提示为准】
 > 
 
 首先需要通过cmd窗口`ipconfig`命令查看IP地址
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2025.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2025.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2025.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104266.png)
 
 我们修改修改Vagrantfile文件文件：`config.vm.network "private_network", ip: "192.168.56.10"` ip地址，前三组必须与VirtualBox Host- Only Ne twork: 中的IPv4地址的前三组【`192.168.56.一般改成10就可以`】保持一致，后一组可自行修改。本文案例修改`192.168.56.10` 。
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2026.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2026.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2026.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104267.png)
 
 修改之后保存文件，然后重启虚拟机。此时必须通过`vagrant reload` 命令修改的ip才可以生效。
 
@@ -117,21 +117,21 @@ Vagrant下载：[https://www.vagrantup.com/downloads](https://www.vagrantup.com/
 
 ### 退出命令：`exit;`
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2027.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2027.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2027.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104268.png)
 
 ### 连接虚拟机命令：`vagrant ssh`
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2028.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2028.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2028.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104269.png)
 
 ### 虚拟机查看IP地址：`[vagrant@localhost ~]$ ip addr`
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2029.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2029.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2029.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104270.png)
 
 各自ping通进行测试：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2030.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104271.png)
 
-![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2031.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2031.png)
+![02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%2031.png](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104272.png)
 
 说明我们的ip地址就算是设置好了，网络环境正常。
 
@@ -147,9 +147,7 @@ Docker Hub市场
 
 [Install Docker Engine on CentOS](https://docs.docker.com/engine/install/centos/)
 
-安装教程：
-
-![image-20220530161233628](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530161233628.png)
+![image-20220606210600715](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062106909.png)
 
 
 
@@ -168,7 +166,7 @@ Docker Hub市场
                   docker-engine
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2033.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104274.png)
 
 ## 2.2 设置repository
 
@@ -182,7 +180,7 @@ Docker Hub市场
  sudo yum install -y yum-utils
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2034.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104276.png)
 
 第二步：
 
@@ -192,7 +190,7 @@ Docker Hub市场
     https://download.docker.com/linux/centos/docker-ce.repo
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2035.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104277.png)
 
 ## 2.3 安装Docker Engine
 
@@ -202,7 +200,7 @@ Docker Hub市场
 sudo yum install docker-ce docker-ce-cli containerd.io
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2036.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104278.png)
 
 ### 2.3.1 启动docker
 
@@ -213,11 +211,11 @@ sudo systemctl start docker
 > 查看docker版本：`[vagrant@localhost ~]$ docker -v`
 > 
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2037.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104279.png)
 
 ### 2.3.2 检测docker中下载了哪些镜像命令：`$ sudo docker images`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2038.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104280.png)
 
 ### 2.3.4 给docker设置开机自启动
 
@@ -225,19 +223,17 @@ sudo systemctl start docker
 sudo systemctl enable docker
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2039.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104281.png)
 
 ## 2.4 环境配置docker阿里云镜像加速
 
 
 
-视频教程
-
 [阿里云登录 - 欢迎登录阿里云，安全稳定的云计算服务平台](https://cr.console.aliyun.com/cn-qingdao/instances/mirrors)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2040.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104282.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2041.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104283.png)
 
 分批执行以下命令：
 
@@ -261,11 +257,9 @@ sudo systemctl daemon-reload      #重启docker后台线程
 sudo systemctl restart docker     #重启docker服务
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2042.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104284.png)
 
 # 三、docker安装MySQL
-
-
 
 ## 1、首先去docker Hub去搜索并下载MySQL镜像文件`sudo docker pull mysql:5.7`
 
@@ -277,57 +271,52 @@ sudo systemctl restart docker     #重启docker服务
 
 ### 1.1 检查安装的镜像文件：`[vagrant@localhost ~]$ sudo docker images`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2043.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104285.png)
 
 ### 1.2 切换root用户命令：`su root` 密码为：vagrant ，这样就可以不写sudo了
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2044.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104286.png)
 
 ### 1.3 查看当前用户的命令：`whoami`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2045.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104287.png)
 
 ## 2、创建实例并启动MySQL
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2046.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104288.png)
 
 ```bash
 sudo docker pull mysql:5.7
 
 # --name指定容器名字 -v目录挂载 -p指定端口映射  -e设置mysql参数 -d后台运行
 
-————————————————
-版权声明：本文为CSDN博主「hancoder」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/hancoder/article/details/106922139
-
-[备注]切换root用户命令：su root 密码为：vagrant ，这样就可以不写sudo了
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2047.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104289.png)
 
 ### docker容器文件挂载与端口映射
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2048.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104290.png)
 
 ### 2.1 查看docker中正在运行的容器命令：`[root@localhost vagrant]# docker ps`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2049.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104291.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2050.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104292.png)
 
 验证MySQL容器确实一个完整的Linux
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2051.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104293.png)
 
 ### 查看所有的容器（没有运行的也可以查看）： `docker ps -a`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2052.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104294.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2053.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104295.png)
 
 ### 第二次启动MySQL命令：docker start mysql
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2054.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104296.png)
 
 - 服务器重启后，docker安装的mysql怎么重启
   
@@ -335,24 +324,24 @@ sudo docker pull mysql:5.7
     
     docker启动MySQL命令：`[root@localhost vagrant]# docker restart 0923afbb97fc`
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2055.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104297.png)
     
 
 ### 查看MySQL安装的位置命令：`whereis mysql`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2056.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104298.png)
 
 ### 2.2 navicat连接MySQL服务
 
 **mysql密码：root**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2057.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104299.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2058.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104300.png)
 
 ## MySQL配置
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2059.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104301.png)
 
 ```bash
 docker exec -it mysql bin/bash
@@ -378,24 +367,23 @@ skip-name-resolve
 保存(注意评论区该配置不对，不是collection而是collation)
 
 docker restart mysql   #重启MySQL容器
-————————————————
-版权声明：本文为CSDN博主「hancoder」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/hancoder/article/details/106922139
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2060.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104302.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2061.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104303.png)
 
 ### 重启MySQL容器命令：`docker restart mysql`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2062.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104304.png)
 
 ### MySQL日志文件地址：/mydata/mysql/log
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2063.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104305.png)
 
 # 四、docker安装redis
+
+
 
 ## 4.1 下载reids镜像文件命令：`docker pull redis`
 
@@ -408,9 +396,9 @@ Password:vagrant
 [root@localhost vagrant]# docker pull redis  #没有指定版本就是下载最新的镜像
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2064.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104306.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2065.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104307.png)
 
 ## 4.2 创建实例并启动（redis配置文件）
 
@@ -423,16 +411,14 @@ mkdir -p /mydata/redis/conf
 touch /mydata/redis/conf/redis.conf
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2066.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104308.png)
 
 ```bash
 docker run -p 6379:6379 --name redis \
 -v /mydata/redis/data:/data \
 -v /mydata/redis/conf/redis.conf:/etc/redis/redis.conf \
 -d redis redis-server /etc/redis/redis.conf
-————————————————
-版权声明：本文为CSDN博主「hancoder」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/hancoder/article/details/106922139
+
 
 # 直接进去redis客户端。
 docker exec -it redis redis-cli
@@ -442,7 +428,7 @@ docker exec -it redis redis-cli
 
 ### 4.3.2 直接进去redis-cli客户端命令：`docker exec -it redis redis-cli`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2067.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104309.png)
 
 ### 4.3.3 重启动reids命令：`docker restart redis`   # 重启reids
 
@@ -471,13 +457,13 @@ appendonly yes
 docker restart redis  #重启reids
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2068.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104310.png)
 
 关于redis.conf的更多配置可以参考官网：
 
 [Redis configuration - Redis](https://redis.io/topics/config)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2069.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104311.png)
 
 ```bash
 [root@localhost conf]# vi redis.conf
@@ -507,7 +493,7 @@ CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS     
 
 使用redis客户端连接
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2070.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104312.png)
 
 ## 4.3 使用redis镜像执行redis-cli命令
 
@@ -517,17 +503,17 @@ redis
 [root@localhost vagrant]# docker exec -it redis redis-cli  #使用redis镜像执行redis-cli命令
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2071.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104313.png)
 
 # 五、开发环境统一：环境开发工具&环境安装配置
 
 ## 5.1 Maven配置
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2072.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104314.png)
 
 在settings中配置阿里云镜像，配置jdk1.8。这个基本都配置过，不贴了
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2073.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104315.png)
 
 ## 5.2 IDEA&VsCode
 
@@ -550,13 +536,13 @@ IDEA安装插件lombok，mybatisX。IDEA设置里配置好maven
 - open in brower
 - Vetur
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2074.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104316.png)
 
 ## 5.3 安装配置git：另外推荐sourcetree
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2075.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104317.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2076.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104318.png)
 
 下载git客户端，右键桌面Git GUI/bash Here。去bash，
 
@@ -599,7 +585,7 @@ ssh -T git@gitee.com
 
 (2) 前后端联调测试基本功能
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2077.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104319.png)
 
 # 六、创建项目微服务：项目的聚合
 
@@ -619,7 +605,7 @@ ssh -T git@gitee.com
 
 ————————————————
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2078.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104320.png)
 
 在IDEA中New–Project from version control–git–复制刚才项目的地址：[https://gitee.com/SuperVITA/gulimall.git](https://gitee.com/SuperVITA/gulimall.git)
 
@@ -627,11 +613,11 @@ IDEA然后New Module–Spring Initializer–com.atguigu.gulimall ， Artifact填
 
 从码云拉取项目到idea本地，新建Module
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2079.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104321.png)
 
 Next—选择web（web开发），springcloud routing里选中openFeign（rpc调用）。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2080.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104322.png)
 
 ## 6.2 创建各个微服务项目
 
@@ -647,33 +633,33 @@ Next—选择web（web开发），springcloud routing里选中openFeign（rpc调
 
 - 商品服务product：gulimall-product
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2081.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104323.png)
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2082.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104324.png)
     
 - 存储服务ware：gulimall-ware
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2083.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104325.png)
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2084.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104327.png)
     
 - 订单服务order：gulimall-order
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2085.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104328.png)
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2086.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104329.png)
     
 - 优惠券服务coupon：gulimall-coupon
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2087.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104330.png)
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2088.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104331.png)
     
 - 会员服务member：gulimall-member
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2089.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104332.png)
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2090.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104333.png)
     
 
 ## 6.3 将gulimall项目设置成总项目：聚合那几个小项目
@@ -710,9 +696,9 @@ Next—选择web（web开发），springcloud routing里选中openFeign（rpc调
 
 在maven窗口刷新，并点击+号，找到刚才的pom.xml添加进来，发现多了个root。这样比如运行root的clean命令，其他项目也一起clean了。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2091.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104334.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2092.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104335.png)
 
 ## idea中忽略提交git（码云）不必要的文件设置：
 
@@ -737,13 +723,15 @@ Next—选择web（web开发），springcloud routing里选中openFeign（rpc调
 
 commit只是保存更新到本地，push才是提交到gitee
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2093.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104336.png)
 
 ## 环境_项目结构创建&提交到码云，idea中提交代码到（git）码云仓库：谷粒商城项目初始结构创建
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2094.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104337.png)
 
 ## 环境-MySQL数据库初始化：MySQL数据库设计
+
+数据库设计视频教程
 
 ## powerdesigner：MySQL数据库设计软件
 
@@ -804,7 +792,7 @@ sudo docker exec -it mysql /bin/bash
 
 然后接着去navicat执行我们的操作，在左侧谷粒商城_192.......上右键建立数据库：字符集选utf8mb4，他能兼容utf8且能解决一些乱码的问题。分别建立了下面数据库（根据自己情况来）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2095.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104338.png)
 
 ```bash
 gulimall-oms
@@ -816,7 +804,7 @@ gulimall-wms
 
 然后打开对应的sql在对应的数据库中执行。依次执行。(注意sql文件里没有建库语句)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2096.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104339.png)
 
 ## 码云搜索：人人开源
 
@@ -830,9 +818,9 @@ git clone https://gitee.com/renrenio/renren-fast.git
 git clone https://gitee.com/renrenio/renren-fast-vue.git
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2097.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104340.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2098.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104341.png)
 
 下载到了桌面，我们把renren-fast移动到我们的项目文件夹（删掉.git文件），而renren-vue是用VSCode打开的（后面再弄）
 
@@ -869,7 +857,7 @@ password: root
 
 浏览器输入`[http://localhost:8080/renren-fast/](http://localhost:8080/renren-fast/)` 得到`{“msg”:“invalid token”,“code”:401}`就代表无误。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2099.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104342.png)
 
 ## 用VSCode打开：人人开源项目clone的项目renren-fast-vue
 
@@ -877,11 +865,11 @@ password: root
 
 ## 下载并安装node：(注意添加path环境变量,后期要用到)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%20100.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104343.png)
 
 ### 查看node的版本信息：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%20101.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104344.png)
 
 http://nodejs.cn/download/ 选择windows下载。下载完安装。
 
@@ -902,29 +890,29 @@ node -v
 npm config set registry [http://registry.npm.taobao.org/](http://registry.npm.taobao.org/)
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%20102.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104345.png)
 
 ### 配置node的path环境变量：（勿忘）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%20103.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104346.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%20104.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104347.png)
 
 ## 在VSCode中启动人人开源项目：renren-fast-vue
 
 然后去VScode的项目终端中输入 `npm install`，是要去拉取依赖（package.json类似于pom.xml的dependency），但是会报错，然后进行如下操作：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%20105.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104348.png)
 
 如果python报错：pfython错误的可以·官网下载python2.7然后`npm config set python + python安装文件夹` 比如： `npm config set python D:\Program Files\Python27\` 
 
 然后在执行上一步操作`npm install` 命令。然后启动项目使用命令：`npm run dev`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%20106.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104349.png)
 
 VSCode中：
 
-![[http://localhost:8001/#/login](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%20107.png) 密码均为：admin](02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%20107.png)
+![[http://localhost:8001/#/login](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062104350.png) 密码均为：admin](02_%E8%99%9A%E6%8B%9F%E6%9C%BAOracle%20VM%20VirtualBox%E4%B8%8B%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA_docker%20redis%20mysql%20bac7ad8c1e42458f8a041a1c7e89aa80/Untitled%20107.png)
 
 [http://localhost:8001/#/login](http://localhost:8001/#/login) 密码均为：admin
 
@@ -934,8 +922,7 @@ python2.7下载地址
 
 ### python2.7安装教程：
 
-[Windows10安装Python2.7_fendo-CSDN博客_python2.7](https://blog.csdn.net/u011781521/article/details/53909151)
+
 
 ### 谷粒商城各种报错问题汇总：
 
-[【谷粒商城】npm install node-sass报错问题的解决_努力充实，远方可期-CSDN博客](https://blog.csdn.net/hancoder/article/details/113821646)
