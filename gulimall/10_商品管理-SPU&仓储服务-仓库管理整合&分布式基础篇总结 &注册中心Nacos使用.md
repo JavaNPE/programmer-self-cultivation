@@ -4,29 +4,29 @@
 
 功能页：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209365.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209366.png)
 
 ## spu参考接口文档地址：
 
 [18、spu检索](https://easydoc.net/s/78237135/ZUqEdvA4/9LISLvy7)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209368.png)
 
 ## 数据库表：pms_spu_info
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209369.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209370.png)
 
 前端改成一样的
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209371.png)
 
 按此条件进行查询：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209372.png)
 
 控制台打印：
 
@@ -35,11 +35,11 @@
 ==> Parameters: 华为(String), %华为%(String), 0(String), 2(String), 225(String), 0(Long), 10(Long)
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209373.png)
 
 ## 修改返回的时间戳格式问题：通过**`jackson` 统一修改时间格式**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209374.png)
 
 指定时间格式：
 
@@ -50,29 +50,29 @@ jackson:
 
 在配置文件中添加这个配置，指定之间格式，重启gulimall-pruduct服务重新测试
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209375.png)
 
 重新查询试一下：返回正常格式的时间
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209376.png)
 
 # P94、商品服务API-商品管理SKU检索
 
 菜单页面：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2011.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209377.png)
 
 ## 接口文档：21、SKU检索
 
 [21、sku检索](https://easydoc.net/s/78237135/ZUqEdvA4/ucirLq1D)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209378.png)
 
 ```yaml
 http://localhost:88/api/product/skuinfo/list?t=1636882465490&page=2&limit=10&key=&catelogId=0&brandId=0&min=0&max=0
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209379.png)
 
 ## Mybatis-Plus eq、ne、gt、lt、ge、le分别代表含义
 
@@ -148,7 +148,6 @@ SkuInfoServiceImpl：
         }
         String min = (String) params.get("min");
         if (!StringUtils.isEmpty(min)) {
-            //https://blog.csdn.net/qq1009798402/article/details/112232435
             //ge 就是 greater than or equal 大于等于
             queryWrapper.ge("price", min);
         }
@@ -205,7 +204,7 @@ PageUtils queryPageByCondition(Map<String, Object> params);
 
 涉及到的数据库表：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209380.png)
 
 ## 1、把gulimall-ware微服务添加到注册中心中
 
@@ -263,29 +262,29 @@ public class GulimallWareApplication {
 
 启动gulimall-ware服务，然后访问：[http://192.168.56.103:8848/nacos/index.htm](http://192.168.56.103:8848/nacos/index.htm)l
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209381.png)
 
 发现gulimall-ware服务已经注册上来了
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209382.png)
 
 ### 给gulimall-ware服务添加批量启动
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209383.png)
 
 修改占用内存大小：**-Xmx100m**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209384.png)
 
 前端工程添加ware相关代码：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209385.png)
 
 ### 重启VsCode：`npm run dev`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2020.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209386.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2021.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209387.png)
 
 ## 2、配置网关的路由规则
 
@@ -298,11 +297,11 @@ public class GulimallWareApplication {
     - RewritePath=/api/(?<segment>/?.*),/$\{segment}
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2022.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209388.png)
 
 重启guliamll-geteway和guliamll-ware服务，重新响应库存维护功能：如下图
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2023.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209389.png)
 
 ## 配置文件开启：idea控制台打印SQL语句
 
@@ -367,13 +366,13 @@ public class WareInfoServiceImpl extends ServiceImpl<WareInfoDao, WareInfoEntity
 
 ## 商品库存接口：功能页面
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2024.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209390.png)
 
 ## 02、查询商品库存-接口文档地址
 
 [02、查询商品库存](https://easydoc.net/s/78237135/ZUqEdvA4/hwXrEXBZ)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2025.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209391.png)
 
 浏览器控制台：请求路径
 
@@ -384,11 +383,11 @@ http://localhost:88/api/ware/waresku/list?t=1636899643856&page=1&limit=10&skuId=
 
 浏览器控制台：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2026.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209392.png)
 
 ## 对应的数据库表：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2027.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209393.png)
 
 ### 查询商品库存接口代码：
 
@@ -449,15 +448,15 @@ public class WareSkuServiceImpl extends ServiceImpl<WareSkuDao, WareSkuEntity> i
 http://localhost:88/api/ware/purchasedetail/list?t=1636902667695&page=1&limit=10&key=&status=1&wareId=1
 ```
 
-## 03、查询采购需求接口文档
+### 03、查询采购需求接口文档
 
 [03、查询采购需求](https://easydoc.net/s/78237135/ZUqEdvA4/Ss4zsV7R)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2028.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209394.png)
 
 涉及到的数据库表：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2029.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209395.png)
 
 ### 采购需求查询代码
 
@@ -521,33 +520,31 @@ public class PurchaseDetailServiceImpl extends ServiceImpl<PurchaseDetailDao, Pu
 
 ### 采购需求查询：结果图
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2030.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209396.png)
 
 # P97、仓储服务-API-仓库管理-合并采购需求
 
 功能介绍：[http://localhost:8001/#/ware-purchaseitem](http://localhost:8001/#/ware-purchaseitem)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2031.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209397.png)
 
 ## 采购简要流程：
 
-![image-20220530092158365](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530092158365.png)
-
-
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209398.png)
 
 ## 05、查询未领取的采购单：接口文档地址
 
 [05、查询未领取的采购单](https://easydoc.net/s/78237135/ZUqEdvA4/hI12DNrH)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2033.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209399.png)
 
 合并采购单：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2034.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209400.png)
 
-### 涉及到的数据库表：gulimall-wms
+## 涉及到的数据库表：gulimall-wms
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2035.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209401.png)
 
 PurchaseController：
 
@@ -582,13 +579,13 @@ PurchaseServiceImpl：
     }
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2036.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209402.png)
 
-## 04、合并采购需求：
+### 04、合并采购需求：
 
 [04、合并采购需求](https://easydoc.net/s/78237135/ZUqEdvA4/cUlv9QvK)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2037.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209403.png)
 
 PurchaseController：
 
@@ -735,15 +732,13 @@ application.yml，统一时间格式yyyy-MM-dd HH:mm:ss
 
 ## 采购流程：
 
-![image-20220530092325224](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530092325224.png)
-
-
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209404.png)
 
 ## 06、领取采购单接口
 
 [06、领取采购单](https://easydoc.net/doc/75716633/ZUqEdvA4/vXMBBgw1)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2039.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209405.png)
 
 PurchaseController：
 
@@ -805,11 +800,11 @@ PurchaseServiceImpl：
 
 ### 使用Postman模拟接口发送请求：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2040.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209406.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2041.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209407.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2042.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209408.png)
 
 # P99、仓储服务-API-仓库管理完成采购
 
@@ -834,31 +829,29 @@ POST: /ware/purchase/done
 }
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2043.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209409.png)
 
 ## 功能介绍：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2044.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209410.png)
 
 ## 🙆🏼‍♂️对象格式|Postman参照（重要）封装格式
 
 ### 1、接口文档上的请求参数
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2045.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209411.png)
 
 ### 2、Java代码封装之后的
 
+![图一：](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209412.png)
+
 图一：
 
-![图一：](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2046.png)
+![图二：](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209413.png)
 
 图二：
 
-![图二：](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2047.png)
-
-
-
-![PurchaseController：](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2048.png)
+![PurchaseController：](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209414.png)
 
 PurchaseController：
 
@@ -934,7 +927,7 @@ PurchaseController：
 
 ### 3、postman中的格式
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2049.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209415.png)
 
 [http://localhost:88/api/ware/purchase/done](http://localhost:88/api/ware/purchase/done)
 
@@ -960,72 +953,47 @@ status状态[0新建，1已分配，2正在采购，3已完成，4采购失败]
 
 ## mybatix插件Generate new Statement | 批量生成@Param  别名
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2050.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209416.png)
 
-### MyBatis-Plus SQL语句的正确写法：**是使用`  `而不是单引号' '**
-
-MyBatis-Plus SQL语句的正确写法 是使用``而不是单引号''
-
-```sql
-MyBatis-Plus SQL语句的正确写法 是使用``而不是单引号''
-UPDATE `pms_category_brand_relation` SET catelog_name = #{name} WHERE catelog_id = #{catId}
------------------------------------------------------------------------
-
---          UPDATE 'pms_category_brand_relation' SET catelog_name=#{name} WHERE catelog_id=#{catId}   --错误写法
---          UPDATE pms_category_brand_relation SET catelog_name=#{name} WHERE catelog_id=#{catId}  --错误写法
-
-
-
-
-		<!--动态SQL-->
-    <!--    DELETE FROM `pms_attr_attrgroup_relation` WHERE(attr_id = 1 AND attr_group_id =1) OR (attr_id = 3 AND attr_group_id =2)-->
-    <delete id="deleteBatchRelation">
-        DELETE FROM `pms_attr_attrgroup_relation` WHERE
-        <foreach collection="entities" item="item" separator=" OR ">
-            (attr_id=#{item.attrId} AND attr_group_id=#{item.attrGroupId})
-        </foreach>
-    </delete>
-```
-
-
+### MyBatis-Plus SQL语句的正确写法：**是使用` `而不是单引号' '**
 
 1、
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2051.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209417.png)
 
 2、
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2052.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209418.png)
 
 3、
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2053.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209420.png)
 
 4、
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2054.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209421.png)
 
 5、
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2055.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209422.png)
 
 领取采购单：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2056.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209423.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2057.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209424.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2058.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209425.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2059.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209426.png)
 
 状态[0新建，1已分配，2正在采购，**3已完成**，4采购失败]
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2060.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209427.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2061.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209428.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2062.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209429.png)
 
 ## 本期代码：
 
@@ -1292,7 +1260,7 @@ WareSkuDao.xml
 
 # P100、商品服务-API-商品管理-SPU规格维护
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2063.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209430.png)
 
 ## P100勘误：抱歉！您访问的页面失联啦...
 
@@ -1310,27 +1278,27 @@ INSERT INTO sys_menu (menu_id, parent_id, name, url, perms, type, icon, order_nu
 { path: /product-attrupdate, component: _import(modules/product/attrupdate), name: attr-update, meta: { title: 规格维护, isTab: true } }
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2064.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209431.png)
 
 正常显示：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2065.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209432.png)
 
 ## 22、获取spu规格-接口
 
 [22、获取spu规格](https://easydoc.net/doc/75716633/ZUqEdvA4/GhhJhkg7)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2066.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209433.png)
 
 **不能回显的兄弟去规格属性菜单那里把多选变单选，不能回选在属性菜单把多选改成单选。规格参数回显不了的，你要么把数据全改为单选，要么全改为多选**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2067.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209434.png)
 
 ## 23、修改商品规格-接口
 
 [23、修改商品规格](https://easydoc.net/doc/75716633/ZUqEdvA4/GhnJ0L85)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2068.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209435.png)
 
 ## 本期代码
 
@@ -1401,5 +1369,6 @@ ProductAttrValueServiceImpl.java
 
 # P101-分布式基础篇总结
 
-![image-20220530093223880](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530093223880.png)
+[01_谷粒商城-项目简介&分布式基础概念](https://www.notion.so/01_-6cd501bbf35b49f3b137c30f098f8a10)
 
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062209436.png)
