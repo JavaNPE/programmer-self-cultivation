@@ -15,9 +15,9 @@ vue项目开放端口太麻烦了，其他主机访问不了。防火墙输入�
 
 ## 45.2 三级分类：对应的数据库表：`pms_category` 表结构说明
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138402.png)
 
-![本人用的是网上提供的数据库SQL脚本](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![本人用的是网上提供的数据库SQL脚本](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138404.png)
 
 本人用的是网上提供的数据库SQL脚本
 
@@ -56,7 +56,7 @@ localhost:8001 ， 点击系统管理，菜单管理，新增
 - `商品系统`
 - 一级菜单
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138405.png)
 
 刷新，看到左侧多了商品系统，添加的这个菜单其实是添加到了guli-admin.sys_menu表里
 
@@ -71,7 +71,7 @@ product/category
 …
 menu
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138406.png)
 
 guli-admin.sys_menu表又多了一行，父id是刚才的商品系统id
 
@@ -249,7 +249,7 @@ props属性设置
 
 但是报错404找不到，此处就解决登录页验证码不显示的问题。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138407.png)
 
 他要给8080发请求读取数据，但是数据是在10000端口上，如果找到了这个请求改端口那改起来很麻烦。方法1是改vue项目里的全局配置，方法2是搭建个网关，让网关路由到10000（即将vue项目里的请求都给网关，网关经过url处理后，去nacos里找到管理后台的微服务，就可以找到对应的端口了，这样我们就无需管理端口，统一交给网关管理端口接口）
 
@@ -398,7 +398,7 @@ spring:
 
 登录，还是报错：（出现了跨域的问题，就是说vue项目是8001端口，却要跳转到88端口，为了安全性，不可以）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138408.png)
 
 完整的异常提示：
 
@@ -412,7 +412,7 @@ Non-resolvable parent POM: Could not find artifact com.ecp:ecp-main:pom:0.0.1-SN
 
 问题分析：这是一种跨域问题。访问的域名或端口和原来请求的域名端口一旦不同，请求就会被限制
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138409.png)
 
 ## 什么是跨域及同源策略：
 
@@ -420,9 +420,9 @@ Non-resolvable parent POM: Could not find artifact com.ecp:ecp-main:pom:0.0.1-SN
 
 **同源策略：**是指协议，域名，端囗都要相同，其中有一个不同都会产生跨域；
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138410.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138411.png)
 
 ## 跨域流程：
 
@@ -430,7 +430,7 @@ Non-resolvable parent POM: Could not find artifact com.ecp:ecp-main:pom:0.0.1-SN
 
 什么意思呢？跨域是要请求的、新的端口那个服务器限制的，不是浏览器限制的。
 
-![image-20220530150953595](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220530150953595.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138412.png)
 
 ## 解决跨域：方式一：使用nginx部署为同一域 （开发过程中稍微麻烦点）
 
@@ -439,11 +439,11 @@ Non-resolvable parent POM: Could not find artifact com.ecp:ecp-main:pom:0.0.1-SN
 - 方法1：设置nginx包含admin和gateway。都先请求nginx，这样端口就统一了
 - 方法2：让服务器告诉预检请求能跨域
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138413.png)
 
 ## 解决跨域：方式二：配置当次请求允许跨域（开发期间使用的是这种）| 网关里写个filter配置类
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2011.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138414.png)
 
 Access-Control-Allow-Origin ： 支持哪些来源的请求跨域
 Access-Control-Allow-Method ： 支持那些方法跨域
@@ -496,9 +496,9 @@ public class GulimallCorsConfiguration {
 
 再次访问：[http://localhost:8001/#/login](http://localhost:8001/#/login)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138415.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138416.png)
 
 [http://localhost:8001/renren](http://localhost:8001/renren)
 
@@ -555,7 +555,7 @@ public class CorsConfig implements WebMvcConfigurer {
 
 在显示**商品系统/分类信息**的时候，出现了**404异常**，请求的**`http://localhost:88/api/product/category/list/tree`**不存在（请求发送的是这个，但是不是我们需要的）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138417.png)
 
 这是因为网关上所做的路径映射不正确，映射后的路径为**http://localhost:8001/renren-fast/product/category/list/tree**
 
@@ -614,7 +614,7 @@ spring.cloud.nacos.config.namespace=a5d48f18-a529-48dc-bd2f-7ca552bd5541
 
 **nacos配置中心地址：**[http://192.168.56.1:8848/nacos](http://192.168.56.1:8848/nacos)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138418.png)
 
 在gulimall-product中的`application.yml` 配置nacos注册中心，并在gulimall-product主启动类中添加：@EnableDiscoveryClient注解，启用弄个配置。
 
@@ -645,11 +645,11 @@ server:
 
 重启gulimall-product：GulimallProductApplication :10000/服务访问nacos：[http://192.168.56.1:8848/nacos](http://192.168.56.1:8848/nacos)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138419.png)
 
 访问 [localhost:88/api/product/category/list/tree](http://localhost:88/api/product/category/list/tree) 提示**{"msg":"invalid token","code":401}**，非法令牌，后台管理系统中没有登录，所以没有带令牌。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138420.png)
 
 原因：**先匹配的先路由**，renren-fast和gulimall-product路由重叠，fast要求登录。
 
@@ -697,7 +697,7 @@ spring:
 
 访问：[http://localhost:88/api/product/category/list/tree](http://localhost:88/api/product/category/list/tree) 正常
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138421.png)
 
 访问：http://localhost:8001/#/product-category ，正常进入登录界面。
 
@@ -743,7 +743,7 @@ data() {
   },
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138422.png)
 
 # 49、商品服务-API-三级分类删除-页面效果
 
@@ -753,7 +753,7 @@ data() {
 
 `参考的是scoped slot那部分代码`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2020.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138423.png)
 
 - 使用 render-content，渲染函数
 - **使用 scoped slot**：[https://cn.vuejs.org/v2/guide/components-slots.html](https://cn.vuejs.org/v2/guide/components-slots.html)
@@ -888,11 +888,11 @@ gulimall-product服务中的CategoryController类：商品三级分类
     }
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2021.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138424.png)
 
 测试删除数据，打开postman输入“ [http://localhost:88/api/product/category/delete](http://localhost:88/api/product/category/delete) ”，请求方式设置为POST，为了比对效果，可以在删除之前，查询数据库的pms_category表：发现catId为1432的内容没了，被删掉了。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2022.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138426.png)
 
 这是逆向工程给我们自动生成的删除功能，但是**现实生成中我们使用的是逻辑删除**，并不是这么点单就把这条数据直接从数据库中直接删掉的。
 
@@ -904,13 +904,13 @@ gulimall-product服务中的CategoryController类：商品三级分类
 
 假设数据库中有字段**show_status为0**，标记它已经被删除。
 
-![psm_category表](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2023.png)
+![psm_category表](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138427.png)
 
 psm_category表
 
 mybatis-plus的逻辑删除：[https://baomidou.com/guide/logic-delete.html#使用方法](https://baomidou.com/guide/logic-delete.html#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2024.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138428.png)
 
 ### mybatis-plus逻辑删除**说明:**
 
@@ -1003,7 +1003,7 @@ mybatis-plus的逻辑删除：[https://baomidou.com/guide/logic-delete.html#使�
         private Integer showStatus;
     ```
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2025.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138429.png)
     
     ```yaml
     ==>  Preparing: **UPDATE pms_category SET show_status=0 WHERE cat_id IN ( ? ) AND show_status=1**
@@ -1014,23 +1014,15 @@ mybatis-plus的逻辑删除：[https://baomidou.com/guide/logic-delete.html#使�
     ![#在idea控制台中打印debug日志信息配置
     logging:
       level:
-        com.atguigu.gulimall: debug](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2026.png)
+        com.atguigu.gulimall: debug](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138430.png)
     
-    在idea控制台中打印debug日志信息配置
-    
-    ```json
+    #在idea控制台中打印debug日志信息配置
     logging:
       level:
         com.atguigu.gulimall: debug
-    ```
-    
-    
-    
     
 
 # 51、商品服务-API-三级分类-删除删除效果细化
-
-
 
 总的的一个效果展示图：删除子菜单的时候，给用户【提示】信息，删除成功之后，页面不折叠。
 
@@ -1038,7 +1030,7 @@ mybatis-plus的逻辑删除：[https://baomidou.com/guide/logic-delete.html#使�
 - 删除成功弹窗
 - 删除后重新展开父节点：重新ajax请求数据，指定展开的基准是:`default-expanded-keys=“expandedKey”`，返回数据后刷新`this.expandedKey = [node.parent.data.catId];`
 
-![录制_2021_08_21_13_49_40_103.gif](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/%E5%BD%95%E5%88%B6_2021_08_21_13_49_40_103.gif)
+![录制_2021_08_21_13_49_40_103.gif](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138431.gif)
 
 - `category.vue`本集总代码：src\views\modules\product\category.vue（位置）
   
@@ -1253,7 +1245,7 @@ mybatis-plus的逻辑删除：[https://baomidou.com/guide/logic-delete.html#使�
 - 参考代码2：`role.vue` 位置：src\views\modules\sys\role.vue
 - 抽取代码片段`vue.code-snippets` **文件=》首选项=》用户片段**
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2027.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138432.png)
     
     ```bash
     {
@@ -1372,7 +1364,7 @@ Message消息提示：成功时
 > Tree树形控件：`default-expanded-keys` 参数：默认展开的节点的 key 的数组
 > 
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2028.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138433.png)
 
 # 52、商品服务-API-三级分类新增新增效果完成 | Element Dialog 对话框组件
 
@@ -1384,7 +1376,7 @@ Element Dialog 对话框组件网址
 
 Dialog 对话框：在保留当前页面状态的情况下，告知用户并承载相关操作。
 
-![Element Dialog 对话框组件显示效果](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2029.png)
+![Element Dialog 对话框组件显示效果](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138434.png)
 
 Element Dialog 对话框组件显示效果
 
@@ -1461,7 +1453,7 @@ Element Dialog 对话框组件显示效果
 
 ## 这节内容需要实现的效果：
 
-![录制_2021_08_21_23_31_32_31.gif](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/%E5%BD%95%E5%88%B6_2021_08_21_23_31_32_31.gif)
+![录制_2021_08_21_23_31_32_31.gif](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138435.gif)
 
 一个button的单击事件函数为`@click=“dialogVisible = true”`
 一个会话的属性为`:visible.sync=“dialogVisible”`
@@ -1911,7 +1903,7 @@ Element Dialog 对话框组件显示效果
 
 ## 实现效果：
 
-![录制_2021_08_22_15_07_37_839.gif](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/%E5%BD%95%E5%88%B6_2021_08_22_15_07_37_839.gif)
+![录制_2021_08_22_15_07_37_839.gif](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138436.gif)
 
 # 54、商品服务-API-三级分类 -修改-拖拽效果 | 菜单拖动
 
@@ -1941,7 +1933,7 @@ Element Dialog 对话框组件显示效果
 - allow-drop拖拽时判定目标节点能否被放置
 - 被拖动的当前节点以及所在的父节点总层数不能大于3
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2030.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138437.png)
 
 关注的焦点在于，拖动到目标节点中，使得目标节点的catlevel+deep小于3即可。
 
@@ -2641,15 +2633,15 @@ Element Dialog 对话框组件显示效果
 
 拖动【手机通讯】=》【手机】上面
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2031.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138438.png)
 
 使用PostMan测试：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2032.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138439.png)
 
 打开数据库查看数据：发现已经更改了
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2033.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138440.png)
 
 前端部分代码：
 
@@ -2691,7 +2683,7 @@ this.$http({
 
 countNodeLevel方法还要讨论没有子节点的操作，不然可能二级节点拖不动
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2034.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062138441.png)
 
 [Element - The world's most popular Vue UI framework](https://element.eleme.cn/#/zh-CN/component/switch)
 
