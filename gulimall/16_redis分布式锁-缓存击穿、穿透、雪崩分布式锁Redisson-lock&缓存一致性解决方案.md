@@ -34,11 +34,13 @@ if(data == null){
 
 ### 本地缓存
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906580.png)
+![image-20220606223827977](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062238034.png)
+
+
 
 ### 分布式缓存-本地模式在分布式下的问题
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906581.png)
+![image-20220606223839306](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062238409.png)
 
 ### 分布式缓存
 
@@ -46,7 +48,7 @@ if(data == null){
 
 缓存中间件：redis，zSet可以用跳表来实现，面试常问哦
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206030906582.png)
+![image-20220606223854345](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062238452.png)
 
 # P152、 缓存使用-整合redis测试案例
 
