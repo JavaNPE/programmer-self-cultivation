@@ -1,12 +1,12 @@
-# 13_商城业务-首页整合thymeleaf渲染首页 | 整合dev-tools热部署|渲染一级分类数据
+# 13_商城业务-首页整合thymeleaf渲染首页- 整合dev-tools热部署-渲染一级分类数据
 
 # P136、商城业务-首页整合thymeleaf渲染首页
 
-
-
 ## 微服务项目架构
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![image-20220606223215387](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062232492.png)
+
+
 
 ### 动静分离
 
@@ -29,11 +29,11 @@ SpringBoot,访问项目的时候，默认会找index
 > 将对应的文件放到对应的文件夹下
 > 
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062232772.png)
 
 将所有的资源放在对应的位置之后，我们又将原来的controller报修改成了app
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062232773.png)
 
 - application.yml
   
@@ -87,7 +87,7 @@ SpringBoot,访问项目的时候，默认会找index
 
 结果图：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062232774.png)
 
 # P137、商城业务-首页整合dev-tools渲染一级分类数据
 
@@ -98,7 +98,7 @@ SpringBoot,访问项目的时候，默认会找index
 [http://localhost:10000/index.html（暂时不显示，需要我们做映射）](http://localhost:10000/index.html%EF%BC%88%E6%9A%82%E6%97%B6%E4%B8%8D%E6%98%BE%E7%A4%BA%EF%BC%8C%E9%9C%80%E8%A6%81%E6%88%91%E4%BB%AC%E5%81%9A%E6%98%A0%E5%B0%84%EF%BC%89)
 都可以访问我们的首页
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062232775.png)
 
 ## thymeleaf官网
 
@@ -148,7 +148,7 @@ pom依赖
 
 重启服务：多出一个de'vtools标识，前提是先关闭thymeleaf的换成cache:false
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062232776.png)
 
 index.html修改内容，记得添加thymeleaf的名称空间
 
@@ -381,6 +381,6 @@ index.html修改内容，记得添加thymeleaf的名称空间
 
 [http://localhost:10000/index/catalog.json](http://localhost:10000/index/catalog.json)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062232777.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062232778.png)
