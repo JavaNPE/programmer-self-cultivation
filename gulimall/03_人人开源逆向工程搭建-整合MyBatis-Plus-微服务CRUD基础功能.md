@@ -1,12 +1,10 @@
-# 03_人人开源逆向工程搭建-整合整合MyBatis-Plus-微服务CRUD基础功能
-
-
+# 03_人人开源逆向工程搭建-整合MyBatis-Plus-微服务CRUD基础功能
 
 # 人人开源：代码生成器|人人项目-逆向工程
 
 [人人开源](https://gitee.com/renrenio)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062112132.png)
 
 把人人开源的逆向工程代码clone到我们电脑本地。
 
@@ -69,13 +67,13 @@ tablePrefix=pms_
 
 [](http://localhost/sys/generator/code?tables=pms_attr,undo_log,pms_sku_images,pms_spu_info_desc,pms_product_attr_value,pms_comment_replay,pms_category_brand_relation,pms_category,pms_brand,pms_spu_info,pms_attr_group,pms_spu_images,pms_attr_attrgroup_relation,pms_spu_comment,pms_sku_sale_attr_value,pms_sku_info)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062112133.png)
 
 解压压缩包，把`main`放到`gulimall-product`的同级目录下。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062112134.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062112135.png)
 
 ## common: 公共部分
 
@@ -375,7 +373,7 @@ server:
 
 运行**gulimallCouponApplication.java 服务**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062112136.png)
 
 [https://www.notion.so](https://www.notion.so)
 
@@ -457,7 +455,7 @@ order端口是9000，product是10000，ware是11000。
 
 重启web后，浏览器访问：`http://localhost:8000/member/growthchangehistory/list`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062112137.png)
 
 ## 谷粒商城-订单服务：gulimall-order：端口号9000 | 对应的数据库 gulimall_oms
 
@@ -624,4 +622,4 @@ gulimall-ware修改pom.xml文件：添加公共类common依赖
 
 只要msg：提示success就可以了
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062112138.png)
