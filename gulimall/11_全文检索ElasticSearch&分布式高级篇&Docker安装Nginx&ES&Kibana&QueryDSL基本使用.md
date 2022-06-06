@@ -1,16 +1,22 @@
 # 11_全文检索ElasticSearch&分布式高级篇&Docker安装Nginx&ES&Kibana&QueryDSL基本使用
 
+# PDF课件：
+
+[谷粒商城-分布式高级-图.pdf](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7-%E5%9B%BE.pdf)
+
 # P102、全文检索ElasticSearch-简介
 
-## ElasticSearch概念-倒排索引
+## ElasticSearch概念-基础概念
 
 **ES重要概念: 索引、类型、文档**
 
-![image-20220529171338452](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529171338452.png)
+![image-20220606221553384](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062215535.png)
+
+
 
 ## ElasticSearch概念-倒排索引
 
-![image-20220529171358299](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529171358299.png)
+![image-20220606221609439](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062216562.png)
 
 # P103、 全文检索ElasticSearch-Docker安装ES
 
@@ -28,13 +34,13 @@ sudo docker pull kibana:7.4.2    （可视化检索数据类似navicat这样的�
 
 方式一：调出cmd窗口通过>`vagrant up` 命令启动，然后回车，启动成功之后，我们通过`vagrant ssh`命令连接到虚拟机。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%202.png)
 
 方式二：通过VirtualBox工具启动。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%203.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%204.png)
 
 ## docker命令：
 
@@ -46,9 +52,9 @@ sudo docker pull kibana:7.4.2    （可视化检索数据类似navicat这样的�
 
 ### [vagrant@localhost ~]$ `sudo docker pull elasticsearch:7.4.2` （下载ES）
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%205.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%206.png)
 
 ### 下载kibana镜像 `sudo docker pull kibana:7.4.2`
 
@@ -68,7 +74,7 @@ chmod -R 777 /mydata/elasticsearch/
 
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%207.png)
 
 ### （3）启动Elastic search
 
@@ -91,7 +97,7 @@ docker update elasticsearch --restart=always
 
 ### `docker ps -a`和`docker logs elasticsearch` 查看日志
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%208.png)
 
 因为容器里的文件映射到了外面，所以删除容器和新建容器数据还在。
 
@@ -101,7 +107,7 @@ docker update elasticsearch --restart=always
 
 数据挂载到外面，但是访问权限不足，把/mydata/elasticsearch下文件夹的权限设置好，上面已经设置过了。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%209.png)
 
 ### 文件夹的权限操作问题需注意：`chmod -R 777 /mydata/elasticsearch/`
 
@@ -112,21 +118,19 @@ docker update elasticsearch --restart=always
 chmod -R 777 /mydata/elasticsearch/
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2010.png)
 
 # P104、 全文检索ElasticSearch-Docker安装Kibana
 
 ## 使用postman测试ElasticSearch
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2011.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2011.png)
 
 [**http://192.168.56.10:9200/_cat/nodes**](http://192.168.56.10:9200/_cat/nodes)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2012.png)
 
-Kibana下载地址：[Index of kibana-local/7.4.2](https://mirrors.huaweicloud.com/kibana/7.4.2/)
-
-
+[Index of kibana-local/7.4.2](https://mirrors.huaweicloud.com/kibana/7.4.2/)
 
 遇到了更新阿里源也下载不下来kibana镜像的情况，先在别的网络下载下来后传到vagrant中。
 
@@ -164,13 +168,13 @@ docker update kibana  --restart=always
 
 浏览器访问：[http://192.168.56.10:5601/app/kibana](http://192.168.56.10:5601/app/kibana)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2013.png)
 
 ## CentOS7中查看卷组信息*pvdisplay*
 
 *`pvdisplay`*
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2014.png)
 
 ```bash
 mkdir /home/ext
@@ -189,9 +193,9 @@ dev/sdb1 /home/ext ext4 defaults 0 1
 
 如：[http://192.168.56.10:9200/_cat/nodes](http://192.168.56.10:9200/_cat/nodes)，可以直接浏览器输入上面的url，也可以在kibana中输入`GET /_cat/nodes`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2015.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2016.png)
 
 ```bash
 127.0.0.1 78 95 5 0.00 0.04 0.10 dilm * 4b9950f79d9d
@@ -203,7 +207,7 @@ dev/sdb1 /home/ext ext4 defaults 0 1
 
 如：[http://192.168.56.10:9200/_cat/health](http://192.168.56.10:9200/_cat/health)
 
-![注：green表示健康值正常](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![注：green表示健康值正常](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2017.png)
 
 注：green表示健康值正常
 
@@ -211,7 +215,7 @@ dev/sdb1 /home/ext ext4 defaults 0 1
 
 如：[http://192.168.56.10:9200/_cat/master](http://192.168.56.10:9200/_cat/master)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2018.png)
 
 （4）`GET/_cat/indicies`：查看所有索引 ，等价于mysql数据库的show databases;
 
@@ -219,7 +223,7 @@ es中的索引就相当于MySQL中的数据库，indices相当于show databases;
 
 如：[http://192.168.56.10:9200/_cat/indices](http://192.168.56.10:9200/_cat/indices)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2019.png)
 
 ### **2、索引一个文档（保存）**
 
@@ -238,7 +242,7 @@ http://192.168.56.10:9200/customer/external/1
 }
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2020.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2020.png)
 
 创建数据成功后，显示201 created表示插入记录成功。
 
@@ -261,9 +265,9 @@ http://192.168.56.10:9200/customer/external/1
 }
 ```
 
-![新增:不带id;带id但之前没数据  修改:带id,并且有数据](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2021.png)新增:不带id;带id但之前没数据  修改:带id,并且有数据
+![新增:不带id;带id但之前没数据  修改:带id,并且有数据](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2021.png)
 
-
+新增:不带id;带id但之前没数据  修改:带id,并且有数据
 
 ### PUT和POST区别
 
@@ -280,7 +284,7 @@ http://192.168.56.10:9200/customer/external/1
 
 1. 每个文档的版本号"`_version`" 起始值都为1 每次对当前文档成功操作后都加1。
 2. 而序列号"`_seq_no`"则可以看做是索引的信息 在第一次为索引插入数据时为0，每对索引内数据操作成功一次sqlNO加1， 并且文档会记录是第几次操作使它成为现在的情况的。
-
+可以参考https://www.cnblogs.com/Taeso/p/13363136.html
 
 # P107、 全文检索-ElasticSearch-入门-get查询数据&乐观锁字段
 
@@ -290,7 +294,7 @@ http://192.168.56.10:9200/customer/external/1
 
 [http://192.168.56.10:9200/customer/external/1](http://192.168.56.10:9200/customer/external/1)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2022.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2022.png)
 
 说明：
 
@@ -317,7 +321,7 @@ http://192.168.56.10:9200/customer/external/1
 
 PUT [http://192.168.56.10:9200/customer/external/1?if_seq_no=18&if_primary_term=6](http://192.168.56.10:9200/customer/external/1?if_seq_no=18&if_primary_term=6)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2023.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2023.png)
 
 （2）将name更新为2，更新过程中使用seq_no=18
 
@@ -414,11 +418,11 @@ POST时带_update对比元数据如果一样就不进行任何操作。
 
 [http://192.168.56.10:9200/customer/external/1/_update](http://192.168.56.10:9200/customer/external/1/_update)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2024.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2024.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2025.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2025.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2026.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2026.png)
 
 ```json
 返回
@@ -476,7 +480,7 @@ DELETE http://192.168.56.10:9200/customer   --删除整个索引
 
 DELETE [http://192.168.56.10:9200/customer/external/1](http://192.168.56.10:9200/customer/external/1)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2027.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2027.png)
 
 ## 6、**ES的批量操作——bulk批量API**
 
@@ -521,7 +525,7 @@ POST http://192.168.56.10:9200/customer/external/_bulk
 
 我们需要去kibana中的Dev Tools中去执行此操作，kibana地址：[http://192.168.56.10:5601/app/kibana#/dev_tools](http://192.168.56.10:5601/app/kibana#/dev_tools)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2028.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2028.png)
 
 解释：
 
@@ -582,7 +586,7 @@ POST /_bulk    #此处没有指定任何索引的任何类型
 {"doc":{"title":"my updated blog post"}}
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2029.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2029.png)
 
 - 详细数据:#! Deprecation: [types removal] Specifying types in bulk requests is deprecated.
   
@@ -2701,11 +2705,11 @@ bulk API以此按顺序执行所有的action (动作)。如果一个单个的动
 
 执行结果：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2030.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2030.png)
 
 使用postman查看所有索引
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2031.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2031.png)
 
 # P111、 全文检索-ElasticSearch-进阶-QueryDSL基本使用&match_ all
 
@@ -2756,7 +2760,7 @@ hits.sort - 结果的排序key（列），没有的话按照score排序
 
 `hits._score` - 相关得分 (not applicable when using match_all)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2032.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2032.png)
 
 ```json
 GET bank/_search?q=*&sort=account_number:asc
@@ -2907,7 +2911,7 @@ match返回account_number=20的数据。
 
 查询结果：
 
-![ES6](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2033.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2033.png)
 
 1. 字符串，全文检索
 
@@ -3010,7 +3014,7 @@ GET bank/_search
 
 查看结果：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2034.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2034.png)
 
 > match_phrase和match的区别，观察如下实例：`match_phrase`是做短语匹配，只要文本中包含匹配条件，就能匹配到；使用match中的keyword，匹配的条件就是要显示字段的全部值，要进行精确匹配的。
 > 
@@ -3167,7 +3171,7 @@ GET bank/_search
 
 文本字段的匹配，使用keyword，匹配的条件就是要显示字段的全部值，要进行精确匹配的。`match_phrase`是做短语匹配，只要文本中包含匹配条件，就能匹配到。
 
-### **（5）query/multi_math【多字段匹配】**
+## **（5）query/multi_math【多字段匹配】**
 
 **state或者address中包含mill**，并且在查询过程中，会对于查询条件进行分词。
 
@@ -3286,7 +3290,7 @@ GET bank/_search
 }
 ```
 
-### **（6）query/bool/must复合查询**
+## **（6）query/bool/must复合查询**
 
 复合语句可以合并，任何其他查询语句，包括符合语句。这也就意味着，复合语句之间可以互相嵌套，可以表达非常复杂的逻辑。
 
@@ -3579,7 +3583,7 @@ GET bank/_search
     ```
     
 
-### （7）query/filter【结果过滤】
+## (7）query/filter【结果过滤】
 
 - must 贡献得分
 - should 贡献得分
@@ -3694,7 +3698,7 @@ GET bank/_search
 }
 ```
 
-### **（8）query/term**
+## **（8）query/term**
 
 和match一样。匹配某个属性的值。
 
@@ -3771,7 +3775,7 @@ GET bank/_search
 
 也就是说，**全文检索字段用match，其他非text字段(数字等)匹配用term**。
 
-### **（9）aggs/agg1（聚合）**
+## **（9）aggs/agg1（聚合）**
 
 前面介绍了存储、检索，但还没介绍分析。
 
@@ -3961,10 +3965,6 @@ user.addr=["ccc","ddd"]
 
 数组的扁平化处理会使检索能检索到本身不存在的，为了解决这个问题，就采用了嵌入式属性，数组里是对象时用嵌入式属性（不是对象无需用嵌入式属性）
 
-nested阅读：[https://blog.csdn.net/weixin_40341116/article/details/80778599](https://blog.csdn.net/weixin_40341116/article/details/80778599)
-
-使用聚合：[https://blog.csdn.net/kabike/article/details/101460578](https://blog.csdn.net/kabike/article/details/101460578)
-
 ```json
 GET articles/_search
 {
@@ -3987,10 +3987,6 @@ GET articles/_search
 ```
 
 # P119、 全文检索-ElasticSearch-映射-mapping创建
-
-## ElasticSearc h概念-基础概念
-
-![image-20220529172604441](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220529172604441.png)
 
 > 映射定义文档如何被存储和检索的?
 > 
@@ -4027,11 +4023,11 @@ GET articles/_search
     3. 嵌套类型
         1. nested 用于json对象数组
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2035.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2035.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2036.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2036.png)
 
-
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2037.png)
 
 ## **（2）Mapping映射**
 
@@ -4277,7 +4273,7 @@ GET /my_index
 
 输出结果：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2038.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2038.png)
 
 ### **添加新的字段映射`PUT /my_index/_mapping`**
 
@@ -4480,7 +4476,7 @@ POST _analyze
 
 - 执行结果：
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2039.png)
+    ![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2039.png)
     
     ```json
     {
@@ -4527,7 +4523,7 @@ POST _analyze
 
 对于中文，我们需要安装额外的分词器：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2040.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2040.png)
 
 ## **1 安装`ik分词器`**
 
@@ -4542,7 +4538,7 @@ POST _analyze
 
 [](https://github-releases.githubusercontent.com/2993595/19827980-fef3-11e9-8cda-384bc0d9396c?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20211128%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211128T103823Z&X-Amz-Expires=300&X-Amz-Signature=94af87a849f428357e9f2772e5bd60a2a86d0a133097a8e6e45c43738e43e53d&X-Amz-SignedHeaders=host&actor_id=44352048&key_id=0&repo_id=2993595&response-content-disposition=attachment%3B%20filename%3Delasticsearch-analysis-ik-7.4.2.zip&response-content-type=application%2Foctet-stream)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2041.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2041.png)
 
 如果不嫌麻烦，还可以采用如下的方式。
 
@@ -4603,7 +4599,7 @@ docker restart elasticsearch
 [root@66718a266132 elasticsearch]# rm -rf elasticsearch-analysis-ik-7.6.2.zip
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2042.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2042.png)
 
 确认是否安装好了分词器
 
@@ -4703,11 +4699,11 @@ GET _analyze
 
 ### 安装wget：`yum install wget`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2043.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2043.png)
 
 ### 安装unzip：`yum install -y unzip`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2044.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2044.png)
 
 # P124、 全文检索- ElasticSearch-分词-自定义扩展词库
 
@@ -4741,17 +4737,17 @@ GET _analyze
 
 ### 查看虚拟机内存大小：`free -h`或者`free -m`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2045.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2045.png)
 
 ### docker中停掉es容器命令：
 
 先`docker ps` 查看容器id，然后`docker stop 容器id`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2046.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2046.png)
 
 ### docker中移除某个容器命令：`docker rm 容器id`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2047.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2047.png)
 
 创建新的es容器：**-Xmx512m**
 
@@ -4773,11 +4769,11 @@ docker update elasticsearch --restart=always
 
 虽然我们把原来的es容器移除了，但是我们在外围做了映射，之前的数据，已经被我们映射到了mydata/el.../data/nodes中去了。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2048.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2048.png)
 
 ## docker-安装nginx：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2049.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2049.png)
 
 - 随便启动一个nginx实例，只是为了复制出配置
     - `docker run -p 80:80 --name nginx -d nginx:1.10`
@@ -4799,39 +4795,39 @@ docker update elasticsearch --restart=always
     ```
     
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2050.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2050.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2051.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2051.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2052.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2052.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2053.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2053.png)
 
 浏览器访问：[192.168.56.10](http://192.168.56.10/)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2054.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2054.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2055.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2055.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2056.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2056.png)
 
 浏览器访问：[http://192.168.56.10/es/fenci.txt](http://192.168.56.10/es/fenci.txt)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2057.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2057.png)
 
 ## 自定义词库：
 
-![`/mydata/elasticsearch/plugins/ik/config` 中的`IKAnalyzer.cfg.xml`](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2058.png)
+![`/mydata/elasticsearch/plugins/ik/config` 中的`IKAnalyzer.cfg.xml`](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2058.png)
 
 `/mydata/elasticsearch/plugins/ik/config` 中的`IKAnalyzer.cfg.xml`
 
 比如我们要把尚硅谷算作一个词，修改**`/usr/share/elasticsearch/plugins/ik/config`**中的`IKAnalyzer.cfg.xml` 由于我们已经做了映射`/mydata/elasticsearch/plugins/ik/config` 中的`IKAnalyzer.cfg.xml`即可【ps:修改配置之后一定要重启】
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2059.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2059.png)
 
 修改配置之后一定要重启
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2060.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2060.png)
 
 [](http://192.168.56.10:5601/app/kibana#/dev_tools/console?_g=())
 
@@ -4847,7 +4843,7 @@ POST _analyze
 }
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2061.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2061.png)
 
 ### docker中启动nginx命令：
 
@@ -4898,9 +4894,9 @@ java操作es有两种方式：
 
 选择依赖web，但不要在里面选择es
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2062.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2062.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2063.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2063.png)
 
 **1、导入依赖**
 
@@ -4923,9 +4919,9 @@ java操作es有两种方式：
 </properties>
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2064.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2064.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2065.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2065.png)
 
 ### 代码
 
@@ -5088,7 +5084,7 @@ java操作es有两种方式：
     
 - 执行test测试类
   
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2066.png)
+    ![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2066.png)
     
 
 # P126、 全文检索ElasticSearch-整合测试保存
@@ -5222,23 +5218,23 @@ public class GulimallElasticSearchConfig {
 
 [](http://192.168.56.10:5601/app/kibana#/dev_tools/console?_g=())
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2067.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2067.png)
 
 在执行之后：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2068.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2068.png)
 
 执行测试方法之后，我们去kibana中执行`Get users/_serarch` 命令去查询索引数据  
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2069.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2069.png)
 
 给user对象赋值之后
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2070.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2070.png)
 
 执行测试方法之后，我们去kibana中执行`Get users/_serarch` 命令去查询索引数据  
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2071.png)
+![Untitled](11_%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2ElasticSearch%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%AB%98%E7%BA%A7%E7%AF%87%20Docker%E5%AE%89%E8%A3%85ES%20Kibana%20Quer%20651442c426204c6587afb4aaae364854/Untitled%2071.png)
 
 # P127、 全文检索ElasticSearch.整合-测试复杂检索
 
