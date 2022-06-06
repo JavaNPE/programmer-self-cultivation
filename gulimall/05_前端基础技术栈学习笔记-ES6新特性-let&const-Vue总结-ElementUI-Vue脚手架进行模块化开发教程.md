@@ -2,7 +2,7 @@
 
 ## 用VSCode打开：人人开源项目clone的项目renren-fast-vue
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130249.png)
 
 # 29、前端基础-ES6-let&const
 
@@ -14,7 +14,7 @@
 - ES2016，就是ES7。
 - ES2017，就是ES8。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%201.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130250.png)
 
 所以，**ECMAScript**是浏览器脚本语言的**规范**，而各种我们**熟知的js语言**，**如JavaScript则是
 规范的具体实现。   比如：JDBC是规范，MySql是实现。**
@@ -308,7 +308,7 @@ ES6为字符串扩展了几个新的AP|:
 </html>
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%202.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130252.png)
 
 ### 5、函数优化：箭头函数 | 函数参数的默认值 | 不定参数
 
@@ -394,7 +394,7 @@ ES6为字符串扩展了几个新的AP|:
 </html>
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%203.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130253.png)
 
 ### 6、对象优化
 
@@ -484,7 +484,7 @@ ES6为字符串扩展了几个新的AP|:
 </html>
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%204.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130254.png)
 
 ### 7、map和reduce
 
@@ -548,7 +548,7 @@ arr.reduce(callback,[initialValue])
 </html>
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%205.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130255.png)
 
 ### 8、Promise：优化异步操作。封装ajax
 
@@ -708,9 +708,9 @@ arr.reduce(callback,[initialValue])
     ```
     
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%206.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130256.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%207.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130257.png)
 
 ### 9、模块化
 
@@ -789,7 +789,7 @@ Model中。
 而MVVM中的VM要做的事情就是把DOM操作完全封装起来，开发人员不用再关心Model
 和View之间是如何互相影响的：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%208.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130258.png)
 
 ## 使用NPM的方式安装Vue：
 
@@ -818,11 +818,11 @@ $ npm install vue
 
 在VSCode终端窗口使用`npm install vue` 命令，安装后在项目node_modules里有vue，类似maven install拉取远程到本地。
 
-![使用 `npm init -y` 命令初始化项目](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%209.png)
+![使用 `npm init -y` 命令初始化项目](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130259.png)
 
 使用 `npm init -y` 命令初始化项目
 
-![`npm install vue`](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2010.png)
+![`npm install vue`](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130260.png)
 
 `npm install vue`
 
@@ -865,7 +865,7 @@ $ npm install vue
     </html>
     ```
     
-    ![Vue实时渲染功能：](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2011.png)
+    ![Vue实时渲染功能：](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130261.png)
     
     Vue实时渲染功能：
     
@@ -910,9 +910,9 @@ $ npm install vue
     </html>
     ```
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2012.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130262.png)
     
-    ![录制_2021_08_16_22_57_19_454.gif](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/%E5%BD%95%E5%88%B6_2021_08_16_22_57_19_454.gif)
+    ![录制_2021_08_16_22_57_19_454.gif](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130263.gif)
     
 
 # 37、前端基础-Vue基本语法&插件安装 | vue 2 snippets语法提示插件 | 谷歌浏览器中安装vue-devtool
@@ -1398,7 +1398,7 @@ show里的字符串也可以比较
     </html>
     ```
     
-    ![录制_2021_08_17_19_12_00_885.gif](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/%E5%BD%95%E5%88%B6_2021_08_17_19_12_00_885.gif)
+    ![录制_2021_08_17_19_12_00_885.gif](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130264.gif)
     
 
 ## 1、计算属性和侦听器.html | **`computed` |** watch监听
@@ -1638,14 +1638,14 @@ vue对象里指定了components属性，是指：标签里有子标签，`'butto
     </html>
     ```
     
-    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2013.png)
+    ![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130265.png)
     
 
 # 42、前端基础-Vue-生命周期和钩子函数
 
 每个vue实例在被创建时都要经过一系列的初始化过程：创建实例，装载模板、渲染模板等等。vue为生命周期中的每个状态都设置了钩子函数（监听函）。每当vue实列处于不同的生命周期时，对应的函数就会被触发调用。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2014.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130266.png)
 
 - 1、生命周期.html
   
@@ -1722,7 +1722,7 @@ vue对象里指定了components属性，是指：标签里有子标签，`'butto
     ```
     
 
-# 43、前端基础-Vue-使用Vue脚手架进行模块化开发 😍
+# 43、前端基础-Vue-使用Vue脚手 架进行模块化开发 😍
 
 ## 1、全局安装webpack命令： `npm install webpack -g`
 
@@ -1730,13 +1730,13 @@ vue对象里指定了components属性，是指：标签里有子标签，`'butto
 
 注意细节：cmd右键**取消快速编辑模式**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2015.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130267.png)
 
 ## 2、全局安装vue脚手架命令：`npm install -g @vue/cli-init`
 
 全局安装vue脚手架命令：`npm install -g @vue/cli-init` 【模块化项目】；
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2016.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130268.png)
 
 **附：**
 
@@ -1744,17 +1744,16 @@ vue对象里指定了components属性，是指：标签里有子标签，`'butto
 
 `npm install -g @vue/cli-init`【后面init 失败，选择下面一条语句成功】
 解决方法一：`cnpm install -g vue-cli`
-解决方法二：[https://blog.csdn.net/zhumizhumi/article/details/89875666](https://blog.csdn.net/zhumizhumi/article/details/89875666)
 
 查找`vue.cmd`，将文件夹添加到`环境变量Path中` 。
 
 推荐使用**EveryThing**工具查找`vue.cmd`文件。
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2017.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130269.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2018.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130270.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2019.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130271.png)
 
 ## 3、初始化vue项目命令：`vue init webpack appname`
 
@@ -1762,22 +1761,22 @@ vue对象里指定了components属性，是指：标签里有子标签，`'butto
 
 vue脚手架初始化一个叫`vue-demo`以webpack为模板的应用`vue init webpack vue-demo`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2020.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130272.png)
 
 **选用npm的方式进行管理 （视频默认选择的都是第一个）**
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2021.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130273.png)
 
 `cd vue-demo`
 
 `npm run dev`启动，**`ctrl+c`**停止项目
 *http://localhost:8080*就可以访问了
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2022.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130274.png)
 
 浏览器访问：[http://localhost:8080](http://localhost:8080/)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2023.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130275.png)
 
 ## 4、VSCode中启动vue项目命令：`npm start = npm run dev`
 
@@ -1787,15 +1786,15 @@ vue脚手架初始化一个叫`vue-demo`以webpack为模板的应用`vue init we
 
 `npmrun build`:将项目打包
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2024.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130276.png)
 
 ## 5、模块化开发
 
 ### 5.1 vue项目目录结构：
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2025.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130277.png)
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2026.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130278.png)
 
 - main.js
   
@@ -2236,14 +2235,14 @@ export default {
 npm i element-ui -S
 ```
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2027.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130279.png)
 
 > vue项目开放端口太麻烦了，其他主机访问不了。防火墙输入策略和host什么的修改过，nacos等其他服务能正常访问，vue项目别的主机访问不了，不知道哪里有限制可以在`onfig/index.js`配置vue项目的ip和端口
 > 
 
 如果有启动项目先将其停止：`ctrl+c`
 
-![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/Untitled%2028.png)
+![Untitled](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206062130280.png)
 
 ## 快速上手：完整引入 Element 在 main.js 中写入以下内容：【参照官网】
 
@@ -2263,9 +2262,9 @@ new Vue({
 
 ### 快捷键模板设置
 
+[VSCode 快速生成 .vue 基本模板、发送http请求模板 - 农夫三拳有点疼~ - 博客园](https://www.notion.so/VSCode-vue-http-3f202317b6a241649716387f7fbeeaa4) 
 
-
-```
+```html
 {
 	"Print to console": {
 		"prefix": "vue",
