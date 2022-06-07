@@ -732,7 +732,7 @@ rabbitTemplate.convertAndSend("hello-java-exchange", "hello222.java", orderEntit
 
 ![image-20220604072116010](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/202206040721115.png)
 
-idea控制台输出打印如下内容
+idea控制台输出打印如下内容，注意控制台打印输出的message信息，包含返回的状态码replyCode，回复的文本消息replyText，以及是哪台交换机exchange和相关的路由键信息routingKey。
 
 ```json
 2022-06-04 07:23:38.310  INFO 27472 --- [nio-9010-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
