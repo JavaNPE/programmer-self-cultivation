@@ -29,12 +29,12 @@
 这样起码我的头发可以少掉一半。我哥茶哥，我为大家整理了一系列教程。
 
 
-# 谷粒商城项目简介
+# 谷粒商城项目
 谷粒商城项目是尚硅谷研究院推出完整大型分布式架构电商平台，技术全面、业务深入。技术涵盖：微服务架构+分布式+全栈+集群+部署+自动化运维+可视化CICD，对标阿里P6/P7，冲击40-60w。
 项目由业务集群系统+后台管理系统构成，打通了分布式开发及全栈开发技能，包含前后分离全栈开发、Restful接口、数据校验、网关、注册发现、配置中心、熔断、限流、降级、链路追踪、性能监控、压力测试、系统预警、集群部署、持续集成、持续部署…
 全套项目教程分为三大部分： 分布式基础（全栈开发篇）、分布式高级（微服务架构篇）、高可用集群（架构师提升篇）。
 
-   * [01_谷粒商城-项目简介-微服务-集群-负载均衡-注册中心-服务熔断-降级-gateway网关（建议收藏:+1:）](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/main/gulimall/01_%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B-%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E9%9B%86%E7%BE%A4-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1-%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD-%E9%99%8D%E7%BA%A7-gateway.md)
+   * [01_项目简介-微服务-集群-负载均衡-注册中心-服务熔断-降级-gateway网关（建议收藏:+1:）](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/main/gulimall/01_%E8%B0%B7%E7%B2%92%E5%95%86%E5%9F%8E-%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B-%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E9%9B%86%E7%BE%A4-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1-%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83-%E6%9C%8D%E5%8A%A1%E7%86%94%E6%96%AD-%E9%99%8D%E7%BA%A7-gateway.md)
    * [02_安装Linux虚拟机-docker安装redis、mysql、git使用教程-VSCode人人开源项目（建议收藏:+1:）](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/main/gulimall/02_%E5%AE%89%E8%A3%85Linux%E8%99%9A%E6%8B%9F%E6%9C%BA-docker%E5%AE%89%E8%A3%85redis%E3%80%81mysql%E3%80%81git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-VSCode%E4%BA%BA%E4%BA%BA%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E8%81%9A%E5%90%88-%E9%85%8D%E7%BD%AE%E5%89%8D%E7%AB%AF%E7%8E%AF%E5%A2%83.md)
    * [03_人人开源逆向工程搭建-整合MyBatis-Plus-微服务CRUD基础功能（建议收藏:+1:）](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/6ce372b9289f5178721c8d9df9037002ea23189e/gulimall/03_%E4%BA%BA%E4%BA%BA%E5%BC%80%E6%BA%90%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA-%E6%95%B4%E5%90%88MyBatis-Plus-%E5%BE%AE%E6%9C%8D%E5%8A%A1CRUD%E5%9F%BA%E7%A1%80%E5%8A%9F%E8%83%BD.md)
    * [04_分布式组件-SpringCloud Alibaba-Nacos、OpenFeign、Gateway微服务学习笔记（建议收藏:+1:）](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/6ce372b9289f5178721c8d9df9037002ea23189e/gulimall/04_%E5%88%86%E5%B8%83%E5%BC%8F%E7%BB%84%E4%BB%B6-SpringCloud%20Alibaba-Nacos%E3%80%81OpenFeign%E3%80%81Gateway%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
@@ -56,6 +56,54 @@
    * [21_消息队列-RabbitMQ安装&MQ工作流详解&Exchange类型&SpringBoot整合MQ（建议收藏:+1:）](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/main/gulimall/21_%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-RabbitMQ%E5%AE%89%E8%A3%85%26MQ%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AF%A6%E8%A7%A3%26Exchange%E7%B1%BB%E5%9E%8B%26SpringBoot%E6%95%B4%E5%90%88MQ.md)
 
 
+# SpringCloud教程笔记汇总
+
+   * [01_微服务概述-SpringCloud组件对比-停更解决方案-官方文档汇总](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/01_%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0-SpringCloud%E7%BB%84%E4%BB%B6%E5%AF%B9%E6%AF%94-%E5%81%9C%E6%9B%B4%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E6%B1%87%E6%80%BB.md)
+   * [02_SpringCloud 订单支付模块微服务架构编码构建-搭建第一个SpringCloud工程-devtools热部署配置](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/02_SpringCloud%20%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E6%A8%A1%E5%9D%97%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%BC%96%E7%A0%81%E6%9E%84%E5%BB%BA-%E6%90%AD%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AASpringCloud%E5%B7%A5%E7%A8%8B-devtools%E7%83%AD%E9%83%A8%E7%BD%B2%E9%85%8D%E7%BD%AE.md)
+   * [03_单机Eureka构建-eureka服务注册与发现](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/03_%E5%8D%95%E6%9C%BAEureka%E6%9E%84%E5%BB%BA-eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0.md)
+   * [04_集群Eureka构建-eureka服务注册与发现](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/04_%E9%9B%86%E7%BE%A4Eureka%E6%9E%84%E5%BB%BA-eureka%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0.md)
+   * [05_SpringCloud整合Zookeeper代替Eureka](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/05_SpringCloud%E6%95%B4%E5%90%88Zookeeper%E4%BB%A3%E6%9B%BFEureka.md)
+   * [06_Consul服务注册与发现-Eureak、zookeeper和Consul三个注册中心异同点有哪些？经典CAP理论](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/06_Consul%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0-Eureak%E3%80%81zookeeper%E5%92%8CConsul%E4%B8%89%E4%B8%AA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83%E5%BC%82%E5%90%8C%E7%82%B9%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F%E7%BB%8F%E5%85%B8CAP%E7%90%86%E8%AE%BA.md)
+   * [07_Ribbon负载均衡与Nginx负载均衡的区别，Ribbon核心组件IRule，负载均衡算法原理（附手写轮询算法）](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/07_Ribbon%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E4%B8%8ENginx%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%8CRibbon%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6IRule%EF%BC%8C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86%EF%BC%88%E6%89%8B%E5%86%99%E8%BD%AE%E8%AF%A2%E7%AE%97%E6%B3%95%EF%BC%89.md)
+   * [08_OpenFeign服务接口调用-超时控制-日志打印Feign和OpenFeign区别](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/08_OpenFeign%E6%9C%8D%E5%8A%A1%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8-%E8%B6%85%E6%97%B6%E6%8E%A7%E5%88%B6-%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0Feign%E5%92%8COpenFeign%E5%8C%BA%E5%88%AB.md)
+   * [09_Hystrix断路器-JMeter压力测试](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/09_Hystrix%E6%96%AD%E8%B7%AF%E5%99%A8-JMeter%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95.md)
+   * [10_Gateway新一代网关](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/10_Gateway%E6%96%B0%E4%B8%80%E4%BB%A3%E7%BD%91%E5%85%B3.md)
+   * [11_SpringCloud config分布式配置中心](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/11_SpringCloud%20config%E5%88%86%E5%B8%83%E5%BC%8F%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83.md)
+   * [12_SpringCloud Bus 消息总线](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/12_SpringCloud%20Bus%20%E6%B6%88%E6%81%AF%E6%80%BB%E7%BA%BF.md)
+   * [13_SpringCloud Stream消息驱动](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/13_SpringCloud%20Stream%E6%B6%88%E6%81%AF%E9%A9%B1%E5%8A%A8.md)
+   * [14_SpringCloud Sleuth分布式请求链路追踪](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/14_SpringCloud%20Sleuth%E5%88%86%E5%B8%83%E5%BC%8F%E8%AF%B7%E6%B1%82%E9%93%BE%E8%B7%AF%E8%BF%BD%E8%B8%AA.md)
+   * [15_SpringCloud Alibaba入门简介及相关学习资料](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/15_SpringCloud%20Alibaba%E5%85%A5%E9%97%A8%E7%AE%80%E4%BB%8B%E5%8F%8A%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99.md)
+   * [16_SpringCloud Alibaba Nacos服务注册和配置中心](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/16_SpringCloud%20Alibaba%20Nacos%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E5%92%8C%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83.md)
+   * [17_SpringCloud Alibaba Sentinel实现熔断与限流](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/17_SpringCloud%20Alibaba%20Sentinel%E5%AE%9E%E7%8E%B0%E7%86%94%E6%96%AD%E4%B8%8E%E9%99%90%E6%B5%81.md)
+   * [18_SpringCloud Alibaba Seata处理分布式事务](https://github.com/JavaNPE/JavaProgrammerSelfCultivation/blob/ad51cdf5aa132ac6f03ed60418ccd76102ea4589/SpringCloud/18_SpringCloud%20Alibaba%20Seata%E5%A4%84%E7%90%86%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1.md)
+
+
+
+
+
+
+
+
+
+
+
+
+# Java数据结构和算法
+如果你不想永远都是代码工人，就需要花时间来研究下数据结构和算法。
+
+本教程是使用Java来讲解数据结构和算法，考虑到数据结构和算法较难，授课采用图解加算法游戏的方式。
+内容包括: 
+稀疏数组、单向队列、环形队列、单向链表、双向链表、
+环形链表、约瑟夫问题、栈、前缀、中缀、后缀表达式、
+中缀表达式转换为后缀表达式、递归与回溯、迷宫问题、
+八皇后问题、算法的时间复杂度、冒泡排序、选择排序、
+插入排序、快速排序、归并排序、希尔排序、基数排序(桶排序)、
+堆排序、排序速度分析、二分查找、插值查找、斐波那契查找、
+散列、哈希表、二叉树、二叉树与数组转换、二叉排序树(BST)、
+AVL树、线索二叉树、赫夫曼树、赫夫曼编码、多路查找树(B树B+树和B*树)、
+图、图的DFS算法和BFS、程序员常用10大算法、二分查找算法(非递归)、
+分治算法、动态规划算法、KMP算法、贪心算法、普里姆算法、克鲁斯卡尔算法、
+迪杰斯特拉算法、弗洛伊德算法马踏棋盘算法。
 
 知识库旨在为学习 Java 的小伙伴提供一系列：
 
