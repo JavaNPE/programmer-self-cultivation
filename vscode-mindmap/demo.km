@@ -3,43 +3,47 @@
         "data": {
             "id": "cqvo2g86nk80",
             "created": 1677736822895,
-            "text": "MainTopic",
+            "text": "邮箱应用场景",
             "expandState": "expand",
-            "priority": 1
+            "priority": null
         },
         "children": [
             {
                 "data": {
-                    "id": "cqvo2yrvz6o0",
-                    "created": 1677736863268,
-                    "text": "topic",
-                    "expandState": "expand"
+                    "id": "cqxl9ahr8co0",
+                    "created": 1677932015545,
+                    "text": "注册绑定个人互联网账户，用于找回账户密码等"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqxl9cr8mnk0",
+                    "created": 1677932020472,
+                    "text": "购物平台查看订单，接收发票等"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqxl9ptp7m00",
+                    "created": 1677932048919,
+                    "text": "用于求职简历，个人（或工作）发邮件"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqxl9xhguhc0",
+                    "created": 1677932065594,
+                    "text": "给陌生人发送文件"
                 },
                 "children": [
                     {
                         "data": {
-                            "id": "cqvo3572ibk0",
-                            "created": 1677736877247,
-                            "text": "topic",
-                            "expandState": "expand"
-                        },
-                        "children": []
-                    },
-                    {
-                        "data": {
-                            "id": "cqvo35s3odc0",
-                            "created": 1677736878518,
-                            "text": "topic",
-                            "expandState": "expand"
-                        },
-                        "children": []
-                    },
-                    {
-                        "data": {
-                            "id": "cqvo36dfzqw0",
-                            "created": 1677736879809,
-                            "text": "topic",
-                            "expandState": "expand"
+                            "id": "cqxla2symg00",
+                            "created": 1677932077173,
+                            "text": "这是最有用的，现在QQ和微信不怎么支持给陌生人发文件、图片、压缩包"
                         },
                         "children": []
                     }
@@ -47,16 +51,24 @@
             },
             {
                 "data": {
-                    "id": "cqvo332j38g0",
-                    "created": 1677736872619,
-                    "text": "topic",
-                    "expandState": "expand"
+                    "id": "cqxla9ql1xc0",
+                    "created": 1677932092267,
+                    "text": "跟外国人交流"
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqxlacwcgrc0",
+                            "created": 1677932099145,
+                            "text": "电话还要考虑时区，QQ微信人家又不怎么用，科学上网不方便，邮箱只用地址就可以畅通无阻的交流"
+                        },
+                        "children": []
+                    }
+                ]
             }
         ]
     },
-    "template": "default",
+    "template": "right",
     "theme": "fresh-blue",
     "version": "1.4.43"
 }
