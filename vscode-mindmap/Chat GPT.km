@@ -1,0 +1,243 @@
+{
+    "root": {
+        "data": {
+            "id": "cra330p3gs80",
+            "created": 1679201023495,
+            "text": "Chat GPT注册流程：后台回复关键词【GPT注册】",
+            "expandState": "expand"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cra33a9ea6g0",
+                    "created": 1679201044313,
+                    "text": "魔法上网",
+                    "priority": 1,
+                    "expandState": "expand",
+                    "layout_mind_offset": {
+                        "x": -7,
+                        "y": -106
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cra36bb0pg80",
+                            "created": 1679201281681,
+                            "text": "IP的选择很简单，这东西哪个国家开发出来的就选哪个国家的就行，其他的没什么讲究的。",
+                            "expandState": "expand"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cra39h4vbkg0",
+                            "created": 1679201529462,
+                            "text": "一些网站的广告页面会有惊喜",
+                            "expandState": "expand"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cra37icvlmo0",
+                    "created": 1679201375395,
+                    "text": "国际邮箱",
+                    "priority": 2,
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cra37vgzri00",
+                            "created": 1679201403942,
+                            "text": "同样的道理，在注册账号填写邮箱的时候，遵循本国优先原则即可，哪个国家的产品就用哪个国家的邮箱。",
+                            "expandState": "expand"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cra391yxa5s0",
+                            "created": 1679201496451,
+                            "text": " 至于QQ邮箱，163这种最好别用，小小钓鱼",
+                            "expandState": "expand"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cra3ag8s8zs0",
+                    "created": 1679201605886,
+                    "text": "接收短信验证码",
+                    "priority": 3,
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cra3cd1pse00",
+                            "created": 1679201755657,
+                            "text": "选择sms-activate即可",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cra3e2ztiyw0",
+                                    "created": 1679201890503,
+                                    "text": "国内可以正常访问 https://sms-activate.org/",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cra3eeme0yg0",
+                                    "created": 1679201915812,
+                                    "text": "同样用国际邮箱注册：Gmail，outlook",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cra3gb7w8000",
+                                    "created": 1679202065133,
+                                    "text": "详细使用流程，在我后面分享的Notion链接里面",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cra3hnqxjmo0",
+                    "created": 1679202170770,
+                    "text": "注册 OpenAI 账号",
+                    "priority": 4,
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cra3j7u8l1k0",
+                            "created": 1679202292870,
+                            "text": "需要先搞定上面三步",
+                            "expandState": "expand"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cra3hz56c6g0",
+                            "created": 1679202195576,
+                            "text": "注册ChatGPT",
+                            "expandState": "expand",
+                            "layout_right_offset": {
+                                "x": 10,
+                                "y": 0
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cra3wy9fh3c0",
+                                    "created": 1679203369119,
+                                    "text": "https://openai.com/blog/chatgpt",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cra3werzmpc0",
+                            "created": 1679203326705,
+                            "text": "绕过OpenAI地区限制的一些方法",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cra3x89gv740",
+                                    "created": 1679203390889,
+                                    "text": "用美区IP",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cra3xfgb3q00",
+                                    "created": 1679203406540,
+                                    "text": "浏览器隐私模式与正常模式切换",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cra3xjz9edk0",
+                                    "created": 1679203416393,
+                                    "text": "多清理浏览器Cookie、缓存",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cra3yle8zvk0",
+                                    "created": 1679203497840,
+                                    "text": "全局代理",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cra4085gfnk0",
+                    "created": 1679203625739,
+                    "text": "详细流程参考Notion链接",
+                    "priority": 5,
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cra40hgd6hs0",
+                            "created": 1679203645990,
+                            "text": "复制链接在手机或电脑自带的浏览器中打开",
+                            "expandState": "expand"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cra40rl8yy00",
+                            "created": 1679203668053,
+                            "text": "https://iridescent-english-b5d.notion.site/Chat-GPT-323c352eda42450884385dd6928b5c0f",
+                            "expandState": "expand"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
