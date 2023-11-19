@@ -1,16 +1,16 @@
 <mxfile host="65bd71144e">
     <diagram id="VWriaCpgpi0mvcaJ00Rg" name="Page-1">
-        <mxGraphModel dx="1317" dy="1425" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="1226" dy="1427" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="4" value="" style="edgeStyle=none;html=1;fontSize=24;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="2" target="3">
+                <mxCell id="4" value="" style="edgeStyle=none;html=1;fontSize=24;fontColor=#000000;strokeColor=#000000;" parent="1" source="2" target="3" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="&lt;font style=&quot;font-size: 24px&quot;&gt;将我的手机卡拔出来删我的视频&lt;/font&gt;" style="text;html=1;strokeColor=#000000;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="2" value="&lt;font style=&quot;font-size: 24px&quot;&gt;将我的手机卡拔出来删我的视频&lt;/font&gt;" style="text;html=1;strokeColor=#000000;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="-321" y="-439" width="389" height="63" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="应对之策" style="rounded=1;whiteSpace=wrap;html=1;fontSize=24;fontColor=#000000;fillColor=none;strokeColor=#000000;" vertex="1" parent="1">
+                <mxCell id="3" value="应对之策" style="rounded=1;whiteSpace=wrap;html=1;fontSize=24;fontColor=#000000;fillColor=none;strokeColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="-186.5" y="-327" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>

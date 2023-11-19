@@ -41,25 +41,25 @@
 
 注册腾讯云账号已经有的可以忽略这一步，选择云产品，基础存储服务中的对象存储功能，点击进入。
 
-![image-20220526163019780](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526163019780.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526163019780.png)
 
 在「存储桶列表」里「创建存储桶」，新用户还有50GB的免费存储服务。由于是第一次登录腾讯云账号，所以有些配置还需要重新设置一下，下面我们需要点击不得不同意否则用不了按钮。同意协议之后点击进入控制台。
 
-![image-20220526163120568](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526163120568.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526163120568.png)
 
 点击「创建存储桶」，这个呢就是用来存放我们的文件的，并设置访问权限，可说是非常的重要，关乎这你的存储对象的安全，自己保存好就可以了，千万不要对外公布。
 
-![image-20220526163536136](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526163536136.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526163536136.png)
 
 
 
 这里需要自己设置一个名称，访问权限这里推荐选择「公有读私有写」，默认警告，点击「下一步」创建，其他配置默认即可。
 
-![image-20220526163743215](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526163743215.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526163743215.png)
 
 创建完成后，点击「配置管理」，因为后面添加配置信息的时候需要里面的数据。
 
-![image-20220526163911723](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526163911723.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526163911723.png)
 
 记录下这里的「**存储桶名称**」和「**访问域名**」。
 
@@ -77,13 +77,13 @@ https://hedi****a-1312***060.cos.ap-shanghai.myqcloud.com
 
 接着在「云产品」「API 密钥管理」里新建密钥，并记录下此时的密钥 id 和 key。
 
-![image-20220526164254970](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526164254970.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526164254970.png)
 
 下载COSBrowers工具：
 
 [COSBrowser - 常用工具 - 对象存储 - 控制台 (tencent.com)](https://console.cloud.tencent.com/cos/cosbrowser)
 
-![image-20220526164348401](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526164348401.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526164348401.png)
 
 
 
@@ -118,19 +118,19 @@ https://hedi****a-1312***060.cos.ap-shanghai.myqcloud.com
 
 注意选择COS的版本一点要和自己注册的腾讯云COS的版本一直，否则无法登录，笔者这里推荐选择V5版本，点击确定按钮之前记得将腾讯云COS设为默认图床。如果有小伙伴设置完之后提示上传失败的提示信息，记得核对COS的版本，一下配置信息是否和腾讯云中的配置是否一致。
 
-![image-20220526164652031](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526164652031.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526164652031.png)
 
 至此，我们专属的图床算是搭建好了，PicGo支持很多中常见的图床，感兴趣的可以多次尝试以下，然后选择一个你个人用起来比较舒服的那个就可以了。
 
 # 3、Typora配置PicGo
 
-笔者这里使用的是Typora这款Markdown文本编辑软件，颜值简约美观，使用便携，可以说非常的经典，码起字来相当舒服，Markdown语法也是非常的简单，用起来不知道比Word强多少！如果你还没使用过这款软件，强烈建议下载一个，体验一段时间，保证你会爱不释手。
+笔者这里使用的是 Typora 这款 Markdown 文本编辑软件，颜值简约美观，使用便携，可以说非常的经典，码起字来相当舒服，Markdown语法也是非常的简单，用起来不知道比Word强多少！如果你还没使用过这款软件，强烈建议下载一个，体验一段时间，保证你会爱不释手。
 
 打开下载好的「Typora」点击左上角「文件」「图像」插入图片时选择「上传图片」并应用对应规则，然后在「上传服务」选择「PicGo（app）」，并选择本地电脑PicGo的安装位置，如下图，配置好之后，点击「验证图片上传选项」稍等一会提示验证成功。
 
-![image-20220526164717825](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526164717825.png)
+![](https://hediancha-1312143060.cos.ap-shanghai.myqcloud.com/image-20220526164717825.png)
 
 
 
-那么我们以后在Typora中写作使用到的图片就会通过PicGo直接同步到你的腾讯云的对象存储中了，这样你在其他平台使用图片素材等就非常的简单了，直接复制粘贴就可以了，从此告别繁琐的图片导入工作，最后在配合Github代码托管平台，我们的写作体系就算是搭建好了。
+那么我们以后在Typora中写作使用到的图片就会通过 PicGo 直接同步到你的腾讯云的对象存储中了，这样你在其他平台使用图片素材等就非常的简单了，直接复制粘贴就可以了，从此告别繁琐的图片导入工作，最后在配合 Github 代码托管平台，我们的写作体系就算是搭建好了。
 

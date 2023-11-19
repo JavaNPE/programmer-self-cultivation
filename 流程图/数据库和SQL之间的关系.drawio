@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="2">
     <diagram id="MS3gSWRfo7CBr7CDkreL" name="数据库和SQL">
-        <mxGraphModel dx="1774" dy="1025" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+        <mxGraphModel dx="2026" dy="1027" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -123,7 +123,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="9onYi-qiqxzF_Z2GRVgA" name="数据安全">
-        <mxGraphModel dx="974" dy="1025" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+        <mxGraphModel dx="1226" dy="1027" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
             <root>
                 <mxCell id="X0ohBxjO3HpSG_1q4Ceo-0"/>
                 <mxCell id="X0ohBxjO3HpSG_1q4Ceo-1" parent="X0ohBxjO3HpSG_1q4Ceo-0"/>
@@ -251,7 +251,7 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="4Y1jFITtytvQzbKDfSUU-130" value="照片" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;fontSize=15;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" parent="X0ohBxjO3HpSG_1q4Ceo-1" vertex="1">
-                    <mxGeometry x="39" y="1170" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="1198" y="735" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="4Y1jFITtytvQzbKDfSUU-134" value="" style="edgeStyle=orthogonalEdgeStyle;sketch=0;html=1;shadow=0;labelBackgroundColor=#FFFFFF;fontSize=15;fontColor=#000000;endArrow=classic;endFill=1;strokeColor=#000000;elbow=vertical;" parent="X0ohBxjO3HpSG_1q4Ceo-1" source="4Y1jFITtytvQzbKDfSUU-131" target="4Y1jFITtytvQzbKDfSUU-133" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -263,19 +263,22 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="4Y1jFITtytvQzbKDfSUU-131" value="压缩成加密文件" style="shape=singleArrow;whiteSpace=wrap;html=1;arrowWidth=0.4;arrowSize=0.4;fontSize=15;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;rounded=1;shadow=0;" parent="X0ohBxjO3HpSG_1q4Ceo-1" vertex="1">
-                    <mxGeometry x="216" y="1170" width="141" height="60" as="geometry"/>
+                    <mxGeometry x="1375" y="735" width="141" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="4Y1jFITtytvQzbKDfSUU-133" value="丢到某度网盘" style="whiteSpace=wrap;html=1;fontSize=15;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;rounded=1;shadow=0;" parent="X0ohBxjO3HpSG_1q4Ceo-1" vertex="1">
-                    <mxGeometry x="362" y="1034" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="1521" y="599" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="4Y1jFITtytvQzbKDfSUU-135" value="Copy至移动硬盘" style="whiteSpace=wrap;html=1;fontSize=15;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;rounded=1;shadow=0;" parent="X0ohBxjO3HpSG_1q4Ceo-1" vertex="1">
-                    <mxGeometry x="508" y="1170" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="1667" y="735" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="4Y1jFITtytvQzbKDfSUU-139" value="丢到阿里云盘" style="whiteSpace=wrap;html=1;fontSize=15;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;rounded=1;shadow=0;" parent="X0ohBxjO3HpSG_1q4Ceo-1" vertex="1">
-                    <mxGeometry x="362" y="1293" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="1521" y="858" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="4Y1jFITtytvQzbKDfSUU-141" value="密码管理工具统一管理密码" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;fontSize=15;fontColor=#000000;" parent="X0ohBxjO3HpSG_1q4Ceo-1" vertex="1">
-                    <mxGeometry x="39" y="1311" width="202" height="30" as="geometry"/>
+                <mxCell id="4Y1jFITtytvQzbKDfSUU-141" value="Keepass密码管理工具统一管理密码" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;fontSize=15;fontColor=#000000;" parent="X0ohBxjO3HpSG_1q4Ceo-1" vertex="1">
+                    <mxGeometry x="1198" y="876" width="270" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="Zw0WHGGmyiCY_nk8HGKn-0" value="全网同号：赫点茶" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;fontSize=15;fontColor=#000000;" parent="X0ohBxjO3HpSG_1q4Ceo-1" vertex="1">
+                    <mxGeometry x="1468" y="966" width="270" height="35" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
